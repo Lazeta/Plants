@@ -25,9 +25,18 @@ const burgerMenu = document.querySelector('.navigation')
 Get the burger menu button and add a click event handler,
 where we add or remove a class, depending on whether it already exist or not.
 */
+// burgerIcon.addEventListener("click", function () {
+//     burgerIcon.classList.toggle('__active');
+//     burgerMenu.classList.toggle('__burger__menu');
+// });
 burgerIcon.addEventListener("click", function () {
-    burgerIcon.classList.toggle('__active');
-    burgerMenu.classList.toggle('__burger__menu');
+    if (burgerIcon.classList.contains('__active')){
+        burgerIcon.classList.remove('__active');
+        burgerMenu.classList.remove('__burger__menu');
+    } else {
+        burgerIcon.classList.add('__active');
+        burgerMenu.classList.add('__burger__menu');
+    }
 });
 
 
@@ -37,6 +46,10 @@ document.addEventListener('keydown', function(e) {
     if(e.key === 'Escape' || e.key === 'Esc') { 
         burgerMenu.classList.remove('__burger__menu');
         burgerIcon.classList.remove('__active');
+        // burgerMenu.style.animation = 'burgerAnimationClose 0.5s forwards';
+        // setTimeout(function(){
+        //     burgerMenu.style.animation = '';
+        // }, 500);
     };
 });
 
@@ -45,17 +58,21 @@ document.addEventListener('keydown', function(e) {
 // We will hide the menu if you click outside the list outside of it.
 document.addEventListener('click', function(e) {
     if (!burgerIcon.contains(e.target) && !burgerMenu.contains(e.target)){
-        closeBurgerMenu();
         burgerMenu.classList.remove('__burger__menu');
         burgerIcon.classList.remove('__active');
+        // burgerMenu.style.animation = 'burgerAnimationClose 0.5s forwards';
+        // setTimeout(function(){
+        //     burgerMenu.style.animation = '';
+        // }, 500);
     }
 })
 
 
-// *RU* Данный обработчик будет действовать на разрешении экрана менее 
-// This handler will operate at screen resolutions less than
-// или равный 768 пикселей.
-// or equal to 768 pixels.
+/* *RU* Данный обработчик будет действовать на разрешении экрана менее 
+или равный 768 пикселей.
+This handler will operate at screen resolutions less than
+or equal to 768 pixels.
+*/
 if (window.innerWidth <= 768) {
     // *RU* Получаем ссылки меню и добавляем обработчик события click.
     // Get the menu links and add a click event handler.
@@ -120,18 +137,18 @@ document.querySelectorAll(".menu-link[href^='#']").forEach(link => {
 
 
 //??? при нажатии на крестик адаптивное меню плавно скрывается уезжая за экран +4
-function openBurgerMenu() {
-    burgerMenu.classList.add('open');
-}
-function closeBurgerMenu() {
-    burgerMenu.classList.remove('__burger__menu');
-    burgerMenu.classList.remove('__active');
-    burgerMenu.classList.add('close');
-    // Удаление класса 'close' после выполнения анимации
-    setTimeout(function() {
-        burgerMenu.classList.remove('close');
-    }, 500);
-}
+// function openBurgerMenu() {
+//     burgerMenu.classList.add('open');
+// }
+// function closeBurgerMenu() {
+//     burgerMenu.classList.remove('__burger__menu');
+//     burgerMenu.classList.remove('__active');
+//     burgerMenu.classList.add('close');
+//     // Удаление класса 'close' после выполнения анимации
+//     setTimeout(function() {
+//         burgerMenu.classList.remove('close');
+//     }, 500);
+// }
 // *RU* Добавление обработчиков событий на кнопки открытия и закрытия бургер меню.
 // Adding event handlers to the buttons for opening and closing the burger menu.
 
