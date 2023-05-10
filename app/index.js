@@ -45,6 +45,7 @@ document.addEventListener('keydown', function(e) {
 // We will hide the menu if you click outside the list outside of it.
 document.addEventListener('click', function(e) {
     if (!burgerIcon.contains(e.target) && !burgerMenu.contains(e.target)){
+        closeBurgerMenu();
         burgerMenu.classList.remove('__burger__menu');
         burgerIcon.classList.remove('__active');
     }
@@ -118,7 +119,21 @@ document.querySelectorAll(".menu-link[href^='#']").forEach(link => {
 
 
 
-// при нажатии на крестик адаптивное меню плавно скрывается уезжая за экран +4
+//??? при нажатии на крестик адаптивное меню плавно скрывается уезжая за экран +4
+function openBurgerMenu() {
+    burgerMenu.classList.add('open');
+}
+function closeBurgerMenu() {
+    burgerMenu.classList.remove('__burger__menu');
+    burgerMenu.classList.remove('__active');
+    burgerMenu.classList.add('close');
+    // Удаление класса 'close' после выполнения анимации
+    setTimeout(function() {
+        burgerMenu.classList.remove('close');
+    }, 500);
+}
+// *RU* Добавление обработчиков событий на кнопки открытия и закрытия бургер меню.
+// Adding event handlers to the buttons for opening and closing the burger menu.
 
-// при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, 
+// ??? при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, 
 // также скрытие меню происходит если сделать клик вне данного окна +4
