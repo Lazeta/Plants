@@ -174,6 +174,23 @@ li,p {
     padding-left: 10px;
     margin-left: -20px;}
 
+.nav__bar {
+    display: flex;
+}
+.nav__bar a {
+    text-decoration: none;}
+.nav__bar li a{
+    transition: 0.4s;
+    transform: scale(1);}
+.nav__bar li a:hover {
+    transition: 2s;
+    transform: scale(1);
+    font-size: 100%;
+    background-color: #53535336;
+    color:#070707;
+    border-radius: 5px;
+    cursor: pointer;}
+
 /* main style */
 .main {
     max-width: 1440px;
@@ -561,6 +578,10 @@ li,p {
     transform: scale(1);
     background-color: #E06733;
     color:#ffffff;
+}
+
+.nav__bar {
+    display: none;       
 }
 
 
@@ -1801,8 +1822,8 @@ li,p {
     .navigation {
         display: none;
     }
-    .navigation.__burger__menu {
-        display: flex;
+    .nav__bar {
+        display: none;
         flex-direction: column;
         position: fixed;
         width: 100%;
@@ -1813,30 +1834,17 @@ li,p {
         left: 0;
         right: 0;
         padding: 100px 20px 0 50px;
-        animation: burgerAnimationOpen 0.5s;
         background-color: rgba(85, 136, 48, 0.9);
         overflow-y: auto;
         text-align: center;
     }
-    .navigation.close {
+    .nav__bar.__burger__menu {
         display: flex;
-        flex-direction: column;
-        position: fixed;
-        width: 100%;
-        height: 50%;
-        z-index: 10;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 100px 20px 0 50px;
-        background-color: rgba(85, 136, 48, 0.9);
-        overflow-y: auto;
-        text-align: center;
-        animation-name: burgerAnimationClose;
-        animation-duration: 0.5s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
+        animation: burgerAnimationOpen 0.75s;
+    }
+    .nav__bar.close {
+        display: flex;
+        animation: burgerAnimationClose 0.8s;
     }
     /* полоска */
     .strip {
@@ -1893,34 +1901,33 @@ li,p {
         position: absolute;
         right: 10px;
     }
-}
-
-
-@media (max-width: 1614px){
-    /* button changed background color */
-    .change__button {
-        display: none;
+    @media (max-width: 1614px){
+        /* button changed background color */
+        .change__button {
+            display: none;
+        }
     }
 }
+
 
 @keyframes burgerAnimationOpen {
     from {
-        margin-left: -250px;
+        transform: translateX(-100%);
         opacity: 0;
     }
     to {
-        margin-left: 0px;
+        transform: translateX(0%);
         opacity: 1;
     }
 }
 
 @keyframes burgerAnimationClose {
     from {
-        margin-right: 0px;
+        transform: translateX(0%);
         opacity: 1;
-    };
+    }
     to {
-        margin-right: -250px;
+        transform: translateX(100%);
         opacity: 0;
     }
 }
