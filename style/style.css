@@ -1,7 +1,7 @@
 html {
-    height: 101%;
+    /* height: 101%; */
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     margin: 0;
     padding: 0;
     outline: none;
@@ -75,7 +75,6 @@ li,p {
     min-width: 320px;
     width: 100%;
     margin: 0 auto;
-    background-color:rgba(0, 0, 0, 0);
 }
 
 
@@ -95,6 +94,8 @@ li,p {
 /* header style */
 .header {
     height: auto;
+    min-width: 320px;
+    max-width: 1440px;
     width: 100%;
     background: #EDF2EC;
     margin: 0 auto;   
@@ -198,7 +199,6 @@ li,p {
     width: 100%;
     background: #EDF2EC;
     margin: 0 auto;
-    /* overflow: hidden; */
 }
 
 /* welcom section style */
@@ -239,7 +239,6 @@ li,p {
     font-family: 'inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    background-color: rgba(0,0,0,0);
     border: 2px solid #E06733;
     border-radius: 10px;
     cursor: pointer;
@@ -310,7 +309,6 @@ li,p {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    background-color: rgba(0,0,0,0);
     color: #E06733;
     border: 1px solid #E06733;
     border-radius: 5px;
@@ -414,7 +412,6 @@ li,p {
     display: flex;
     justify-content: space-between;}
 .btn__accordion__item {
-    background-color: rgba(0,0,0,0);
     border-radius: 50%;
     cursor: pointer;}
 .price__info {
@@ -438,7 +435,6 @@ li,p {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    background-color: rgba(0,0,0,0);
     color: #E06733;
     border: 1px solid #E06733;
     border-radius: 5px;
@@ -509,7 +505,6 @@ li,p {
     padding-right: 27px;
 }
 .btn__accordion {
-    background-color: rgba(0,0,0,0);
     cursor: pointer;}
 
 
