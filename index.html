@@ -20,7 +20,7 @@
     <title>Plants</title>
 </head>
 
-<body>
+<body id="Home">
     <button class="change__button __changer">Change Theme</button>
     <header class="header">
         <div class="container">
@@ -29,22 +29,22 @@
                     <img class="logo__list__img" src="assets/img/logo_header.jpg" srcset="assets/svg/logo_header.svg" alt="logo plants icon">
                     <span>Plants</span>
                 </div>
-                <nav class="navigation">
+                <nav class="navigation nav__bar">
                     <ul class="nav__menu">
                         <li class="home__item">
-                            <a id="__show" href="#Home" target="link">Home</a>
+                            <a id="__show" class="menu-link" href="#Home" onclick="smoothScroll('#Home')" target="link">Home</a>
                         </li>
                         <li class="about-us__item">
-                            <a id="__show" href="#About-us" target="link">About us</a>
+                            <a id="__show" class="menu-link" href="#About-us" onclick="smoothScroll('#About-us')" target="link">About us</a>
                         </li>
                         <li class="service-__item">
-                            <a id="__show"href="#Service" target="link">Service</a>
+                            <a id="__show" class="menu-link" href="#Service" onclick="smoothScroll('#Service')" target="link">Service</a>
                         </li>
                         <li class="price__item">
-                            <a id="__show" href="#Price" target="link">Price</a>
+                            <a id="__show" class="menu-link" href="#Price" onclick="smoothScroll('#Price')" target="link">Price</a>
                         </li>
                         <li class="contacts__item">
-                            <a id="__show" href="#Contacts" target="link">Contacts</a>
+                            <a id="__show" class="menu-link" href="#Contacts" onclick="smoothScroll('#Contacts')" target="link">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -67,7 +67,7 @@
                 <div class="welcome__container">
                     <img class="welcome__container__img" src="assets/img/leafs_big.jpg" srcset="assets/svg/leafs_big.svg" alt="big leafs logo jpg">
                     <div class="welcome__section">
-                        <h1 id="Home">We grow <span>plants</span> and give you oxygen</h1>
+                        <h1>We grow <span>plants</span> and give you oxygen</h1>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                         <button class="btn__learn-more btn__animation">LEARN MORE</button>
                     </div>
@@ -167,7 +167,7 @@
                             <h2>Our best <span>gardeners </span> are ready to help you</h2>
                             <button class="btn__contact-us btn__animation">Contact us</button>
                         </div>
-                        <div class="leafs">
+                        <div class="leafs" >
                             <img src="assets/img/leafs_small.jpg" srcset="assets/svg/leafs_small.svg" alt="small leafs jpg">
                         </div>
                     </div>
@@ -179,7 +179,7 @@
             <div class="container">
                 <div class="contact__container">
                     <div class="box-city">
-                        <h2 class="contact-us-h2" id="Contacts"><span>Contact us</span></h2>
+                        <h2 class="contact-us-h2"><span>Contact us</span></h2>
                         <div class="contacts__button">
                             <button type="submit" class="city__bar btn-success">
                                 <span>City</span>
@@ -193,7 +193,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="Contacts">
         <div class="container">
             <div class="content">
                 <div class="footer-data">
@@ -214,10 +214,10 @@
                 </div>
                 <div class="social-list">
                     <ul>
-                        <li class="instagram__svg__item"><a href="https://www.instagram.com/"><img src="assets/img/instagram.jpg" srcset="assets/svg/instagram.svg" alt="instagram icon"></a></li>
-                        <li class="facebook__svg__item"><a href="https://www.facebook.com/"><img src="assets/img/facebook.jpg" srcset="assets/svg/facebook.svg" alt="facebook icon"></a></li>
-                        <li class="twitter__svg__item"><a href="https://twitter.com/?lang=ru"><img src="assets/img/twitter.jpg" srcset="assets/svg/twitter.svg" alt="twitter icon"></a></li>
-                        <li class="pinterest__svg__item"><a href="https://www.pinterest.com/"><img src="assets/img/pinterest.jpg" srcset="assets/svg/pinterest.svg" alt="pinterest icon"></a></li>
+                        <li class="instagram__svg__item"><a href="https://www.instagram.com/"><img src="assets/img/instagram.jpg" srcset="assets/svg/instagram.svg" target="_blank" alt="instagram icon"></a></li>
+                        <li class="facebook__svg__item"><a href="https://www.facebook.com/"><img src="assets/img/facebook.jpg" srcset="assets/svg/facebook.svg" target="_blank" alt="facebook icon"></a></li>
+                        <li class="twitter__svg__item"><a href="https://twitter.com/?lang=ru"><img src="assets/img/twitter.jpg" srcset="assets/svg/twitter.svg" target="_blank" alt="twitter icon"></a></li>
+                        <li class="pinterest__svg__item"><a href="https://www.pinterest.com/"><img src="assets/img/pinterest.jpg" srcset="assets/svg/pinterest.svg" target="_blank" alt="pinterest icon"></a></li>
                     </ul>
                 </div>
             </div>
