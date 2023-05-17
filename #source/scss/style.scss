@@ -57,7 +57,7 @@ span {}
 
 /* current styles */
 .wrapper {
-    max-width: 1440px;
+    max-width: auto;
     min-width: 320px;
     margin: 0 auto;
 }
@@ -65,7 +65,6 @@ span {}
 /* header style */
 .header {}
 .navigation {display: flex;}
-.burger__menu {display: none;}
 
 /* main style */
 .main {}
@@ -103,9 +102,9 @@ span {}
     transform: scale(1);
 }
 
-.nav__bar {display: none;}
+.gamburger {display: none;}
 
-
+@media (max-width: 1024) {}
 
 @media (max-width: 768px) {
     /* header style */
@@ -130,9 +129,9 @@ span {}
     .footer {} 
 }
     
+@media (max-width: 600px) {}
 
-
-@media (320px <= width < 768px) {
+@media (max-width: 414) {
     /* header style */
     .header {}
 
@@ -144,11 +143,6 @@ span {}
 
     /* about section style */
     .about {}
-    .about__container {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column; 
-    }
     
     
     /* service section style*/
@@ -215,7 +209,7 @@ span {}
     }
 
     /* меню бургер в 4 полосы с анимацией, превращения в крестик */
-    .burger__menu {
+    .gamburger {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -242,7 +236,7 @@ span {}
         background-color: rgba(85, 136, 48, 0.9);
         text-align: center;
     }
-    .nav__bar.__burger__menu {
+    .nav__bar.__gamburger {
         display: flex;
         animation: burgerAnimationOpen 0.75s;
     }
@@ -261,10 +255,10 @@ span {}
     .strip:nth-child(1) {transform-origin: top right;}
     .strip:nth-child(2) {transform-origin: top left;}
     .strip:nth-child(4) {transform-origin: bottom right;}
-    .burger__menu.__active .strip:nth-child(1){width: 33px; transform: rotate(-45deg);}
-    .burger__menu.__active .strip:nth-child(2){opacity: 0;}
-    .burger__menu.__active .strip:nth-child(3){opacity: 0;}
-    .burger__menu.__active .strip:nth-child(4){width: 33px; transform: rotate(45deg);}
+    .gamburger.__active .strip:nth-child(1){width: 33px; transform: rotate(-45deg);}
+    .gamburger.__active .strip:nth-child(2){opacity: 0;}
+    .gamburger.__active .strip:nth-child(3){opacity: 0;}
+    .gamburger.__active .strip:nth-child(4){width: 33px; transform: rotate(45deg);}
 }
 
 

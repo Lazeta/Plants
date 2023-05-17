@@ -1,16 +1,3 @@
-// // *RU* Функция смены цвета заднего фона на размерах от 1440 пикселей более.
-// // Function changed color background color on size from 1440px and more.
-// const btnColor = document.querySelector('.__changer');
-// function random(number){
-//     return Math.floor(Math.random() * (number+1))
-// };
-// btnColor.onclick = function(){
-//     const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-//     document.body.style.backgroundColor = rndCol;
-// };
-
-
-
 /* *RU* Данный обработчик будет действовать на разрешении экрана менее 
 или равный 768 пикселей.
 This handler will operate at screen resolutions less than
@@ -22,7 +9,7 @@ if (window.innerWidth <= 768){
     For a burger menu of 4 lanes where, when clicked, a site navigation window pops up.
     We fixed the constants of our navigation menu and menu icon.
     */
-    const burgerIcon = document.querySelector('.burger__menu');
+    const burgerIcon = document.querySelector('.gamburger');
     const burgerMenu = document.querySelector('.nav__bar')
 
     /* *RU* Получаем кнопку меню бургер и добавляем обработчик события click,
@@ -32,19 +19,19 @@ if (window.innerWidth <= 768){
     */
     // burgerIcon.addEventListener("click", function () {
     //     burgerIcon.classList.toggle('__active');
-    //     burgerMenu.classList.toggle('__burger__menu');
+    //     burgerMenu.classList.toggle('__gamburger');
     // });
     burgerIcon.addEventListener("click", function () {
         if (burgerIcon.classList.contains('__active')){
             burgerIcon.classList.remove('__active');
-            burgerMenu.classList.remove('__burger__menu');
+            burgerMenu.classList.remove('__gamburger');
             burgerMenu.classList.add('close')
             setTimeout(function() {
                 burgerMenu.classList.remove('close');
               }, 700);
         } else {
             burgerIcon.classList.add('__active');
-            burgerMenu.classList.add('__burger__menu');
+            burgerMenu.classList.add('__gamburger');
             burgerMenu.classList.remove('close')
         }
     });
@@ -56,7 +43,7 @@ if (window.innerWidth <= 768){
         if(e.key === 'Escape' || e.key === 'Esc') { 
             if(burgerIcon.classList.contains('__active')) {
                 burgerIcon.classList.remove('__active');
-                burgerMenu.classList.remove('__burger__menu');
+                burgerMenu.classList.remove('__gamburger');
                 burgerMenu.classList.add('close');
                 setTimeout(function() {
                     burgerMenu.classList.remove('close');
@@ -70,7 +57,7 @@ if (window.innerWidth <= 768){
     document.addEventListener('click', function(e) {
             if(burgerIcon.classList.contains('__active')) {
                 if (!burgerIcon.contains(e.target) && !burgerMenu.contains(e.target)){
-                    burgerMenu.classList.remove('__burger__menu');
+                    burgerMenu.classList.remove('__gamburger');
                     burgerIcon.classList.remove('__active');
                     burgerMenu.classList.add('close');
                     setTimeout(function() {
@@ -86,8 +73,8 @@ if (window.innerWidth <= 768){
     menuLinks[i].addEventListener('click', function(e) {
         // *RU* Закрываем меню.
         // Close the menu.
-        if (burgerMenu.classList.contains('__burger__menu')) {
-            burgerMenu.classList.remove('__burger__menu') 
+        if (burgerMenu.classList.contains('__gamburger')) {
+            burgerMenu.classList.remove('__gamburger') 
             burgerMenu.classList.add('close');
             setTimeout(function() {
                 burgerMenu.classList.remove('close');
@@ -140,3 +127,18 @@ if (window.innerWidth <= 768){
         });
     });
 }
+
+
+
+
+
+// // *RU* Функция смены цвета заднего фона на размерах от 1440 пикселей более.
+// // Function changed color background color on size from 1440px and more.
+// const btnColor = document.querySelector('.__changer');
+// function random(number){
+//     return Math.floor(Math.random() * (number+1))
+// };
+// btnColor.onclick = function(){
+//     const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+//     document.body.style.backgroundColor = rndCol;
+// };
