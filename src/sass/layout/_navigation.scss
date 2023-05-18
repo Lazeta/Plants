@@ -1,0 +1,27 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__navigation {
+    display: flex;
+}
+
+.header__navigation a {
+    text-decoration: none;
+}
+
+.header__navigation li a{
+    transition: 0.4s;
+    transform: scale(1);
+}
+
+.header__navigation li a:hover {
+    transition: 2s;
+    transform: scale(1);
+    font-size: 100%;
+    background-color: #53535336;
+    color:#070707;
+    border-radius: 5px;
+    cursor: pointer;
+}

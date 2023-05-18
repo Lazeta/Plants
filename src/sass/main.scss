@@ -1,8 +1,8 @@
 @import 
+    'abstracts/constants',
+    'abstracts/mixins',
     'abstracts/function',
-    'abstracts/variables',
-    'abstracts/placeholders',
-    'abstracts/mixins';
+    'abstracts/placeholders';
 
 @import 
     'base/base',
@@ -16,8 +16,14 @@
     'components/dropdown';
 
 @import
+    'layout/wrapper',
     'layout/header',
     'layout/navigation',
+    'layout/welcome',
+    'layout/about',
+    'layout/service',
+    'layout/prices',
+    'layout/contact-us',
     'layout/footer',
     'layout/grid',
     'layout/forms';
@@ -33,15 +39,6 @@
 @import 
     'vendors/bootstrap';
 
-/* header style */
-.header {
-    max-width: 1440px;
-    height: 134px;
-    width: 1440px;
-    background: #EDF2EC;
-    margin: 0 auto;
-    overflow: hidden;
-}
 .navbar {
     width: 1220px;
     height: 50px;
@@ -69,22 +66,7 @@
     font-size: 16px;
     line-height: 21px;
     color: #000000;}
-.navigation {
-    display: flex;
-}
-.navigation a {
-    text-decoration: none;}
-.navigation li a{
-    transition: 0.4s;
-    transform: scale(1);}
-.navigation li a:hover {
-    transition: 2s;
-    transform: scale(1);
-    font-size: 100%;
-    background-color: #53535336;
-    color:#070707;
-    border-radius: 5px;
-    cursor: pointer;}
+
 .home__item a {
     margin-right: 43px;
     color: #E06733;}
@@ -527,12 +509,7 @@
 
 
 @media (max-width: 767px) {
-    .header {
-        max-width: 768px;
-        height: 117px;
-        background: #EDF2EC;
-        margin: 0 auto;
-    }
+
     .navbar {
         width: auto;
         height: 50px;
@@ -1046,13 +1023,7 @@
 }
 
 @media (max-width: 380px) {
-    .header {
-        width: 380px;
-        height: 96px;
-        background: #EDF2EC;
-        margin: 0 auto;
-        padding: 0;
-    }
+
     .navbar {
         padding: 36px 26px 36px 25px;
         width: auto;

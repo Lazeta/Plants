@@ -1,0 +1,33 @@
+.header {
+    max-width: 1440px;
+    height: 134px;
+    width: 1440px;
+    background: #EDF2EC;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: $tablet-width){
+    .header {
+        max-width: 768px;
+        height: 117px;
+        background: #EDF2EC;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: $mobile-big-width){
+    .header {
+        width: 380px;
+        height: 96px;
+        background: #EDF2EC;
+        margin: 0 auto;
+        padding: 0;
+    }
+}

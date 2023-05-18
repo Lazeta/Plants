@@ -17,11 +17,11 @@
         right: 25px;
     }
 
-    .navigation {
+    .header__navigation {
         display: none;
     }
 
-    .nav__bar {
+    .navigation {
         display: none;
         flex-direction: column;
         position: fixed;
@@ -38,12 +38,12 @@
         text-align: center;
     }
 
-    .nav__bar.__burger__menu {
+    .navigation.__burger__menu {
         display: flex;
         animation: burgerAnimationOpen 0.75s;
     }
 
-    .nav__bar.close {
+    .navigation.close {
         display: flex;
         animation: burgerAnimationClose 0.8s;
     }

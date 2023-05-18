@@ -3,7 +3,12 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     font-size: 10px;
-} 
+    box-sizing: border-box;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
 
 body {
     font-size: 1.6rem;
