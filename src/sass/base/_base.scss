@@ -1,0 +1,151 @@
+html {
+    height: 101%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 10px;
+} 
+
+body {
+    font-size: 1.6rem;
+    line-height: 1; 
+}
+
+strong {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 26px;
+}
+
+a {
+    text-decoration: none;
+    color: #010201;
+} 
+
+a:hover {
+    text-decoration: underline;
+} 
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; 
+    font-size: 4.5rem;
+    color: #717171;
+    line-height: 50px;
+} 
+
+h2 {
+    font-family: 'Inika', sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.0rem;
+    line-height: 52.12px;
+} 
+
+p {
+    font-size: 2.0rem;
+    white-space: pre-line;
+    color:#636060;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+} 
+
+span {
+    color: #499A18;
+}
+
+li,p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 30px;
+}
+
+.container {
+    margin: 0 auto;
+    background-color:rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 700; 
+        font-size: 3.5rem;
+        color: #000000;
+        line-height: 50px;
+    } 
+    
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 35px;
+        color: #000000;
+    } 
+    
+    p {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 25px;
+        white-space: pre-line;
+        color:#636060;
+    } 
+    
+    span {
+        color: #499A18;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        font-size: 1.6rem;
+    } 
+    
+    a {
+        text-decoration: none;
+        color: #010201;
+    } 
+    
+    a:hover {
+        text-decoration: underline;
+    } 
+    
+    h1 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 35px;
+        color: #717171;
+    } 
+    
+    h2 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 35px;
+        color: #000000;
+    } 
+    
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 25px;
+        color:#636060;
+    } 
+    
+    span {
+        color: #499A18;
+    }
+}
