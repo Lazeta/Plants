@@ -1,9 +1,206 @@
-
+.prices {
+    width: 1440px;
+    height: 560px;
+    background: #FFFFFF;
+}
+.prices__container {
+    width: 1222px;
+    height: 405px;
+    padding: 40px 109px 115px 109px;    
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.prices__bar {
+    width: 332px;
+    height: 391px;
+}
+.prices__bar h2 {
+    padding-bottom: 60px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+}
+.prices__list {
+    width: 332px;
+    height: 281px;
+    border: 1px solid #E3E1D5;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.price__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.prices__content {
+    width: 452px;
+    height: 191.01px;
+    text-align: end;
+}
+.prices__content h2 {
+    font-family: 'Inter';
+    font-weight: 700;
+    line-height: 50px;
+}
+.leafs {
+    margin-top: 35px;
+    margin-right: -5px;
+}
 
 @media (max-width: $tablet-width) {
-
+    .prices {
+        max-width: 768px;
+        width: 768px;
+        height: 585px;
+        background: #FFFFFF;
+    }
+    .prices__container {
+        width: auto;
+        height: 405px;
+        padding: 0;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    .prices__bar {
+        width: 332px;
+        height: 391px;
+    }
+    .prices__bar h2 {
+        padding-bottom: 0px;
+        padding-top: 42px;
+        margin-left: -96px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 42px;
+        text-align: center;
+    }
+    .prices__list {
+        width: 332px;
+        height: 281px;
+        margin: 55px 0 0 50px;
+        padding-top: 4px;
+        border: 1px solid #E3E1D5;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .price__info {
+        padding: 143px 0px 0 90px;
+        width: 296px;
+        height: 357.98px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .prices__content {
+        width: 296px;
+        height: 77.41px;
+        text-align: right;
+    }
+    .prices__content h2 {
+        font-family: 'Inter';
+        font-weight: 700;
+        line-height: 50px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .leafs {
+        margin-top: 100px;
+        margin-right: -10px;
+    }
 }
 
 @media (max-width: $mobile-big-width) {
-    
+    .prices {
+        max-width: 380px;
+        width: 382px;
+        height: 512px;
+        background: #FFFFFF;
+    }
+    .prices__container {
+        width: 230px;
+        height: auto;
+        padding: 20px 0 0 0;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    .prices__bar {
+        width: 382px;
+        height: auto;
+        margin: 0;
+        padding: 0px 0 0 0;
+    }
+    .prices__bar h2 {
+        padding-bottom: 0px;
+        padding-top: 2px;
+        margin-left: 0px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .prices__list {
+        width: 224px;
+        height: 235px;
+        margin: 36px 0px 0px 80px;
+        padding: 0px 0;
+        border: 1px solid #E3E1D5;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .price__info {
+        padding: 20px 0px 0 75px;
+        width: 230px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .prices__content {
+        width: 296px;
+        height: 77.41px;
+    }
+    .prices__content h2 {
+        padding: 0 10px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 35px;
+        text-align: center;
+    }
+    .leafs {
+        margin-top: 0px;
+        margin-right: 0px;
+        display: none;
+    }
+    .leafs img {
+        display: none;
+    }
 }

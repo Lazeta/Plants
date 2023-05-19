@@ -2,20 +2,16 @@
     display: flex;
     flex-direction: row;
 }
-
 .header__navigation {
     display: flex;
 }
-
 .header__navigation a {
     text-decoration: none;
 }
-
 .header__navigation a{
     transition: 0.4s;
     transform: scale(1);
 }
-
 .header__navigation a:hover {
     transition: 2s;
     transform: scale(1);
@@ -25,11 +21,9 @@
     border-radius: 5px;
     cursor: pointer;
 }
-
 .list__item {
         
 }
-
 .logo__list {
     width: 79.17px;
     height: 21.04px;
@@ -47,7 +41,6 @@
     line-height: 21px;
     color: #000000;
 }
-
 .home__item a {
     margin-right: 43px;
     color: #E06733;
@@ -98,7 +91,6 @@
         background: #EDF2EC;
         margin: 0 auto;
     }
-
     .header__navigation {
         width: auto;
         height: 50px;
@@ -108,17 +100,12 @@
         flex-direction: row;
         align-items: baseline;
     }
-
     .header__navigation li {
         font-family: 'Inika', sans-serif;
         font-weight: 400;
         display: inline;
     }
-
-    .list__item {
-
-    }
-
+    .list__item {}
     .logo__list {
         width:  80px;
         height: auto;
@@ -169,14 +156,6 @@
 }
 
 @media (max-width: $mobile-big-width){
-    .header {
-        width: 380px;
-        height: 96px;
-        background: #EDF2EC;
-        margin: 0 auto;
-        padding: 0;
-    }
-
     .header__navigation {
         padding: 36px 26px 36px 25px;
         width: auto;
@@ -192,13 +171,8 @@
         font-weight: 400;
         display: inline;
     }
-
-    .list__item {
-        
-    }
-
+    .list__item {}
     .logo__list {
-
         width:  77px;
         height: auto;
         margin-top: -2px;

@@ -1,9 +1,117 @@
-
+.about {
+    width: 1440px;
+    height: 666px;
+    background: #FFFFFF;
+}
+.about__container {
+    width: 1222px;
+    height: 479px;
+    padding: 93px 109px 94px 109px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.about__content {
+    width: 605px;
+    height: 344px;
+}
+.about__content h2 {
+    width: 463px;
+    height: 102px;
+    color:#E06733;
+}
+.about__content p {
+    margin-top: 40px;
+    font-size: 20px;
+}
 
 @media (max-width: $tablet-width) {
-
+    .about {
+        max-width: 768px;
+        width: auto;
+        height: 783px;
+        padding: 0 0 0 50px;
+        background: #FFFFFF;
+    }
+    .about__container {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 0 0 0 0;
+        padding: 0 50px 0 0px;
+    }
+    .about__container__img {
+        width: 250px;
+    }
+    .about__content {
+        width: 668px;
+        height: 350px;
+        padding: 40px 0 68px 0px;
+    }
+    .about__content h2 {
+        padding-left: 102px;
+        color:#E06733;
+        font-family: 'Inika';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 46px;
+        text-align: center;
+    }
+    .about__container p {
+        margin-top: 40px;
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
 
 @media (max-width: $mobile-big-width) {
-    
+    .about {
+        max-width: 380px;
+        width: 380px;
+        height: 516px;
+        padding: 0 0 0 50px;
+        background: #FFFFFF;
+    }
+    .about__container {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 0 0 0 0;
+        padding: 34px 50px 0 0px;
+    }
+    .about__content {
+        width: 380px;
+        padding: 0px 0 0px 0px;
+    }
+    .about__content h2 {
+        width: 288px;
+        height: 57.74px;
+        margin-top: -5px;
+        padding: 0 0 0 20px;
+        color:#E06733;
+        font-family: 'Inika';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 33px;
+        text-align: center;
+    }
+    .about__container p {
+        margin: 21px 50px 0 0;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        color: #636060;
+        text-align: left;
+    }
+    .about__container__img {
+        width: 150px;
+        margin: 0 48px 25px 0;
+    }
 }
