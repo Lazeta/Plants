@@ -1,0 +1,21 @@
+.main {
+    max-width: 1440px;
+    background: #EDF2EC;
+    margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+    .main {
+        max-width: 768px;
+        background: #EDF2EC;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: $mobile-big-width) {
+    .main {
+        max-width: 768px;
+        background: #EDF2EC;
+        margin: 0 auto;
+    }
+}

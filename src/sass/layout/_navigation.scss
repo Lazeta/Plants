@@ -11,12 +11,12 @@
     text-decoration: none;
 }
 
-.header__navigation li a{
+.header__navigation a{
     transition: 0.4s;
     transform: scale(1);
 }
 
-.header__navigation li a:hover {
+.header__navigation a:hover {
     transition: 2s;
     transform: scale(1);
     font-size: 100%;
@@ -24,4 +24,228 @@
     color:#070707;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.list__item {
+        
+}
+
+.logo__list {
+    width: 79.17px;
+    height: 21.04px;
+    margin-top: 10px;
+}
+.logo__list__img {
+    margin-right: -4px;
+    margin-top: -1px;
+}
+.logo__list span {
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.home__item a {
+    margin-right: 43px;
+    color: #E06733;
+}
+.home__item a:hover {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: -20px;
+    color: #E06733;
+}
+.about-us__item a {
+    margin-right: 43px;
+}
+.about-us__item a:hover {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: -20px;
+}
+.service-__item a {
+    margin-right: 42px;
+}
+.service-__item a:hover {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: -20px;
+}
+.price__item a {
+    margin-right: 44px;
+}
+.price__item a:hover {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: -20px;
+}
+.contacts__item a{
+    margin-right: 1px
+}
+.contacts__item a:hover {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: -20px;
+}
+
+@media (max-width: $tablet-width){
+    .header {
+        max-width: 768px;
+        height: 117px;
+        background: #EDF2EC;
+        margin: 0 auto;
+    }
+
+    .header__navigation {
+        width: auto;
+        height: 50px;
+        padding: 35px 50px 42px 50px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    .header__navigation li {
+        font-family: 'Inika', sans-serif;
+        font-weight: 400;
+        display: inline;
+    }
+
+    .list__item {
+
+    }
+
+    .logo__list {
+        width:  80px;
+        height: auto;
+        margin-top: 10px;
+    }
+    .logo__list__img {
+        margin-right: -4px;
+        margin-top: -1px;
+    }
+    .logo__list span {
+        font-family: 'Inika';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #000000;
+    }
+    .home__item a {
+        font-weight: 700;
+        color: #E06733;
+    }
+    .home__item a:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: -20px;
+        color: #E06733;
+    }
+    .about-us__item a:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: -20px;
+    }
+    .service-__item a:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: -20px;
+    }
+    .price__item a:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: -20px;
+    }
+    .contacts__item a:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: $mobile-big-width){
+    .header {
+        width: 380px;
+        height: 96px;
+        background: #EDF2EC;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .header__navigation {
+        padding: 36px 26px 36px 25px;
+        width: auto;
+        height: 50px;
+        display: inline-block;
+        justify-content: none;
+        flex-direction: none;
+        align-items: left;
+    }
+
+    .header__navigation li {
+        font-family: 'Inika', sans-serif;
+        font-weight: 400;
+        display: inline;
+    }
+
+    .list__item {
+        
+    }
+
+    .logo__list {
+
+        width:  77px;
+        height: auto;
+        margin-top: -2px;
+        padding-left: 0px;
+    }
+    .logo__list__img {
+        margin-right: 0px;
+        margin-left: -2px;
+        margin-top: 0px;
+    }
+    .logo__list span {
+        margin-left: -5px;
+        font-family: 'Inika';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #000000;
+    }
+    .home__item a {
+        font-weight: 700;
+        color: #E06733;
+    }
+    .home__item a:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: -20px;
+        color: #E06733;
+    }
+    .about-us__item a:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: -20px;
+    }
+    .service-__item a:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: -20px;
+    }
+    .price__item a:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: -20px;
+    }
+    .contacts__item a:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: -20px;
+    }
 }

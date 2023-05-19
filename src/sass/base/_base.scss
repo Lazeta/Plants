@@ -75,7 +75,7 @@ li,p {
     background-color:rgba(0, 0, 0, 0);
 }
 
-@media (max-width: 767px) {
+@media (max-width: $tablet-width) {
     h1 {
         font-family: 'Inter', sans-serif;
         font-style: normal;
@@ -109,7 +109,7 @@ li,p {
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: $mobile-big-width) {
     body {
         font-size: 1.6rem;
     } 
