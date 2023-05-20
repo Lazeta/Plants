@@ -1,33 +1,33 @@
 .contact-us {
-    width: 1440px;
-    height: 550px;
-    background: #EDF2EC;
+    width: auto;
+    background: $color-light;
 }
-.contact__wrapper {
-    width: 1220px;
-    height: 490px;
-    padding: 60px 109px 0.01px 109px;
+.contact-us__wrapper {
+    max-width: $content-width;
+    height: 550px;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
 }
 .contact-us__box-city {
     display: flex;
+    padding: 60px 109px 0px 0px;
 }
 .contact-us__title {
-    width: 192px;
+    min-width: 192px;
     height: 51px;
-    padding-right: 65px;
-    font-family: 'Inika';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
+    padding-right: 68px;
+    font-size: 4rem;
+}
+.contact-us__woman {
+    margin: 0 auto;
+    padding: 0px;
 }
 .contact-us__img {
-    margin-top: -8px;
-    padding-bottom: 2px;
+    height: 100%;
+    width: 98%;
+    padding: 0 0px 1px 0;
+    margin: auto;
 }
 
 @media (max-width: $tablet-width) {
@@ -35,74 +35,54 @@
         max-width: 768px;
         width: 768px;
         height: 739px;
-        background: #EDF2EC;
     }
-    .contact__wrapper {
+    .contact-us__wrapper {
         width: 768px;
         height: 490px;
-        padding: 205px 0 0 0;
+        padding: 200px 0 0 0;
     }
-    .contact-us-title {
+    .contact-us__title {
         width: 200px;
         height: 248.49px;
-        left: 294px;
-        top: 491px;
-        margin-top: -153px;
-        margin-right: -385px;
-        font-family: 'Inika';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 40px;
     }
     .contact-us__img {
-        position: absolute;
         width: 200px;
         height: 248.49px;
-        left: 294px;
-        top: 4184px;
     }
 }
 
 @media (max-width: $mobile-big-width) {
     .contact-us {
-        position: relative;
         max-width: 380px;
         width: 384px;
         height: 444px;
-        background: #EDF2EC;
     }
-    .contact__wrapper {
+    .contact-us__wrapper {
         width: 380px;
         height: 490px;
         padding: 21px 0 0 0;
     }
     .contact-us__box-city {
-        width:300px;
+        width: 300px;
         display: flex;
         flex-direction: column;
     }
-    .contact-us-title {
+    .contact-us__title {
         width: 192px;
         height: 34px;
         margin: 0; 
         padding: 155px 0 0 12px;
-        font-family: 'Inika';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 25px;
-        line-height: 33px;
+        font-size: 2.5rem;
+        line-height: 3.3rem;
         text-align: center;
-        color: #499A18;
+        color: $color-green;
     }
     .contact-us__button {
         width: 250px;
     }
     .contact-us__img {
         margin: 0 0 30px 0;
-        position: absolute;
         width: 100px;
         height: 124.25px;
-        left: 139px;
-        top: 320px;
     }
 }

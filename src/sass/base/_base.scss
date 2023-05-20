@@ -102,6 +102,7 @@ li,p {
     a {
         text-decoration: none;
         color: #010201;
+        cursor: pointer;
     }  
     a:hover {
         text-decoration: underline;
@@ -127,10 +128,8 @@ li,p {
         font-style: normal;
         font-weight: 400;
         font-size: 1.5rem;
-        line-height: 25px;
-        color:#636060;
+        line-height: 2.5rem;
+        color: $color-paragraph;
     } 
-    span {
-        color: #499A18;
-    }
+    span {}
 }

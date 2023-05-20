@@ -1,10 +1,10 @@
 .footer {
-    height: 130px;
-    width: 1440px;
-    background: #ffffff;
+    background: $color-white;
     margin: 0 auto;
 }
 .footer__wrapper {
+    margin: auto;
+    max-width: $content-width;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -20,47 +20,35 @@
 .footer-data li {
     padding: 8px;
     margin-right: 1px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+    font-size: 2rem;
 }
 .rsschool li {
     padding: 8px 0;
     margin-left: 12px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+    font-size: 2rem;
 }
 .social-list li {
     padding: 8px 10px;
 }
-.instagram__svg__item {
+.instagram__svg__item a {
     padding-bottom: 0;
     margin-right: 7px;
-    cursor: pointer;
 }
-.facebook__svg__item img {
+.facebook__svg__item a {
     padding-bottom: 0;
     margin-right: 4px;
-    cursor: pointer;
 }
-.twitter__svg__item img {
-    padding-bottom: 3px;
-    cursor: pointer;
+.twitter__svg__item a {
+    padding-bottom: 3px; 
 }
-.pinterest__svg__item img {
-    padding-bottom: 1px;
-    cursor: pointer;
+.pinterest__svg__item a {
+    padding-bottom: 1px;  
 }
 
 @media (max-width: $tablet-width) {
     .footer {
-        max-width: 768px;
-        width: auto;
+        width: 100%;
         height: auto;
-        background: #ffffff;
         margin: 0 auto;
     }
     .footer__wrapper {
@@ -80,52 +68,42 @@
     .footer-data li {
         padding: 8px;
         margin-right: 0px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
+        font-size: 2rem;
     }
     .rsschool li {
         padding: 8px 0;
         margin-left: -3px;
         margin-top: -6px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
+        font-size: 2rem;
     }
     .social-list li {
-        padding: 15px 10px;}
-    .instagram__svg__item {
+        padding: 15px 10px;
+    }
+    .instagram__svg__item a {
         padding-bottom: 0;
         margin-right: 7px;
-        cursor: pointer;
     }
-    .facebook__svg__item img {
+    .facebook__svg__item a {
         padding-bottom: 0;
         margin-right: 4px;
-        cursor: pointer;
     }
-    .twitter__svg__item img {
-        padding-bottom: 3px;
-        cursor: pointer;
+    .twitter__svg__item a {
+        padding-bottom: 3px; 
     }
-    .pinterest__svg__item img {
-        padding-bottom: 1px;
-        cursor: pointer;
+    .pinterest__svg__item a {
+        padding-bottom: 1px; 
     }
 }
 
 @media (max-width: $mobile-big-width) {
     .footer {
-        width: 380px;
+        width: 100%;
         height: 146px;
         margin: 0 auto;
-        background: #ffffff;
     }
     .footer__wrapper {
         margin-top: -10px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
         padding: 20px 0px 0px 2px;
         display: flex;
         flex-direction: column;
@@ -140,40 +118,30 @@
     }
     .footer-data li {
         padding: 8px;
-        margin-right: 0px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
+        margin-right: 0;
         font-size: 20px;
     }
     .rsschool li {
         padding: 8px 0;
         margin-left: -3px;
         margin-top: -6px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
+        font-size: 2rem;
     }
     .social-list li {
         padding: 0px 10px 5px 10px;
     }
-    .instagram__svg__item {
+    .instagram__svg__item a {
         padding-bottom: 0;
         margin-right: 7px;
-        cursor: pointer;
     }
-    .facebook__svg__item img {
+    .facebook__svg__item a {
         padding-bottom: 0;
         margin-right: 4px;
-        cursor: pointer;
     }
-    .twitter__svg__item img {
+    .twitter__svg__item a {
         padding-bottom: 3px;
-        cursor: pointer;
     }
-    .pinterest__svg__item img {
-        padding-bottom: 1px;
-        cursor: pointer;
+    .pinterest__svg__item a {
+        padding-bottom: 1px;  
     }
 }

@@ -43,7 +43,7 @@
     <meta name="application-name" content="My Application">
     <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
 
-    <link rel="manifest" href="./assets/docs/manifest.json">
+    <!-- <link rel="manifest" href="./assets/docs/manifest.json"> -->
     <meta name="theme-color" content="#ffffff">
 
     <!-- join preprocessor -->
@@ -51,6 +51,7 @@
 
     <title>Plants</title>
 </head>
+
 
 <body id="Home">
     <!-- <button class="change__button __changer">Change Theme</button> -->
@@ -62,19 +63,19 @@
             </div>
             <nav class="header__navigation nav__menu">
                 <ul class="navigation">
-                    <li class="list__item home__item ">
+                    <li class="list__item">
                         <a id="__show" class="menu-link" href="#Home" onclick="smoothScroll('#Home')" target="link">Home</a>
                     </li>
-                    <li class="list__item about-us__item">
+                    <li class="list__item">
                         <a id="__show" class="menu-link" href="#About-us" onclick="smoothScroll('#About-us')" target="link">About us</a>
                     </li>
-                    <li class="list__item service-__item">
+                    <li class="list__item">
                         <a id="__show" class="menu-link" href="#Service" onclick="smoothScroll('#Service')" target="link">Service</a>
                     </li>
-                    <li class="list__item price__item">
+                    <li class="list__item">
                         <a id="__show" class="menu-link" href="#Price" onclick="smoothScroll('#Price')" target="link">Price</a>
                     </li>
-                    <li class="list__item contacts__item">
+                    <li class="list__item">
                         <a id="__show" class="menu-link" href="#Contacts" onclick="smoothScroll('#Contacts')" target="link">Contacts</a>
                     </li>
                 </ul>
@@ -114,14 +115,16 @@
 
         <section class="service">
             <div class="wrapper service__wrapper">
-                <h2 id="Service"><span>Service and our projects</span></h2>
-                <div class="services__buttons">
-                    <button class="btn__project btn__animation_2">Gardens</button>
-                    <button class="btn__project btn__animation_2">Lawn</button>
-                    <button class="btn__project btn__animation_2">Planting</button>
+                <div class="service__content">
+                    <h2 id="Service">Service and our projects</h2>
+                    <div class="services__buttons">
+                        <button class="btn__project btn__animation_2">Gardens</button>
+                        <button class="btn__project btn__animation_2">Lawn</button>
+                        <button class="btn__project btn__animation_2">Planting</button>
+                    </div>
                 </div>
     
-                <article class="services__content">
+                <article class="services">
                     <div class="service__item">
                         <img src="./assets/img/service_1.png" alt="garden care image aloyee">
                         <div class="description">
@@ -171,7 +174,7 @@
         <section class="prices">
             <div class="wrapper prices__wrapper">
                 <div class="prices__bar">
-                    <h2 id="Price">Prices</h2>
+                    <h2 class="prices__bar__title" id="Price">Prices</h2>
                     <div class="prices__list">
                         <button class="btn__item btn-basics">
                             <strong>Basics</strong>
@@ -189,11 +192,11 @@
                 </div>
                 <div class="price__info">
                     <div class="prices__content">
-                        <h2>Our best <span>gardeners </span> are ready to help you</h2>
+                        <h2 class="prices__content__title">Our best <span>gardeners </span> are ready to help you</h2>
                         <button class="btn__contact-us btn__animation">Contact us</button>
                     </div>
                     <div class="leafs" >
-                        <img src="./assets/img/leafs_small.png" alt="small leafs image png">
+                        <img class="leafs__img" src="./assets/img/leafs_small.png" alt="small leafs image png">
                     </div>
                 </div>
             </div>
@@ -202,7 +205,7 @@
         <section class="contact-us">
             <div class="wrapper contact-us__wrapper">
                 <div class="contact-us__box-city">
-                    <h2 class="contact-us-title"><span>Contact us</span></h2>
+                    <h2 class="contact-us__title"><span>Contact us</span></h2>
                     <div class="contact-us__button">
                         <button type="submit" class="btn__city__bar contact-us__selected">
                             <span>City</span>
@@ -210,7 +213,9 @@
                         </button>
                     </div>
                 </div>
-                <img class="contact-us__img" src="./assets/img/contact_woman.png" alt="image contact woman">
+                <div class="contact-us__woman">
+                    <img class="contact-us__img" src="./assets/img/contact_woman.png" alt="image contact woman">
+                </div>
             </div>
         </section>
     </main>
