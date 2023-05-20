@@ -4,24 +4,20 @@ video {
     padding: 0;
     outline: none;
 }
-
 ol,ul {
     list-style: none;
     list-style-type: none;
-} 
-
+}
 blockquote,q {
     quotes: none;
-} 
-
+}
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {  
     content: '';
     content: none;
-} 
-
+}
 input {
     outline: none;
 }

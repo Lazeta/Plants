@@ -7,16 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="true">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg">
-    <link rel="icon" type="image/png" href="assets/svg/favicon.png">
-    
-    <link rel="stylesheet" href="./sass/main.css">
-    
+    <link rel="stylesheet" href="./sass/fonts.css">
+
+    <!-- Desktop browsers -->
+    <link type="image/x-icon" rel="shortcut icon" href="./assets/favicon/favicon.ico">
+    <link type="image/png" sizes="16x16" rel="icon" href="./assets/favicon/favicon-16x16.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="./assets/favicon/favicon-32x32.png">
+    <link type="image/png" sizes="96x96" rel="icon" href="./assets/favicon/favicon-96x96.png">
+    <link type="image/png" sizes="120x120" rel="icon" href="./assets/favicon/favicon-120x120.png">
+
+    <!-- Chrome on Android -->
+    <link type="image/png" sizes="192x192" rel="icon" href="./assets/favicon/android-chrome-192x192.png">
+    <link type="image/png" sizes="512x512" rel="icon" href="./assets/favicon/android-chrome-512x512.png">
+
+    <!-- Bookmark icon in iOS (PWA) -->
+    <link sizes="57x57" rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon-57x57.png">
+    <link sizes="60x60" rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon-60x60.png">
+    <link sizes="72x72" rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon-72x72.png">
+    <link sizes="76x76" rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon-76x76.png">
+    <link sizes="114x114" rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon-114x114.png">
+    <link sizes="120x120" rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon-120x120.png">
+    <link sizes="144x144" rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon-144x144.png">
+    <link sizes="152x152" rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon-152x152.png">
+    <link sizes="180x180" rel="apple-touch-icon" href="./assets/favicon/apple-touch-icon-180x180.png">
+
+    <!-- macOS -->
+    <meta name="msapplication-TileColor" content="#2b5797">
+
+    <!-- Windows -->
+    <meta name="msapplication-square70x70logo" content="./assets/favicon/mstile-70x70.png">
+    <meta name="msapplication-TileImage" content="./assets/favicon/mstile-144x144.png">
+    <meta name="msapplication-square150x150logo" content="./assets/favicon/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="./assets/favicon/mstile-310x310.png">
+    <meta name="msapplication-square310x310logo" content="./assets/favicon/mstile-310x150.png">
+    <meta name="application-name" content="My Application">
+    <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
+
+    <link rel="manifest" href="./assets/docs/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" href="./sass/main.css">   
+
     <title>Plants</title>
 </head>
 
@@ -169,7 +201,7 @@
                 <div class="contact-us__box-city">
                     <h2 class="contact-us-title"><span>Contact us</span></h2>
                     <div class="contact-us__button">
-                        <button type="submit" class="btn__city__bar btn-success">
+                        <button type="submit" class="btn__city__bar contact-us__selected">
                             <span>City</span>
                             <img class="btn__accordion__city" src="assets/svg/accordion_btn.svg" alt="accordion btn svg">
                         </button>

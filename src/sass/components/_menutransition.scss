@@ -1,7 +1,6 @@
 .burger__menu {
     display: none;
 }
-
 .nav__menu {
     display: none;       
 }
@@ -22,7 +21,6 @@
     cursor: pointer;
 }
 
-
 @media (max-width: $tablet-width) {
     /* меню бургер в 4 полосы с анимацией, превращения в крестик */
     .burger__menu {
@@ -37,11 +35,9 @@
         top: 36px;
         right: 25px;
     }
-
     .header__navigation {
         display: none;
     }
-
     .navigation {
         display: none;
         flex-direction: column;
@@ -58,12 +54,10 @@
         overflow-y: auto;
         text-align: center;
     }
-
     .navigation.__burger__menu {
         display: flex;
         animation: burgerAnimationOpen 0.75s;
     }
-
     .navigation.close {
         display: flex;
         animation: burgerAnimationClose 0.8s;
@@ -113,11 +107,10 @@
         flex-direction: column;
         align-items: flex-start; 
     }
-
     nav > ul > li {
         font-size: 3.6rem;
-        line-height: 50px; }
-    
+        line-height: 50px; 
+    }
 }
 
 

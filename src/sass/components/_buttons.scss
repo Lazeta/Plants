@@ -33,12 +33,10 @@
     margin-left: -2px;
     text-align: center;
 }
-
 .btn__project__2 {
     margin-right: 34px;
     text-align: center;    
 }
-
 .btn__project__3 {
     text-align: center;
     margin-right: 1.5px;
@@ -142,7 +140,7 @@
 }
 
 
-.btn-success {}
+
 
 @media (max-width: $tablet-width) {
     .btn__learn-more {
@@ -216,7 +214,6 @@
         border-radius: 5px;
         cursor: pointer;
     }
-
     .btn__city__bar {
         width: 450px;
         height: 50px;
@@ -272,9 +269,6 @@
         background-color: #E06733;
         color:#ffffff;
     }
-
-
-    .btn-success {}
 }
 
 @media (max-width: $mobile-big-width) {
@@ -408,7 +402,6 @@
         letter-spacing: 0.05em;
         color: #717171;
         text-align: center;
-        
     }
     .btn__city__bar img {
         padding: 0 20px 17px 0;
@@ -419,7 +412,7 @@
         margin-right: 0px;
         cursor: pointer;
     }
-    
+
 
     .btn__animation {
         transition: 0.6s;
@@ -441,7 +434,4 @@
         background-color: #E06733;
         color:#ffffff;
     }
-
-
-    .btn-success {}
 }
