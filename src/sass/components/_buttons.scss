@@ -8,26 +8,21 @@
     background-color: rgba(0,0,0,0);
     border: 2px solid #E06733;
     border-radius: 10px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     text-align: center;
 }
-
-.services__btns button {
-    width: 161px;
-    height: 50px;
-    font-family: 'Inika';
-    font-style: normal;
-    font-weight: 400;
+.btn__project {
+    min-width: 161px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    padding: auto;
+    margin: 0 19px;
     font-size: 2.0rem;
-    background-color: rgba(0,0,0,0);
-    color: #E06733;
     border: 1px solid #E06733;
     border-radius: 5px;
-    cursor: pointer;
 }
-
 .btn__project__1 {
     margin-right: 35px;
     margin-left: -2px;
@@ -146,14 +141,6 @@
     .btn__learn-more {
         width: 158px;
         height: 44px;
-        font-family: 'inter', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        background-color: rgba(0,0,0,0);
-        color: #000000;
-        border: 2px solid #E06733;
-        border-radius: 10px;
-        cursor: pointer;
     }
     
     .services__btns button {
@@ -278,19 +265,9 @@
         margin-bottom: 59px;
         margin-left: 1px;
         padding-left: 16px;
-        background-color: rgba(0,0,0,0);
-        border: 2px solid #E06733;
-        border-radius: 10px;
-        cursor: pointer;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 20px;
-        color: #000000;
     }
 
-    .services__btns button {
+    .services__button {
         width: 121px;
         height: 35px;
         margin: 0px 10px 9px 0;
@@ -306,20 +283,6 @@
         border-radius: 5px;
         cursor: pointer;
     }
-    .btn__project__1 {
-        margin-right: 0px;
-        margin-left: 0px;
-        text-align: center;
-    }
-    .btn__project__2 {
-        margin-right: 0px;
-        text-align: center;    
-    }
-    .btn__project__3 {
-        text-align: center;
-        margin-right: 0px;
-    }
-
     .btn__item {
         width: 180px;
         height: 49.72px;

@@ -4,11 +4,10 @@
 }
 
 .header__wrapper {
-    margin: auto;
+    margin: 0 auto;
     max-width: $content-width;
-    width: 59%;
     height: 134px;
-    padding: 48px 109px;
+    padding: 42px 109px 42px 111px;
     display: flex;
     justify-content: space-between;
 }
@@ -25,6 +24,19 @@
 .header__navigation li {
     display: inline-flex;
     flex-direction: row;
+}
+.logo__box {
+    padding-top: 8px;
+    margin: 0;
+}
+.logo__name {
+    font-family: 'Inika', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: $color-links;
+    margin-left: -4px;
 }
 
 @media (max-width: $tablet-width){

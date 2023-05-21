@@ -4,7 +4,7 @@
     background: $color-light;
 }
 .welcome__wrapper {
-    max-width: 1220px;
+    max-width: auto;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -13,20 +13,19 @@
 .welcome__section {
     width: auto;
     height: 340px;
-    margin: 36px -2px;
+    margin: 36px 0;
+    padding-left: 103px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .welcome__section p {
-    width: auto;
     height: 105px;
-    font-size: 2.0rem;
-    line-height: 3.5rem;
-    align-content: stretch;
+    width: 99%;
+    line-height: 3.4rem;
 }
 .welcome__img {
-
+    padding-right: 109px;
 }
 
 @media (max-width: $tablet-width) {

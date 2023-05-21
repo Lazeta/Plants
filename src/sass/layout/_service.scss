@@ -6,32 +6,33 @@
 .services__wrapper {
 
 }
-.services__wrapper h2 {
-    width: 306px;
-    height: 94px;
-    line-height: 5.2rem;
-}
 .service__content {
     max-width: 1007px;
     height: 94px;
-    padding: 40px 324px 0 109px;
+    padding: 40px 50px 0 109px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
 }
+.service__title {
+    width: 306px;
+    height: 94px;
+    line-height: 5.2rem;
+    padding-top: 20px;
+    color: $color-green;
+}
 .services__buttons {
     max-width: 559px;
     height: 50px;
-    margin-top: 13px;
     display: flex;
     justify-content: space-between;
 }
+
 .services {
     max-width: 1440px;
     height: 955px;
-    padding: 40px 109px 0px 109px;
-    margin-top: 50px;
+    padding: 130px 109px 0px 109px;
     display: grid;
     grid-template-columns: repeat(3, 329px);
     gap: 55px 116px;
