@@ -24,6 +24,7 @@ a {
   line-height: 5rem;
   color: #010201;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
@@ -67,13 +68,13 @@ h4 {
 }
 
 p {
-  font-size: 2rem;
-  white-space: pre-line;
-  color: #636060;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
-  line-height: 30px;
+  font-size: 2rem;
+  line-height: 3.5rem;
+  color: #636060;
+  white-space: pre-line;
 }
 
 strong {
@@ -137,16 +138,14 @@ input {
 .btn__learn-more {
   width: 158px;
   height: 44px;
-  padding-left: 25px;
   font-family: "inter", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  background-color: rgba(0, 0, 0, 0);
   border: 2px solid #E06733;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 }
 
 .btn__project {
@@ -159,22 +158,6 @@ input {
   font-size: 2rem;
   border: 1px solid #E06733;
   border-radius: 5px;
-}
-
-.btn__project__1 {
-  margin-right: 35px;
-  margin-left: -2px;
-  text-align: center;
-}
-
-.btn__project__2 {
-  margin-right: 34px;
-  text-align: center;
-}
-
-.btn__project__3 {
-  text-align: center;
-  margin-right: 1.5px;
 }
 
 .prices__list button {
@@ -684,20 +667,6 @@ input {
   justify-content: space-between;
 }
 
-.header__navigation {
-  height: 50px;
-  max-width: auto;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: baseline;
-}
-
-.header__navigation li {
-  display: inline-flex;
-  flex-direction: row;
-}
-
 .logo__box {
   padding-top: 8px;
   margin: 0;
@@ -726,13 +695,18 @@ input {
     padding: 0;
   }
 }
-.navigation {
+.header__navigation {
+  height: 50px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0 -20px 0 0;
 }
 
-.header__navigation {
-  display: flex;
+.header__navigation li {
+  display: inline-flex;
+  padding: 0 21.5px;
 }
 
 .header__navigation a {
@@ -749,85 +723,8 @@ input {
   transform: scale(1);
   font-size: 100%;
   background-color: rgba(83, 83, 83, 0.2117647059);
-  color: #070707;
+  color: #010201;
   border-radius: 5px;
-  cursor: pointer;
-}
-
-.list__item {
-  padding: 0px 23px;
-}
-
-.logo__list {
-  width: 79.17px;
-  height: 21.04px;
-  margin-top: 10px;
-}
-
-.logo__list__img {
-  margin-right: -4px;
-  margin-top: -1px;
-}
-
-.logo__list span {
-  font-family: "Inika";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  color: #000000;
-}
-
-.home__item a {
-  margin-right: 43px;
-  color: #E06733;
-}
-
-.home__item a:hover {
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-left: -20px;
-  color: #E06733;
-}
-
-.about-us__item a {
-  margin-right: 43px;
-}
-
-.about-us__item a:hover {
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-left: -20px;
-}
-
-.service-__item a {
-  margin-right: 42px;
-}
-
-.service-__item a:hover {
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-left: -20px;
-}
-
-.price__item a {
-  margin-right: 44px;
-}
-
-.price__item a:hover {
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-left: -20px;
-}
-
-.contacts__item a {
-  margin-right: 1px;
-}
-
-.contacts__item a:hover {
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-left: -20px;
 }
 
 @media (max-width: 768px) {
@@ -850,6 +747,9 @@ input {
     font-family: "Inika", sans-serif;
     font-weight: 400;
     display: inline;
+  }
+  .navigation {
+    display: flex;
   }
   .logo__list {
     width: 80px;
@@ -999,21 +899,20 @@ input {
 .welcome__section {
   width: auto;
   height: 340px;
-  margin: 36px 0;
-  padding-left: 103px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 36px 0px 0px 109px;
 }
 
 .welcome__section p {
-  height: 105px;
-  width: 99%;
-  line-height: 3.4rem;
+  padding: 44px 0;
+}
+
+.welcome__section > button {
+  margin-top: 3px;
 }
 
 .welcome__img {
   padding-right: 109px;
+  margin: -7px 0 0 -6px;
 }
 
 @media (max-width: 768px) {

@@ -13,19 +13,17 @@
 .welcome__section {
     width: auto;
     height: 340px;
-    margin: 36px 0;
-    padding-left: 103px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 36px 0px 0px 109px;
 }
 .welcome__section p {
-    height: 105px;
-    width: 99%;
-    line-height: 3.4rem;
+    padding: 44px 0;
+}
+.welcome__section > button {
+    margin-top: 3px;
 }
 .welcome__img {
     padding-right: 109px;
+    margin: -7px 0 0 -6px;
 }
 
 @media (max-width: $tablet-width) {

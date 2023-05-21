@@ -20,6 +20,7 @@ a {
     line-height: 5rem;
     color: $color-links;
     text-decoration: none;
+    cursor: pointer;
 }
 a:hover {
     text-decoration: underline;
@@ -57,13 +58,13 @@ h4 {
     color: $color-main-text;
 }
 p {
-    font-size: 2.0rem;
-    white-space: pre-line;
-    color:#636060;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
-    line-height: 30px;
+    font-size: 2rem;
+    line-height: 3.5rem; 
+    color: $color-paragraph;
+    white-space: pre-line;
 }
 strong {
     font-family: 'Inter';

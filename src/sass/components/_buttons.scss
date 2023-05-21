@@ -1,16 +1,14 @@
 .btn__learn-more {
     width: 158px;
     height: 44px;
-    padding-left: 25px;
     font-family: 'inter', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
-    background-color: rgba(0,0,0,0);
-    border: 2px solid #E06733;
+    border: 2px solid $color-orange;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
 }
 .btn__project {
     min-width: 161px;
@@ -20,21 +18,8 @@
     padding: auto;
     margin: 0 19px;
     font-size: 2.0rem;
-    border: 1px solid #E06733;
+    border: 1px solid $color-orange;
     border-radius: 5px;
-}
-.btn__project__1 {
-    margin-right: 35px;
-    margin-left: -2px;
-    text-align: center;
-}
-.btn__project__2 {
-    margin-right: 34px;
-    text-align: center;    
-}
-.btn__project__3 {
-    text-align: center;
-    margin-right: 1.5px;
 }
 
 .prices__list button {

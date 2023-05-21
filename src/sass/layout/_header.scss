@@ -11,20 +11,6 @@
     display: flex;
     justify-content: space-between;
 }
-
-.header__navigation {
-    height: 50px;
-    max-width: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: baseline;
-}
-
-.header__navigation li {
-    display: inline-flex;
-    flex-direction: row;
-}
 .logo__box {
     padding-top: 8px;
     margin: 0;
