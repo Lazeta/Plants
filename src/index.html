@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="true">
-    
+
     <link rel="stylesheet" href="./sass/fonts.css">
 
     <!-- Desktop browsers -->
@@ -47,7 +47,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- join preprocessor -->
-    <link rel="stylesheet" href="./sass/main.css">   
+    <link rel="stylesheet" href="./sass/main.css">
 
     <title>Plants</title>
 </head>
@@ -64,23 +64,28 @@
             <nav class="header__navigation nav__menu">
                 <ul class="navigation">
                     <li class="list__item">
-                        <a id="__show" class="menu-link" href="#Home" onclick="smoothScroll('#Home')" target="link"><span>Home</span></a>
+                        <a id="__show" class="menu-link" href="#Home" onclick="smoothScroll('#Home')"
+                            target="link"><span>Home</span></a>
                     </li>
                     <li class="list__item">
-                        <a id="__show" class="menu-link" href="#About-us" onclick="smoothScroll('#About-us')" target="link">About us</a>
+                        <a id="__show" class="menu-link" href="#About-us" onclick="smoothScroll('#About-us')"
+                            target="link">About us</a>
                     </li>
                     <li class="list__item">
-                        <a id="__show" class="menu-link" href="#Service" onclick="smoothScroll('#Service')" target="link">Service</a>
+                        <a id="__show" class="menu-link" href="#Service" onclick="smoothScroll('#Service')"
+                            target="link">Service</a>
                     </li>
                     <li class="list__item">
-                        <a id="__show" class="menu-link" href="#Price" onclick="smoothScroll('#Price')" target="link">Price</a>
+                        <a id="__show" class="menu-link" href="#Price" onclick="smoothScroll('#Price')"
+                            target="link">Price</a>
                     </li>
                     <li class="list__item">
-                        <a id="__show" class="menu-link" href="#Contacts" onclick="smoothScroll('#Contacts')" target="link">Contacts</a>
+                        <a id="__show" class="menu-link" href="#Contacts" onclick="smoothScroll('#Contacts')"
+                            target="link">Contacts</a>
                     </li>
                 </ul>
             </nav>
-            
+
             <!-- меню бургер работает при разрешении экрана до 767px включительно -->
             <div class="burger__menu">
                 <div class="strip"></div>
@@ -97,7 +102,8 @@
                 <img class="welcome__img" src="./assets/img/leafs_large.png" alt="big leafs image png">
                 <div class="welcome__section">
                     <h1 class="welcome__title">We grow <em>plants</em> and give you oxygen</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.</p>
                     <button class="btn__learn-more btn__animation">LEARN MORE</button>
                 </div>
             </div>
@@ -106,8 +112,13 @@
         <section class="about">
             <div class="wrapper about__wrapper">
                 <div class="about__content">
-                    <h2 id="About-us" class="about__title"><em>We are</em> professional experienced <em>gardeners</em></h2>
-                    <p class="about__paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h2 id="About-us" class="about__title"><em>We are</em> professional experienced <em>gardeners</em>
+                    </h2>
+                    <p class="about__paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into electronic typesetting, remaining
+                        essentially unchanged.</p>
                 </div>
                 <img class="about__img" src="./assets/img/houseplant_large.png" alt="plant image png">
             </div>
@@ -123,7 +134,7 @@
                         <button class="btn__project btn__animation_2">Planting</button>
                     </div>
                 </div>
-    
+
                 <article class="services">
                     <div class="service__item">
                         <img src="./assets/img/service_1.png" alt="garden care image aloyee">
@@ -174,28 +185,42 @@
         <section class="prices">
             <div class="wrapper prices__wrapper">
                 <div class="prices__bar">
-                    <h2 class="prices__bar__title" id="Price">Prices</h2>
-                    <div class="prices__list">
-                        <button class="btn__item btn-basics">
-                            <strong>Basics</strong>
-                            <img class="btn__accordion__item" src="./assets/svg/accordion_btn_item.svg" alt="accordion btn svg black arrow">
-                        </button>
-                        <button class="btn__item btn-standard">
-                            <strong>Standart</strong>
-                            <img class="btn__accordion__item" src="./assets/svg/accordion_btn_item.svg" alt="accordion btn svg black arrow">
-                        </button>
-                        <button class="btn__item btn__item-pro">
-                            <strong>Pro care</strong>
-                            <img class="btn__accordion__item" src="./assets/svg/accordion_btn_item.svg" alt="accordion btn svg black arrow">
-                        </button>
+                    <div class="prices__bar__header">
+                        <h2 class="prices__bar__title" id="Price">Prices</h2>
+                    </div>
+                    <div class="prices__bar__content">
+                        <div class="prices__list">
+                            <div class="prices__item">
+                                <button class="btn__item btn__item-basics">
+                                    <strong>Basics</strong>
+                                    <img class="btn__accordion__item" src="./assets/svg/accordion_btn_item.svg"
+                                        alt="accordion btn svg black arrow with check mark">
+                                </button>
+                            </div>
+                            <div class="prices__item">
+                                <button class="btn__item btn__item-standard">
+                                    <strong>Standard</strong>
+                                    <img class="btn__accordion__item" src="./assets/svg/accordion_btn_item.svg"
+                                        alt="accordion btn svg black arrow with check mark">
+                                </button>
+                            </div>
+                            <div class="prices__item">
+                                <button class="btn__item btn__item-pro">
+                                    <strong>Pro care</strong>
+                                    <img class="btn__accordion__item" src="./assets/svg/accordion_btn_item.svg"
+                                        alt="accordion btn svg black arrow with check mark">
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="price__info">
                     <div class="prices__content">
-                        <h2 class="prices__content__title">Our best <span>gardeners </span> are ready to help you</h2>
+                        <h3 class="prices__content__title">Our best <em>gardeners </em> are ready to help you</h3>
                         <button class="btn__contact-us btn__animation">Contact us</button>
                     </div>
-                    <div class="leafs" >
+                    <div class="leafs">
                         <img class="leafs__img" src="./assets/img/leafs_small.png" alt="small leafs image png">
                     </div>
                 </div>
@@ -209,7 +234,8 @@
                     <div class="contact-us__button">
                         <button type="submit" class="btn__city__bar contact-us__selected">
                             <span>City</span>
-                            <img class="btn__accordion__city" src="./assets/svg/accordion_btn.svg" alt="accordion btn svg">
+                            <img class="btn__accordion__city" src="./assets/svg/accordion_btn.svg"
+                                alt="accordion btn svg">
                         </button>
                     </div>
                 </div>

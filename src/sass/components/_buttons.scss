@@ -31,23 +31,23 @@
 .btn__item {
     width: 250px;
     height: 50px;
-    margin: 16px 41px;
-    padding: 14px 40px;
-    text-align: start;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2rem;
-    background: #EDF2EC;
+    background: $color-light;
     border-radius: 20px;
     border: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;   
 }
-
+.btn__item-basics :nth-child(1) {
+    padding: 28px 106px 16px 23px;
+}
+.btn__item-standard :nth-child(1) {
+    padding: 21px 65px 16px 17px;
+}
+.btn__item-pro :nth-child(1) {
+    padding: 15px 98px 16px 23px;
+} 
 .btn__accordion__item {
-    background-color: rgba(0,0,0,0);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -305,7 +305,6 @@
     .btn__accordion__item {
         padding-right: 22px;
         padding-top: 4px;
-        background-color: rgba(0,0,0,0);
         border-radius: 50%;
         cursor: pointer;
     }

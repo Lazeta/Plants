@@ -75,11 +75,10 @@ p {
   line-height: 3.5rem;
   line-height: 3rem;
   color: #636060;
-  white-space: pre-line;
 }
 
 strong {
-  font-family: "Inter";
+  font-family: "Inter" sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
@@ -167,23 +166,27 @@ input {
 .btn__item {
   width: 250px;
   height: 50px;
-  margin: 16px 41px;
-  padding: 14px 40px;
-  text-align: start;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 2rem;
   background: #EDF2EC;
   border-radius: 20px;
   border: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn__item-basics :nth-child(1) {
+  padding: 28px 106px 16px 23px;
+}
+
+.btn__item-standard :nth-child(1) {
+  padding: 21px 65px 16px 17px;
+}
+
+.btn__item-pro :nth-child(1) {
+  padding: 15px 98px 16px 23px;
 }
 
 .btn__accordion__item {
-  background-color: rgba(0, 0, 0, 0);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -436,7 +439,6 @@ input {
   .btn__accordion__item {
     padding-right: 22px;
     padding-top: 4px;
-    background-color: rgba(0, 0, 0, 0);
     border-radius: 50%;
     cursor: pointer;
   }
@@ -1358,7 +1360,7 @@ input {
   margin: auto;
 }
 
-.prices__container {
+.prices__wrapper {
   width: 1222px;
   height: 405px;
   display: inline-flex;
@@ -1374,6 +1376,10 @@ input {
 
 .prices__bar__title {
   padding-bottom: 60px;
+  margin-top: -2px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
   font-size: 4rem;
   line-height: 4.8rem;
 }
@@ -1386,6 +1392,8 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .price__info {
@@ -1402,12 +1410,17 @@ input {
 }
 
 .prices__content__title {
+  font-family: "Inter" sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
   line-height: 5rem;
+  color: #000000;
 }
 
 .leafs {
   width: 152px;
   height: 175px;
+  padding-top: 33px;
 }
 
 @media (max-width: 768px) {
