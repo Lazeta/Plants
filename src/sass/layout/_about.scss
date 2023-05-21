@@ -3,14 +3,14 @@
     height: 666px;
     background: $color-white;
     margin: auto;
+    padding: 93px 109px 94px 109px;
 }
 .about__wrapper {
-    width: 1222px;
+    width: auto;
     height: 479px;
-    padding: 93px 109px 94px 109px;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 .about__content {
@@ -24,7 +24,6 @@
 }
 .about__content p {
     padding-top: 40px;
-    font-size: 2rem;
 }
 
 @media (max-width: $tablet-width) {
@@ -39,7 +38,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        margin: 0 0 0 0;
+        margin: 0;
         padding: 0 50px 0 0px;
     }
     .about__container__img {

@@ -1,27 +1,36 @@
 .welcome {
-    width: auto;
-    height: 532px;
+    max-width: $content-width;
     background: $color-light;
+    margin: auto;
+    height: 532px;
+    padding: 63px 109px;
+    width: 100%;
 }
 .welcome__wrapper {
-    max-width: auto;
+    // width: auto;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 62px 109px;
 }
 .welcome__section {
-    width: auto;
-    height: 340px;
-    padding: 36px 0px 0px 109px;
+    min-width: 238px;
+    height: 360px;
+    width: 549;
+    margin-top: 15px;
+    padding: 20px 0px 0px 109px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .welcome__section p {
-    padding: 44px 0;
+    line-height: 3.5rem;
 }
 .welcome__section > button {
     margin-top: 3px;
 }
 .welcome__img {
+    width: 100%;
+    height: 100%;
     padding-right: 109px;
     margin: -7px 0 0 -6px;
 }

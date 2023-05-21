@@ -73,6 +73,7 @@ p {
   font-weight: 400;
   font-size: 2rem;
   line-height: 3.5rem;
+  line-height: 3rem;
   color: #636060;
   white-space: pre-line;
 }
@@ -101,10 +102,6 @@ li {
 
 button {
   cursor: pointer;
-}
-
-.container {
-  margin: 0 auto;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio,
@@ -150,12 +147,14 @@ input {
 
 .btn__project {
   min-width: 161px;
-  min-height: 50px;
+  height: 50px;
+  margin: 0px 19px;
+  padding: auto;
+  font-size: 2rem;
+  color: #E06733;
   display: flex;
   align-items: center;
-  padding: auto;
-  margin: 0 19px;
-  font-size: 2rem;
+  justify-content: center;
   border: 1px solid #E06733;
   border-radius: 5px;
 }
@@ -883,27 +882,33 @@ input {
   }
 }
 .welcome {
-  width: auto;
-  height: 532px;
+  max-width: 1440px;
   background: #EDF2EC;
+  margin: auto;
+  height: 532px;
+  padding: 63px 109px;
+  width: 100%;
 }
 
 .welcome__wrapper {
-  max-width: auto;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: 62px 109px;
 }
 
 .welcome__section {
-  width: auto;
-  height: 340px;
-  padding: 36px 0px 0px 109px;
+  min-width: 238px;
+  height: 360px;
+  width: 549;
+  margin-top: 15px;
+  padding: 20px 0px 0px 109px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .welcome__section p {
-  padding: 44px 0;
+  line-height: 3.5rem;
 }
 
 .welcome__section > button {
@@ -911,6 +916,8 @@ input {
 }
 
 .welcome__img {
+  width: 100%;
+  height: 100%;
   padding-right: 109px;
   margin: -7px 0 0 -6px;
 }
@@ -992,15 +999,15 @@ input {
   height: 666px;
   background: #FFFFFF;
   margin: auto;
+  padding: 93px 109px 94px 109px;
 }
 
 .about__wrapper {
-  width: 1222px;
+  width: auto;
   height: 479px;
-  padding: 93px 109px 94px 109px;
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -1017,7 +1024,6 @@ input {
 
 .about__content p {
   padding-top: 40px;
-  font-size: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -1032,7 +1038,7 @@ input {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin: 0 0 0 0;
+    margin: 0;
     padding: 0 50px 0 0px;
   }
   .about__container__img {
@@ -1105,33 +1111,33 @@ input {
   background: #EDF2EC;
 }
 
+.service__wrapper {
+  display: block;
+}
+
 .service__content {
-  max-width: 1007px;
   height: 94px;
-  padding: 40px 50px 0 109px;
+  padding: 70px 50px 20px 109px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .service__title {
-  width: 306px;
+  width: 429px;
   height: 94px;
+  margin-top: -30px;
   line-height: 5.2rem;
-  padding-top: 20px;
-  color: #499A18;
 }
 
 .services__buttons {
-  max-width: 559px;
   height: 50px;
   display: flex;
   justify-content: space-between;
 }
 
 .services {
-  max-width: 1440px;
   height: 955px;
   padding: 130px 109px 0px 109px;
   display: grid;
@@ -1161,18 +1167,14 @@ input {
 }
 
 .description h3 {
-  margin-top: 10px;
-  padding-bottom: 10px;
-  color: #E06733;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 20px;
+  line-height: 4.6rem;
 }
 
 .description p {
   color: #717171;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -1184,7 +1186,7 @@ input {
     background: #EDF2EC;
     margin-bottom: 17px;
   }
-  .services__wrapper {
+  .service__wrapper {
     width: auto;
     height: auto;
     padding: 48px 0 30px 50px;
@@ -1193,7 +1195,7 @@ input {
     justify-content: none;
     align-items: flex-start;
   }
-  .services__wrapper h2 {
+  .service__wrapper h2 {
     width: 306px;
     height: 94px;
     line-height: 35px;
@@ -1240,17 +1242,6 @@ input {
     border: 1px solid #E3E1D5;
     border-radius: 0px 0px 20px 20px;
     text-align: center;
-  }
-  .description h3 {
-    margin-top: 11px;
-    padding-right: 3px;
-    padding-bottom: 11px;
-    color: #E06733;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 20px;
   }
   .description p {
     width: 201;
