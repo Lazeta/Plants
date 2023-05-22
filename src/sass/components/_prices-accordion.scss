@@ -1,4 +1,10 @@
-
+.btn__accordion__item {
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btn__accordion__item :nth-child(1) {
+    margin: 0 0 0 0;   
+}
 
 @media (max-width: $tablet-width) {
 
