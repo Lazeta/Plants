@@ -1,33 +1,36 @@
 .welcome {
     background: $color-light;
-    margin: auto;
     height: 532px;
-    padding: 63px 5%;
-    width: 100%;
+    padding: 63px 5% 0 5%;
+    width: auto;
 }
 .welcome__wrapper {
-    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
 }
-.welcome__wrapper img {
-    max-width: 100%;
-    height: auto;
-    margin-right: 5%;
-    padding-left: 7%;
-    margin: -0.8% 5% 0 0;
+.welcome__img {
+    width: 448.8px;
+    height: 407.36px;
+    margin: -10px 25px 0px;
+    padding: 0 0 0 75px;
 }
 .welcome__section {
     max-height: 100%;
     min-width: 549px;
     height: 375px;
     width: calc(50% - 2.5%);
-    padding: 36px 109px 0px 27px;
-    margin-left: 5%;
+    padding: 36px 109px 0px 26px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.welcome__title {
+    // width: 600px;
+    min-width: 414px;
+    height: auto;
 }
 .welcome__section p {
     line-height: 3.5rem;
