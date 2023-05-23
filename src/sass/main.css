@@ -18,10 +18,10 @@ body {
 
 a {
   font-family: "Inika", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.6rem;
+  font-style: 1.6rem;
   line-height: 5rem;
+  font-weight: 400;
+  font-style: normal;
   color: #010201;
   text-decoration: none;
   cursor: pointer;
@@ -33,56 +33,50 @@ a:hover {
 
 h1 {
   font-family: "Inter", sans-serif;
-  font-style: normal;
+  font-style: 4.5rem;
+  line-height: 5rem;
   font-weight: 700;
+  font-style: normal;
   font-size: 4.5rem;
   color: #717171;
-  line-height: 5rem;
 }
 
 h2 {
   font-family: "Inika", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 4rem;
+  font-style: 4rem;
   line-height: 5.2rem;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
   color: #499A18;
 }
 
 h3 {
   font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2rem;
+  font-style: 2rem;
   line-height: 5rem;
-  color: #E06733;
-}
-
-h4 {
-  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-weight: 400;
-  font-size: 2rem;
-  line-height: 4rem;
-  color: #717171;
+  color: #E06733;
 }
 
 p {
   font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2rem;
-  line-height: 3.5rem;
+  font-style: 2rem;
   line-height: 3rem;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
   color: #636060;
 }
 
 strong {
   font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2rem;
+  font-style: 2rem;
   line-height: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
   color: #636060;
 }
 
@@ -100,10 +94,11 @@ li {
 }
 
 button {
-  font-family: "Inika", sans-serif;
+  font-family: "Inika", serif;
   font-style: normal;
-  font-weight: 400;
   line-height: 2.6rem;
+  font-weight: 400;
+  font-style: normal;
   cursor: pointer;
 }
 

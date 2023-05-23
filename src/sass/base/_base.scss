@@ -13,65 +13,44 @@ body {
     line-height: 1rem;
 }
 a {
-    font-family: 'Inika', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 5rem;
+    @include font(('Inika', serif), 1.6rem, 5rem, 400, normal);
     color: $color-links;
     text-decoration: none;
     cursor: pointer;
+
 }
 a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 700;
+    @include font(('Inter', sans-serif), 4.5rem, 5rem, 700, normal);
+    // нужно пофиксить баг из за чего вылазит приоритет -webkit any(artivle, aside, nav, section) h1 {}
     font-size: 4.5rem;
     color: $color-main-text;
-    line-height: 5rem;
 }
 h2 {
-    font-family: 'Inika', serif;
-    font-style: normal;
-    font-weight: 400;
+    @include font(('Inika', serif), 4rem, 5.2rem, 400, normal);
+    // нужно пофиксить баг из за чего вылазит приоритет -webkit any(artivle, aside, nav, section) h1 {}
     font-size: 4rem;
-    line-height: 5.2rem;
     color: $color-green;
 }
 h3 {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 5rem;
+    @include font(('Inter', sans-serif), 2rem, 5rem, 700, normal);
     color: $color-orange;
 }
-h4 {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 4rem;
-    color: $color-main-text;
-}
+// h4 {
+//     @include font(('Inter', sans-serif), 2rem, 4rem, 400, normal);
+//     color: $color-main-text;
+// }
 p {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    @include font(('Inter', sans-serif), 2rem, 3rem, 400, normal);
+    // нужно пофиксить баг из за чего вылазит приоритет -webkit any(artivle, aside, nav, section) h1 {}
     font-size: 2rem;
-    line-height: 3.5rem; 
-    line-height: 3rem; 
     color: $color-paragraph;
 }
 strong {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 700;
+    @include font(('Inter', sans-serif), 2rem, 2rem, 700, normal);
     font-size: 2rem;
-    line-height: 2rem;
     color: $color-paragraph;
 }
 span { 
@@ -85,10 +64,7 @@ li {
     color: $color-links;
 }
 button {
-    font-family: 'Inika', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2.6rem;
+    @include font(('Inika', serif), normal, 2.6rem, 400, normal);
     cursor: pointer;
 }
 
