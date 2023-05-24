@@ -1,115 +1,105 @@
 .burger__menu {
     display: none;
 }
-.nav__menu {
-    display: none;       
+.mobile-menu {
+    display: none;
 }
-.nav__menu a {
-    text-decoration: none;
-}
-.nav__menu li a{
-    transition: 0.4s;
-    transform: scale(1);
-}
-.nav__menu li a:hover {
-    transition: 2s;
-    transform: scale(1);
-    font-size: 100%;
-    background-color: #53535336;
-    color:#070707;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
 
 @media (max-width: $tablet-width) {
     /* меню бургер в 4 полосы с анимацией, превращения в крестик */
     .burger__menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 24px;
         width: 40px;
-        cursor: pointer;
-        z-index: 11;
+        height: 24px;
+        @include flex (flex, column, none, none, space-between, none);
         position: fixed;
         top: 36px;
         right: 25px;
+        z-index: 11;
+        cursor: pointer;
+        &.__active .strip:nth-child(1){
+            width: 33px;
+            transform: rotate(-45deg);
+        }
+        &.__active .strip:nth-child(2){
+            opacity: 0;
+        }
+        &.__active .strip:nth-child(3){
+            opacity: 0;
+        }
+        &.__active .strip:nth-child(4){
+            width: 33px;
+            transform: rotate(45deg);
+        }
     }
     .header__navigation {
-        display: none;
+        
     }
     .navigation {
-        display: none;
-        flex-direction: column;
-        position: fixed;
         width: 100%;
         height: 50%;
-        z-index: 10;
+        display: none;
+        flex-direction: column;
+        padding: 100px 20px 0 50px;
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 100px 20px 0 50px;
-        background-color: rgba(85, 136, 48, 0.9);
-        overflow-y: auto;
+        background-color: $color-green;
+        opacity: 70%;
         text-align: center;
-    }
-    .navigation.__burger__menu {
-        display: flex;
-        animation: burgerAnimationOpen 0.75s;
-    }
-    .navigation.close {
-        display: flex;
-        animation: burgerAnimationClose 0.8s;
+        overflow-y: auto;
+        z-index: 10;
+        &.__burger__menu {
+            display: flex;
+            animation: burgerAnimationOpen 0.75s;
+        }
+        &.close {
+            display: flex;
+            animation: burgerAnimationClose 0.8s;
+        }
+        &.__show {
+            display: flex;
+        }
     }
 
-    /* полоска */
     .strip {
         width: 100%;
         height: 2px;
-        background-color: #717171;
-        transition: transform 0.2s ease;
+        background-color: $color-main-text;
+        transition: transform 0.4s ease;
         z-index: 10;
-    }
-    /* полоска 1 */
-    .strip:nth-child(1) {
-        transform-origin: top right;
-    }
-    /* полоска 2 */
-    .strip:nth-child(2) {
-        transform-origin: top left;
-    }
-    /* полоска 4 */
-    .strip:nth-child(4) {
-        transform-origin: bottom right;
+        &.strip:nth-child(1) {
+            transform-origin: top right;
+        }
+        &.strip:nth-child(2) {
+            transform-origin: top left;
+        }
+        &.strip:nth-child(4) {
+            transform-origin: bottom right;
+        }
     }
 
-    .burger__menu.__active .strip:nth-child(1){
-        width: 33px;
-        transform: rotate(-45deg);
-    }
-    .burger__menu.__active .strip:nth-child(2){
-        opacity: 0;
-    }
-    .burger__menu.__active .strip:nth-child(3){
-        opacity: 0;
-    }
-    .burger__menu.__active .strip:nth-child(4){
-        width: 33px;
-        transform: rotate(45deg);
-    }
 
-    .nav__menu {
-        display: flex;
+    .mobile-menu {
         margin: 0;
-        padding: 0 0 0 50px;
-        list-style-type: none;
-        flex-direction: column;
-        align-items: flex-start; 
-    }
-    nav > ul > li {
-        font-size: 3.6rem;
-        line-height: 50px; 
+        padding-right: 50px;
+        @include flex (flex, column, none, none, none, flex-start);
+        list-style: none;
+        &>*li {
+            @include font (2.4rem, 5rem, 700);
+            box-shadow:1px 1px rgba(0, 0, 0, 1);
+        }
+        &>*a {
+            // @extend %transition-400ms;
+            &:hover {
+                // @extend %transition-2s;
+                background-color: rgba(0, 0, 0, 0.025);
+                color: $color-black;
+                border-radius: 5px;
+            }
+        }
     }
 }
 

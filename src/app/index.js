@@ -10,7 +10,7 @@ if (window.innerWidth <= 768){
     We fixed the constants of our navigation menu and menu icon.
     */
     const burgerIcon = document.querySelector('.burger__menu');
-    const burgerMenu = document.querySelector('.nav__bar');
+    const burgerMenu = document.querySelector('.mobile-menu');
 
     /* *RU* Получаем кнопку меню бургер и добавляем обработчик события click,
     где добавляем или удаляем класс в зависимости от того есть он уже или нет.

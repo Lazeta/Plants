@@ -1,7 +1,14 @@
-@mixin font ($family, $size, $height, $weight, $style) {
-    font-family: $family;
-    font-style: $size;
+@mixin font ($size, $height, $weight) {
+    font-size: $size;
     line-height: $height;
     font-weight: $weight;
-    font-style: $style; 
-} 
+}
+
+@mixin flex ($flex, $direction, $wrap, $align-content, $justify, $align-items) {
+    display: $flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    align-content: $align-content;
+    justify-content: $justify;
+    align-items: $align-items;
+}

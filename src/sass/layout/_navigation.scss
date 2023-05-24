@@ -1,10 +1,8 @@
 .header__navigation {
     height: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    margin-right: -20px;
     padding: 0;
-    margin: 0 -20px 0 0;
+    @include flex (flex, row, none, none, space-between, none);
 }
 .header__navigation li {
     display: inline-flex;
@@ -21,7 +19,7 @@
     transition: 2s;
     transform: scale(1);
     font-size: 100%;
-    background-color: #53535336;
+    background-color: $color-main-text;
     color: $color-links;
     border-radius: 5px;
 }
@@ -43,14 +41,11 @@
         justify-content: space-between;
         flex-direction: row;
         align-items: baseline;
-    }
-    .header__navigation li {
-        font-family: 'Inika', sans-serif;
-        font-weight: 400;
-        display: inline;
-    }
-    .navigation {
-        display: flex;
+        &>*li {
+            font-family: 'Inika', sans-serif;
+            font-weight: 400;
+            display: inline;
+        }
     }
     .list__item {}
     .logo__list {

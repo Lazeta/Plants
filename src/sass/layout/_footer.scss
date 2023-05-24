@@ -28,12 +28,12 @@
     padding: 0 20px 0 0px;
 }
 .footer-data li:nth-of-type(2) {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 5rem;
+    @extend %font-inter;
+    @include font(2rem, 5rem, 400);
     margin: 0 18px;
+    &:hover {
+        text-decoration: none;
+    }
 }
 .rsschool li {
     padding: 0 0 0 15px;

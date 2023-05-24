@@ -1,8 +1,8 @@
 @import 
     'abstracts/constants',
     'abstracts/mixins',
-    'abstracts/function',
-    'abstracts/placeholders';
+    'abstracts/placeholders',
+    'abstracts/function';
 
 @import 
     'base/base',
@@ -11,8 +11,6 @@
 @import 
     'components/buttons',
     'components/menutransition',
-    'components/carousel',
-    'components/cover',
     'components/dropdown',
     'components/adresses',
     'components/prices-accordion',

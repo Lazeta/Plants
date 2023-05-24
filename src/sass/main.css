@@ -1,82 +1,78 @@
 @charset "UTF-8";
+.btn__contact-us, button, h2, a {
+  font-family: "Inika", serif;
+}
+
+.footer-data li:nth-of-type(2), .btn__city__bar span, .btn__learn-more, strong, p, h3, h1 {
+  font-family: "Inter", sans-serif;
+}
+
+.btn__animation_2:hover, .btn__animation_2, .btn__animation:hover, .btn__animation {
+  transition: all 1s ease-out;
+  transform: scale(1);
+}
+
 html {
   height: 100%;
-  scroll-behavior: smooth;
   font-size: 10px;
   line-height: 10px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *:after, *:before {
   box-sizing: inherit;
+  font-style: normal;
 }
 
 body {
   font-size: 1.6rem;
-  line-height: 1rem;
 }
 
 a {
-  font-family: "Inika", serif;
-  font-style: 1.6rem;
+  font-size: 1.6rem;
   line-height: 5rem;
   font-weight: 400;
-  font-style: normal;
   color: #010201;
   text-decoration: none;
   cursor: pointer;
 }
-
 a:hover {
   text-decoration: underline;
 }
 
 h1 {
-  font-family: "Inter", sans-serif;
-  font-style: 4.5rem;
+  font-size: 4.5rem;
   line-height: 5rem;
   font-weight: 700;
-  font-style: normal;
-  font-size: 4.5rem;
   color: #717171;
 }
 
 h2 {
-  font-family: "Inika", serif;
-  font-style: 4rem;
+  font-size: 4rem;
   line-height: 5.2rem;
   font-weight: 400;
-  font-style: normal;
-  font-size: 4rem;
   color: #499A18;
 }
 
 h3 {
-  font-family: "Inter", sans-serif;
-  font-style: 2rem;
+  font-size: 2rem;
   line-height: 5rem;
   font-weight: 700;
-  font-style: normal;
   color: #E06733;
 }
 
 p {
-  font-family: "Inter", sans-serif;
-  font-style: 2rem;
+  font-size: 2rem;
   line-height: 3rem;
   font-weight: 400;
-  font-style: normal;
-  font-size: 2rem;
   color: #636060;
 }
 
 strong {
-  font-family: "Inter", sans-serif;
-  font-style: 2rem;
+  font-size: 2rem;
   line-height: 2rem;
   font-weight: 700;
-  font-style: normal;
-  font-size: 2rem;
   color: #636060;
 }
 
@@ -86,19 +82,19 @@ span {
 
 em {
   color: #499A18;
-  font-style: normal;
 }
 
 li {
   color: #010201;
 }
+li:hover {
+  text-decoration: underline;
+}
 
 button {
-  font-family: "Inika", serif;
-  font-style: normal;
+  font-size: normal;
   line-height: 2.6rem;
   font-weight: 400;
-  font-style: normal;
   cursor: pointer;
 }
 
@@ -133,14 +129,17 @@ input {
 .btn__learn-more {
   width: 158px;
   height: 44px;
-  font-family: "inter", sans-serif;
-  font-weight: 400;
   font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   border: 2px solid #E06733;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .btn__project {
@@ -150,31 +149,35 @@ input {
   font-size: 2rem;
   color: #E06733;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: normal;
   justify-content: center;
+  align-items: center;
   border: 1px solid #E06733;
   border-radius: 5px;
 }
 
 .prices__list button {
   margin: 7px 22px 7px 22px;
-  padding: 0 0 0 10px;
+  padding-left: 10px;
 }
 
 .btn__item {
   width: 250px;
   height: 50px;
   background: #EDF2EC;
-  border-radius: 20px;
-  border: none;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
   justify-content: space-around;
   align-items: center;
+  border-radius: 20px;
+  border: none;
 }
 
 .btn__item-basics :nth-child(1) {
-  margin-left: 0px;
-  margin-bottom: 0px;
   margin-right: 10px;
   padding-top: 8px;
 }
@@ -185,8 +188,8 @@ input {
 
 .btn__item-standard :nth-child(1) {
   width: 140px;
-  margin-left: 2px;
   margin-right: -40px;
+  margin-left: 2px;
   padding-right: 50px;
 }
 
@@ -207,15 +210,12 @@ input {
   width: 162px;
   height: 50px;
   margin-top: 39px;
-  font-family: "Inika";
-  font-style: normal;
+  font-size: 2rem;
+  line-height: none;
   font-weight: 700;
-  font-size: 20px;
-  background-color: rgba(0, 0, 0, 0);
   color: #E06733;
   border: 1px solid #E06733;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .btn__city__bar {
@@ -223,53 +223,39 @@ input {
   height: 50px;
   margin-top: 85px;
   background: #D6E7D2;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0px;
-  border: none;
   display: inline-flex;
+  flex-direction: none;
+  flex-wrap: none;
+  align-content: none;
   justify-content: space-between;
+  align-items: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
 }
 
 .btn__city__bar span {
   height: 40px;
   padding: 5px 0px 5px 17px;
-  font-family: "Inter";
-  font-style: normal;
+  font-size: 2rem;
+  line-height: 4rem;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
   letter-spacing: 0.05em;
   color: #717171;
 }
 
 .btn__city__bar img {
-  cursor: pointer;
   padding-top: 16px;
   padding-right: 27px;
 }
 
-.btn__animation {
-  transition: 0.6s;
-  transform: scale(1);
-}
-
-.btn__animation_2 {
-  transition: 0.6s;
-  transform: scale(1);
-}
-
 .btn__animation:hover {
-  transition: 3s;
-  transform: scale(1);
   background-color: #E06733;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .btn__animation_2:hover {
-  transition: 2s;
-  transform: scale(1);
   background-color: #E06733;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
@@ -525,89 +511,26 @@ input {
   display: none;
 }
 
-.nav__menu {
+.mobile-menu {
   display: none;
-}
-
-.nav__menu a {
-  text-decoration: none;
-}
-
-.nav__menu li a {
-  transition: 0.4s;
-  transform: scale(1);
-}
-
-.nav__menu li a:hover {
-  transition: 2s;
-  transform: scale(1);
-  font-size: 100%;
-  background-color: rgba(83, 83, 83, 0.2117647059);
-  color: #070707;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   /* меню бургер в 4 полосы с анимацией, превращения в крестик */
   .burger__menu {
+    width: 40px;
+    height: 24px;
     display: flex;
     flex-direction: column;
+    flex-wrap: none;
+    align-content: none;
     justify-content: space-between;
-    height: 24px;
-    width: 40px;
-    cursor: pointer;
-    z-index: 11;
+    align-items: none;
     position: fixed;
     top: 36px;
     right: 25px;
-  }
-  .header__navigation {
-    display: none;
-  }
-  .navigation {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    height: 50%;
-    z-index: 10;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 100px 20px 0 50px;
-    background-color: rgba(85, 136, 48, 0.9);
-    overflow-y: auto;
-    text-align: center;
-  }
-  .navigation.__burger__menu {
-    display: flex;
-    animation: burgerAnimationOpen 0.75s;
-  }
-  .navigation.close {
-    display: flex;
-    animation: burgerAnimationClose 0.8s;
-  }
-  /* полоска */
-  .strip {
-    width: 100%;
-    height: 2px;
-    background-color: #717171;
-    transition: transform 0.2s ease;
-    z-index: 10;
-  }
-  /* полоска 1 */
-  .strip:nth-child(1) {
-    transform-origin: top right;
-  }
-  /* полоска 2 */
-  .strip:nth-child(2) {
-    transform-origin: top left;
-  }
-  /* полоска 4 */
-  .strip:nth-child(4) {
-    transform-origin: bottom right;
+    z-index: 11;
+    cursor: pointer;
   }
   .burger__menu.__active .strip:nth-child(1) {
     width: 33px;
@@ -623,17 +546,71 @@ input {
     width: 33px;
     transform: rotate(45deg);
   }
-  .nav__menu {
-    display: flex;
-    margin: 0;
-    padding: 0 0 0 50px;
-    list-style-type: none;
+  .navigation {
+    width: 100%;
+    height: 50%;
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    padding: 100px 20px 0 50px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #499A18;
+    opacity: 70%;
+    text-align: center;
+    overflow-y: auto;
+    z-index: 10;
   }
-  nav > ul > li {
-    font-size: 3.6rem;
-    line-height: 50px;
+  .navigation.__burger__menu {
+    display: flex;
+    animation: burgerAnimationOpen 0.75s;
+  }
+  .navigation.close {
+    display: flex;
+    animation: burgerAnimationClose 0.8s;
+  }
+  .navigation.__show {
+    display: flex;
+  }
+  .strip {
+    width: 100%;
+    height: 2px;
+    background-color: #717171;
+    transition: transform 0.4s ease;
+    z-index: 10;
+  }
+  .strip.strip:nth-child(1) {
+    transform-origin: top right;
+  }
+  .strip.strip:nth-child(2) {
+    transform-origin: top left;
+  }
+  .strip.strip:nth-child(4) {
+    transform-origin: bottom right;
+  }
+  .mobile-menu {
+    margin: 0;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: none;
+    align-content: none;
+    justify-content: none;
+    align-items: flex-start;
+    list-style: none;
+  }
+  .mobile-menu > * li {
+    font-size: 2.4rem;
+    line-height: 5rem;
+    font-weight: 700;
+    box-shadow: 1px 1px rgb(0, 0, 0);
+  }
+  .mobile-menu > * a:hover {
+    background-color: rgba(0, 0, 0, 0.025);
+    color: #000000;
+    border-radius: 5px;
   }
 }
 @keyframes burgerAnimationOpen {
@@ -712,11 +689,14 @@ input {
 }
 .header__navigation {
   height: 50px;
+  margin-right: -20px;
+  padding: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: none;
+  align-content: none;
   justify-content: space-between;
-  padding: 0;
-  margin: 0 -20px 0 0;
+  align-items: none;
 }
 
 .header__navigation li {
@@ -737,7 +717,7 @@ input {
   transition: 2s;
   transform: scale(1);
   font-size: 100%;
-  background-color: rgba(83, 83, 83, 0.2117647059);
+  background-color: #717171;
   color: #010201;
   border-radius: 5px;
 }
@@ -758,13 +738,10 @@ input {
     flex-direction: row;
     align-items: baseline;
   }
-  .header__navigation li {
+  .header__navigation > * li {
     font-family: "Inika", sans-serif;
     font-weight: 400;
     display: inline;
-  }
-  .navigation {
-    display: flex;
   }
   .logo__list {
     width: 80px;
@@ -1705,12 +1682,13 @@ input {
 }
 
 .footer-data li:nth-of-type(2) {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 2rem;
   line-height: 5rem;
+  font-weight: 400;
   margin: 0 18px;
+}
+.footer-data li:nth-of-type(2):hover {
+  text-decoration: none;
 }
 
 .rsschool li {

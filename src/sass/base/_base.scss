@@ -1,56 +1,50 @@
 html {
     height: 100%;
-    scroll-behavior: smooth;
     font-size: 10px;
     line-height: 10px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *, *:after, *:before {
     box-sizing: inherit;
+    font-style: normal;
 }
 body {
     font-size: 1.6rem; 
-    line-height: 1rem;
 }
 a {
-    @include font(('Inika', serif), 1.6rem, 5rem, 400, normal);
+    @extend %font-inika;
+    @include font(1.6rem, 5rem, 400);
     color: $color-links;
     text-decoration: none;
     cursor: pointer;
-
-}
-a:hover {
-    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 h1 {
-    @include font(('Inter', sans-serif), 4.5rem, 5rem, 700, normal);
-    // нужно пофиксить баг из за чего вылазит приоритет -webkit any(artivle, aside, nav, section) h1 {}
-    font-size: 4.5rem;
+    @extend %font-inter;
+    @include font(4.5rem, 5rem, 700);
     color: $color-main-text;
 }
 h2 {
-    @include font(('Inika', serif), 4rem, 5.2rem, 400, normal);
-    // нужно пофиксить баг из за чего вылазит приоритет -webkit any(artivle, aside, nav, section) h1 {}
-    font-size: 4rem;
+    @extend %font-inika;
+    @include font(4rem, 5.2rem, 400);
     color: $color-green;
 }
 h3 {
-    @include font(('Inter', sans-serif), 2rem, 5rem, 700, normal);
+    @extend %font-inter;
+    @include font(2rem, 5rem, 700);
     color: $color-orange;
 }
-// h4 {
-//     @include font(('Inter', sans-serif), 2rem, 4rem, 400, normal);
-//     color: $color-main-text;
-// }
 p {
-    @include font(('Inter', sans-serif), 2rem, 3rem, 400, normal);
-    // нужно пофиксить баг из за чего вылазит приоритет -webkit any(artivle, aside, nav, section) h1 {}
-    font-size: 2rem;
+    @extend %font-inter;
+    @include font(2rem, 3rem, 400);
     color: $color-paragraph;
 }
 strong {
-    @include font(('Inter', sans-serif), 2rem, 2rem, 700, normal);
-    font-size: 2rem;
+    @extend %font-inter;
+    @include font(2rem, 2rem, 700);
     color: $color-paragraph;
 }
 span { 
@@ -58,13 +52,16 @@ span {
 }
 em {
     color: $color-green;
-    font-style: normal;
 }
 li {
     color: $color-links;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 button {
-    @include font(('Inika', serif), normal, 2.6rem, 400, normal);
+    @extend %font-inika;
+    @include font(normal, 2.6rem, 400);
     cursor: pointer;
 }
 
@@ -73,5 +70,9 @@ button {
 }
 
 @media (max-width: $mobile-big-width) {
+
+}
+
+@media (max-width: $mobile-small-width) {
 
 }
