@@ -4,12 +4,11 @@
 }
 .contact-us__wrapper {
     height: 550px;
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
+    @include flex (flex, row-reverse, nowrap, none, none, none);
 }
 .contact-us__box-city {
-    padding: 60px 109px 0px 0px;
+    padding-top: 60px;
+    padding-right: 109px;
     display: flex;
 }
 .contact-us__title {
@@ -22,10 +21,10 @@
     padding: 0px;
 }
 .contact-us__img {
-    height: 100%;
     width: 98%;
-    padding: 0 0px 1px 0;
+    height: 100%;
     margin: auto;
+    padding-bottom: 1px;
 }
 
 @media (max-width: $tablet-width) {

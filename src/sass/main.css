@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.btn__contact-us, button, h2, a {
+.about__content > h2, .btn__contact-us, button, h2, a {
   font-family: "Inika", serif;
 }
 
@@ -7,8 +7,18 @@
   font-family: "Inter", sans-serif;
 }
 
+.header__navigation > a {
+  transition: all 400ms ease-out;
+  transform: scale(1);
+}
+
 .btn__animation_2:hover, .btn__animation_2, .btn__animation:hover, .btn__animation {
   transition: all 1s ease-out;
+  transform: scale(1);
+}
+
+.header__navigation > a:hover {
+  transition: all 2s ease-out;
   transform: scale(1);
 }
 
@@ -698,24 +708,14 @@ input {
   justify-content: space-between;
   align-items: none;
 }
-
-.header__navigation li {
+.header__navigation > li {
   display: inline-flex;
   padding: 0 21.5px;
 }
-
-.header__navigation a {
+.header__navigation > a {
   text-decoration: none;
 }
-
-.header__navigation a {
-  transition: 0.4s;
-  transform: scale(1);
-}
-
-.header__navigation a:hover {
-  transition: 2s;
-  transform: scale(1);
+.header__navigation > a:hover {
   font-size: 100%;
   background-color: #717171;
   color: #010201;
@@ -1005,6 +1005,8 @@ input {
   height: 479px;
   display: flex;
   flex-direction: row;
+  flex-wrap: none;
+  align-content: none;
   justify-content: space-between;
   align-items: center;
 }
@@ -1013,14 +1015,12 @@ input {
   width: 605px;
   height: 344px;
 }
-
-.about__content h2 {
+.about__content > h2 {
   width: 463px;
   height: 102px;
   color: #E06733;
 }
-
-.about__content p {
+.about__content > p {
   padding-top: 40px;
 }
 
@@ -1029,15 +1029,24 @@ input {
     max-width: 768px;
     width: auto;
     height: 783px;
-    padding: 0 0 0 50px;
+    padding-left: 50px;
   }
   .about__container {
     width: auto;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    flex-wrap: none;
+    align-content: none;
+    justify-content: space-between;
+    align-items: none;
     margin: 0;
-    padding: 0 50px 0 0px;
+    padding-right: 50px;
+  }
+  .about__container > p {
+    margin-top: 40px;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: none;
   }
   .about__container__img {
     width: 250px;
@@ -1047,20 +1056,13 @@ input {
     height: 350px;
     padding: 40px 0 68px 0px;
   }
-  .about__content h2 {
+  .about__content > h2 {
     padding-left: 102px;
     color: #E06733;
-    font-family: "Inika";
-    font-style: normal;
+    font-size: 3.5rem;
+    line-height: 4.6rem;
     font-weight: 400;
-    font-size: 35px;
-    line-height: 46px;
     text-align: center;
-  }
-  .about__container p {
-    margin-top: 40px;
-    font-size: 20px;
-    line-height: 30px;
   }
 }
 @media (max-width: 414px) {
@@ -1068,39 +1070,47 @@ input {
     max-width: 380px;
     width: 380px;
     height: 516px;
-    padding: 0 0 0 50px;
+    padding-left: 50px;
   }
   .about__container {
     width: auto;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    margin: 0 0 0 0;
-    padding: 34px 50px 0 0px;
+    flex-wrap: none;
+    align-content: none;
+    justify-content: space-between;
+    align-items: none;
+    margin: 0;
+    padding-top: 34px;
+    padding-right: 50px;
+  }
+  .about__container > p {
+    margin-top: 21px;
+    margin-right: 50px;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: none;
+    text-align: left;
   }
   .about__content {
     width: 380px;
-    padding: 0px 0 0px 0px;
+    padding: 0;
   }
-  .about__content h2 {
+  .about__content > h2 {
     width: 288px;
     height: 57.74px;
     margin-top: -5px;
-    padding: 0 0 0 20px;
+    padding-left: 20px;
     color: #E06733;
-    font-size: 25px;
-    line-height: 33px;
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    font-weight: none;
     text-align: center;
-  }
-  .about__container p {
-    margin: 21px 50px 0px 0px;
-    font-size: 15px;
-    line-height: 25px;
-    text-align: left;
   }
   .about__container__img {
     width: 150px;
-    margin: 0px 48px 25px 0px;
+    margin-right: 48px;
+    margin-bottom: 25px;
   }
 }
 .service {
@@ -1567,10 +1577,14 @@ input {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
+  align-content: none;
+  justify-content: none;
+  align-items: none;
 }
 
 .contact-us__box-city {
-  padding: 60px 109px 0px 0px;
+  padding-top: 60px;
+  padding-right: 109px;
   display: flex;
 }
 
@@ -1586,10 +1600,10 @@ input {
 }
 
 .contact-us__img {
-  height: 100%;
   width: 98%;
-  padding: 0 0px 1px 0;
+  height: 100%;
   margin: auto;
+  padding-bottom: 1px;
 }
 
 @media (max-width: 768px) {
