@@ -1,0 +1,191 @@
+.service {
+    width: auto;
+    height: 1300px;
+    background: $color-light;
+}
+.service__wrapper {
+    display: block
+}
+.service__content {
+    height: 94px;
+    padding: 70px 50px 20px 109px;
+    @include flex (flex, row, none, none, flex-start, flex-start);
+}
+.service__title {
+    width: 429px;
+    height: 94px;
+    margin-top: -30px;
+    line-height: 5.2rem;
+}
+.services__buttons {
+    height: 50px;
+    @include flex (flex, row, none, none, space-between, none);
+}
+
+.services {
+    height: 955px;
+    padding: 130px 109px 0px 109px;
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    gap: 55px 116px;
+}
+.service__item {
+    width: 330px;
+    height: 450px;
+    & img {
+        min-width: 329px;
+        max-height: 350px;
+        border-radius: 20px 20px 0px 0px;
+        object-fit: cover;
+    }
+}
+.description {
+    width: 327px;
+    height: 100px;
+    margin: -3px 0 0 1px;
+    text-align: center;
+    border: 1px solid $color-border;
+    border-radius: 0px 0px 20px 20px;
+    & > h3 {
+        line-height: 4.6rem;
+    }
+    & p {
+        color: $color-main-text;
+        @extend %font-inter;
+        @include font (1.6rem, 2rem, none);
+    }
+}
+
+
+@media (max-width: $tablet-width) {
+    .service {
+        max-width: $tablet-width;
+        margin-top: 12px;
+        width: auto;
+        height: auto;
+        background: $color-light;
+        margin-bottom: 17px;
+    }
+    .service__wrapper {
+        width: auto;
+        height: auto;
+        padding: 48px 0 30px 50px;
+        @include flex (flex, column, none, none, none, flex-start);
+        & > h2 {
+            width: 306px;
+            height: 94px;
+        }
+    }
+    .services__buttons {
+        width: 559px;
+        height: 50px;
+        margin: 0;
+        padding: 40px 0 0px 0;
+        @include flex (flex, none, none, none, space-between, none);
+    }
+    .services {
+        width: auto;
+        height: auto;
+        padding: 10px 0 50px 26px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 278px);
+        gap: 38px 109px; 
+    }
+    .service__item {
+        width: 281px;
+        height: 450px;
+        padding: 0 10px 0 0;
+        & img {
+            width: 280px;
+            height: 350px;
+            border-radius: 20px 20px 0px 0px;
+            object-fit: none;
+        }
+    }
+    .description {
+        width: 278px;
+        height: 100px;
+        margin: -5px 0 0 24px;
+        padding: 0;
+        text-align: center;
+        border: 1px solid $color-border;
+        border-radius: 0px 0px 20px 20px;
+        & p {
+            width: 201;
+            height: 40px;
+            padding: 0 38px 20px 38px;
+            color: $color-main-text;
+            text-align: center;
+        }
+    }  
+}
+
+@media (max-width: $mobile-big-width) {
+    .service {
+        max-width: 768px;
+        width: auto;
+        height: auto;
+        margin: 12px 0 -20px 0;
+        background: $color-description;
+    }
+    .services__wrapper {
+        width: auto;
+        height: auto;
+        padding: 82px 0 30px 50px;
+        @include flex (flex, column, none, none, none, flex-start);
+        & > h2 {
+            width: 187px;
+            height: 69px;
+            margin: -65px 0 0 -24px;
+        }
+    }
+    .services__buttons {
+        width: 282px;
+        height: 79px;
+        margin: 35px 0 0 -24px;
+        padding: 0;
+        @include flex (flex, row, wrap, none, flex-start, none);
+    }
+    .services {
+        width: auto;
+        height: auto;
+        padding: 10px 0 50px 26px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 0px);
+        gap: 34px 0px; 
+    }
+    .service__item {
+        width: 281px;
+        height: 450px;
+        padding: 0 10px 0 0;
+        & img {
+            width: 280px;
+            height: 350px;
+            border-radius: 20px 20px 0px 0px;
+            object-fit: none;
+        }
+    }
+    .description {
+        width: 278px;
+        height: 100px;
+        margin: -5px 0 0 24px;
+        padding: 0;
+        text-align: center;
+        border: 1px solid $color-border;
+        border-radius: 0px 0px 20px 20px;
+        & > h3 {
+            margin: 11px 0 0 0;
+            padding: 0 3px 11px 0;
+            color: $color-orange;
+        }
+        & p {
+            width: 201;
+            height: 40px;
+            padding: 0 38px 20px 38px;
+            color: $color-main-text;
+            text-align: center;
+        }
+    }  
+}

@@ -9,9 +9,7 @@
     width: auto;
     height: 405px;  
     margin: -1px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex (flex, row, none, none, space-between, none);
 }
 .prices__bar {
     max-width: 332px;
@@ -20,34 +18,21 @@
 }
 .prices__bar__title {
     padding-bottom: 60px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 4.8rem;
+    @extend %font-inter;
+    @include font (4rem, 4.8rem, 700);
 }
 .prices__list {
     width: 332px;
     height: 281px;
     padding-top: 2px;
-    border: 1px solid $color-description;
+    @include flex (flex, column, nowrap, none, space-evenly, center);
+    border: 1px solid $color-border;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.prices__bar__content {
-    padding-top: 0px;
 }
 .price__info {
     max-width: 452px;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
+    @include flex (flex, column, none, none, flex-start, flex-end);
 }
 .prices__content {
     width: 452px;
@@ -55,10 +40,8 @@
     text-align: end;
 }
 .prices__content__title {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 5rem;
+    @extend %font-inter;
+    @include font (4rem, 5rem, 700);
     color: $color-black;
 }
 .leafs {
@@ -79,11 +62,7 @@
         width: auto;
         height: 405px;
         padding: 0;
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        align-content: space-between;
+        @include flex (inline-flex, column, wrap, space-between, flex-start, none);
     }
     .prices__bar {
         width: 332px;
@@ -93,8 +72,6 @@
         padding-bottom: 0px;
         padding-top: 42px;
         margin-left: -96px;
-        font-size: 3.5rem;
-        line-height: 4.2rem;
         text-align: center;
     }
     .prices__list {
@@ -104,27 +81,18 @@
         padding-top: 4px;
         border: 1px solid $color-border;
         border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex (flex, column, none, none, center, none);
     }
     .price__info {
-        padding: 143px 0px 0px 90px;
         width: 296px;
         height: 357.98px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        flex-direction: column;
+        padding: 143px 0px 0px 90px;
+        @include flex (flex, column, none, none, space-between, flex-end);
     }
     .prices__content {
         width: 296px;
         height: 77.41px;
         text-align: right;
-    }
-    .prices__content__title {
-        font-size: 2.5rem;
-        line-height: 3.5rem;
     }
     .leafs {
         margin-top: 100px;
@@ -142,11 +110,7 @@
         width: 230px;
         height: auto;
         padding: 20px 0px 0px 0px;
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        align-content: space-between;
+        @include flex (inline-flex, column, wrap, space-between, flex-start, none);
     }
     .prices__bar {
         width: 382px;
@@ -155,11 +119,8 @@
         padding: 0;
     }
     .prices__bar__title {
-        padding-bottom: 0;
-        padding-top: 2px;
         margin-left: 0;
-        font-size: 2.5rem;
-        line-height: 3rem;
+        padding: 2px 0 0 0;
         text-align: center;
     }
     .prices__list {
@@ -167,21 +128,15 @@
         height: 235px;
         margin: 36px 0px 0px 80px;
         padding: 0;
-        border: 1px solid #E3E1D5;
+        @include flex (flex, column, none, none, center, flex-end);
+        border: 1px solid $color-border;
         border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
     }
     .price__info {
-        padding: 20px 0px 0px 75px;
         width: 230px;
         height: auto;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
+        padding: 20px 0px 0px 75px;
+        @include flex (flex, column, wrap, center, none, none);
     }
     .prices__content {
         width: 296px;
@@ -189,8 +144,6 @@
     }
     .prices__content__title {
         padding: 0 10px;
-        font-size: 2rem;
-        line-height: 3.5rem;
         text-align: center;
     }
     .leafs {

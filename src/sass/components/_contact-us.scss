@@ -9,7 +9,7 @@
 .contact-us__box-city {
     padding-top: 60px;
     padding-right: 109px;
-    display: flex;
+    @include flex ();
 }
 .contact-us__title {
     min-width: 195px;
@@ -36,7 +36,7 @@
     .contact-us__wrapper {
         width: 768px;
         height: 490px;
-        padding: 200px 0 0 0;
+        padding-left: 200px;
     }
     .contact-us__title {
         width: 200px;
@@ -57,20 +57,19 @@
     .contact-us__wrapper {
         width: 380px;
         height: 490px;
-        padding: 21px 0 0 0;
+        padding-left: 21px;
     }
     .contact-us__box-city {
         width: 300px;
-        display: flex;
-        flex-direction: column;
+        @include flex (flex, column, none, none, none, none);
     }
     .contact-us__title {
         width: 192px;
         height: 34px;
         margin: 0; 
-        padding: 155px 0 0 12px;
-        font-size: 2.5rem;
-        line-height: 3.3rem;
+        padding-top: 155px;
+        padding-left: 12px;
+        @include font (2.5rem, 3.3rem, none);
         text-align: center;
         color: $color-green;
     }
@@ -78,7 +77,7 @@
         width: 250px;
     }
     .contact-us__img {
-        margin: 0 0 30px 0;
+        margin-bottom: 30px;
         width: 100px;
         height: 124.25px;
     }

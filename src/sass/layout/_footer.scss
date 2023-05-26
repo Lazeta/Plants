@@ -5,56 +5,38 @@
 .footer__wrapper {
     margin: auto;
     padding: 40px 109px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    @include flex (flex, row, none, none, space-between, none);
+    & li {
+        @include flex (inline-flex, row, none, none, center, none);
+    }
+    & *a {
+        @extend %font-inter;
+        @include font (2rem, 5rem, 400);
+        font-style: normal;
+        color: $color-links;
+    }
 }
-.footer__wrapper li {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.footer__wrapper *a {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 5rem;
-    color: $color-links;
-}
+
 .footer-data {
     width: auto;
     height: 50px;
-    padding: 0 20px 0 0px;
-}
-.footer-data li:nth-of-type(2) {
-    @extend %font-inter;
-    @include font(2rem, 5rem, 400);
-    margin: 0 18px;
-    &:hover {
-        text-decoration: none;
+    padding-right: 20px;
+    & li:nth-of-type(2) {
+        @extend %font-inter;
+        @include font(2rem, 5rem, 400);
+        margin: 0 18px;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 .rsschool li {
-    padding: 0 0 0 15px;
+    padding-left: 15px;
 }
 .social-list li {
     padding: 5px 3px 0 20px;
 }
-.instagram__svg__item a {
-    // padding-bottom: 0;
-    // margin-right: 7px;
-}
-.facebook__svg__item a {
-    // padding-bottom: 0;
-    // margin-right: 4px;
-}
-.twitter__svg__item a {
-    
-}
-.pinterest__svg__item a {
-    // padding-bottom: 1px;  
-}
+
 
 @media (max-width: $tablet-width) {
     .footer {
@@ -64,28 +46,18 @@
     }
     .footer__wrapper {
         padding: 25px 0px 0px 2px;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer__wrapper li {
-        display: inline-flex;
-        flex-direction: row;
+        @include flex (flex, column, none, none, space-between, center);
+        & li {
+            @include flex (inline-flex, row, none, none, none, none);
+        }
     }
     .footer-data {
         width: 190px;
-    }
-    .footer-data li {
-        padding: 8px;
-        margin-right: 0px;
-        font-size: 2rem;
     }
     .rsschool li {
         padding: 8px 0;
         margin-left: -3px;
         margin-top: -6px;
-        font-size: 2rem;
     }
     .social-list li {
         padding: 15px 10px;
@@ -115,44 +87,52 @@
     .footer__wrapper {
         margin-top: -10px;
         margin-bottom: 0;
-        padding: 20px 0px 0px 2px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding-top: 20px;
+        padding-left: 2px;
+        @include flex (flex, column, none, none, none, center);
     }
     .footer__wrapper li {
-        display: inline-flex;
-        flex-direction: row;
+        @include flex (inline-flex, row, none, none, none, none);
     }
     .footer-data {
         width: 190px;
+        li {
+            padding: 8px;
+            margin-right: 0;
+        }
     }
-    .footer-data li {
-        padding: 8px;
-        margin-right: 0;
-        font-size: 20px;
+    .rsschool {
+        li {
+            padding: 8px 0;
+            margin-left: -3px;
+            margin-top: -6px;
+        }
     }
-    .rsschool li {
-        padding: 8px 0;
-        margin-left: -3px;
-        margin-top: -6px;
-        font-size: 2rem;
+    .social-list {
+        li {
+            padding: 0px 10px 5px 10px;
+        }
     }
-    .social-list li {
-        padding: 0px 10px 5px 10px;
+    .instagram__svg__item {
+        a {
+            padding-bottom: 0;
+            margin-right: 7px;
+        }
     }
-    .instagram__svg__item a {
-        padding-bottom: 0;
-        margin-right: 7px;
+    .facebook__svg__item {
+        a {
+            padding-bottom: 0;
+            margin-right: 4px;
+        }
     }
-    .facebook__svg__item a {
-        padding-bottom: 0;
-        margin-right: 4px;
+    .twitter__svg__item {
+        a {
+            padding-bottom: 3px;
+        }
     }
-    .twitter__svg__item a {
-        padding-bottom: 3px;
-    }
-    .pinterest__svg__item a {
-        padding-bottom: 1px;  
+    .pinterest__svg__item {
+        a {
+            padding-bottom: 1px;  
+        }
     }
 }

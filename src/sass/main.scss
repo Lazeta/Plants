@@ -1,34 +1,36 @@
+@import "base/reset";
+
 @import 
     'abstracts/constants',
     'abstracts/mixins',
-    'abstracts/placeholders',
-    'abstracts/function';
+    'abstracts/placeholders';
 
 @import 
     'base/base',
-    'base/reset';
+    'base/buttons';
     
-@import 
-    'components/buttons',
-    'components/menutransition',
-    'components/dropdown',
-    'components/adresses',
-    'components/prices-accordion',
-    'components/contact-us__selected';
     
 @import
+    'layout/main',
     'layout/wrapper',
     'layout/header',
-    'layout/navigation',
-    'layout/main',
-    'layout/welcome',
-    'layout/about',
-    'layout/service',
-    'layout/prices',
-    'layout/contact-us',
     'layout/footer',
+    'layout/columns',
     'layout/forms';
-
+    
+@import 
+    'components/navigation',
+    'components/welcome',
+    'components/about',
+    'components/service',
+    'components/prices',
+    'components/contact-us',
+    'components/menutransition',
+    'components/adresses',
+    'components/prices-accordion',
+    'components/dropdown',
+    'components/contact-us__selected';
+    
 @import 
     'pages/home',
     'pages/contact';
