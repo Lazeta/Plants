@@ -47,57 +47,57 @@
 
 
 @media (max-width: $tablet-width){
-    .header__navigation {
-        width: auto;
-        height: 50px;
-        padding: 35px 50px 42px 50px;
-        @include flex (flex, row, none, none, space-between, baseline);
-        li {
-            font-family: 'Inika', sans-serif;
-            font-weight: 400;
-            display: inline;
-        }
-    }
-    .logo__box {
-        width:  80px;
-        height: auto;
-        margin-top: 10px;
-    }
-    .logo__img {
-        margin-right: -4px;
-        margin-top: -1px;
-    }
-    .logo__name {
-        @include font (1.6rem, 2.1rem, 400);
-        color: $color-black;
-    }
+    // .header__navigation {
+    //     width: auto;
+    //     height: 50px;
+    //     padding: 35px 50px 42px 50px;
+    //     @include flex (flex, row, none, none, space-between, baseline);
+    //     li {
+    //         font-family: 'Inika', sans-serif;
+    //         font-weight: 400;
+    //         display: inline;
+    //     }
+    // }
+    // .logo__box {
+    //     width:  80px;
+    //     height: auto;
+    //     margin-top: 10px;
+    // }
+    // .logo__img {
+    //     margin-right: -4px;
+    //     margin-top: -1px;
+    // }
+    // .logo__name {
+    //     @include font (1.6rem, 2.1rem, 400);
+    //     color: $color-black;
+    // }
 }
 
 @media (max-width: $mobile-big-width){
-    .header__navigation {
-        width: auto;
-        height: 50px;
-        padding: 36px 26px 36px 25px;
-        @include flex (inline-block, none, none, none, none, flex-start);
-        li {
-            display: inline;
-        }
-    }
+    // .header__navigation {
+    //     width: auto;
+    //     height: 50px;
+    //     padding: 36px 26px 36px 25px;
+    //     @include flex (inline-block, none, none, none, none, flex-start);
+    //     li {
+    //         display: inline;
+    //     }
+    // }
 
-    .logo__box {
-        width:  77px;
-        height: auto;
-        margin-top: -2px;
-        padding-left: 0px;
-    }
-    .logo__img {
-        margin-right: 0px;
-        margin-left: -2px;
-        margin-top: 0px;
-    }
-    .logo__name {
-        margin-left: -5px;
-        @include font (1.6rem, 2.1rem, 400);
-        color: $color-black;
-    }
+    // .logo__box {
+    //     width:  77px;
+    //     height: auto;
+    //     margin-top: -2px;
+    //     padding-left: 0px;
+    // }
+    // .logo__img {
+    //     margin-right: 0px;
+    //     margin-left: -2px;
+    //     margin-top: 0px;
+    // }
+    // .logo__name {
+    //     margin-left: -5px;
+    //     @include font (1.6rem, 2.1rem, 400);
+    //     color: $color-black;
+    // }
 }
