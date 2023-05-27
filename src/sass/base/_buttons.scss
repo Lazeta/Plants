@@ -119,7 +119,6 @@
             width: 161px;
             height: 50px;
             color: $color-orange;
-            cursor: pointer;
             border: 1px solid $color-orange;
             border-radius: 5px;
         }
@@ -144,7 +143,6 @@
     }
     .btn__accordion__item {
         border-radius: 50%;
-        cursor: pointer;
     }
 
     .btn__contact-us {
@@ -154,7 +152,7 @@
         color: $color-orange;
         border: 1px solid $color-orange;
         border-radius: 5px;
-        cursor: pointer;
+
     }
     .btn__city__bar {
         width: 450px;
@@ -172,17 +170,12 @@
             color: $color-main-text;
             text-align: center; 
         }
-    }
-    .btn__city__bar span {
-    }
-    .btn__city__bar img {
-        padding: 0 35px 18px 0;
-        cursor: pointer;
+        img {
+            padding: 0 35px 18px 0;
+        }
     }
     .btn__accordion__city {
-        background-color: rgba(0,0,0,0);
         margin-right: 0;
-        cursor: pointer;
     }
 
 
@@ -197,14 +190,14 @@
     .btn__animation:hover {
         transition: 3s;
         transform: scale(1);
-        background-color: #E06733;
-        color:#ffffff;
+        background-color: $color-hovered;
+        color: $color-white;
     }
     .btn__animation_2:hover {
         transition: 2s;
         transform: scale(1);
-        background-color: #E06733;
-        color:#ffffff;
+        background-color: $color-hovered;
+        color: $color-white;
     }
 }
 
@@ -221,17 +214,13 @@
         width: 121px;
         height: 35px;
         margin: 0px 10px 9px 0;
-        font-family: 'Inika';
-        font-style: normal;
         font-weight: 400;
         font-size: 15px;
         line-height: 20px;
         text-align: center;
-        background-color: rgba(0,0,0,0);
-        color: #E06733;
-        border: 1px solid #E06733;
+        color: $color-orange;
+        border: 1px solid $color-orange;
         border-radius: 5px;
-        cursor: pointer;
     }
     .btn__item {
         width: 180px;
@@ -244,7 +233,7 @@
         font-weight: 700;
         font-size: 15px;
         line-height: 20px;
-        background: #EDF2EC;
+        background: $color-city-box;
         border-radius: 20px;
         border: none;
         display: flex;
@@ -269,7 +258,6 @@
         padding-right: 22px;
         padding-top: 4px;
         border-radius: 50%;
-        cursor: pointer;
     }
 
     .btn__contact-us {
@@ -277,17 +265,13 @@
         width: 121px;
         height: 35px;
         margin: 19px 0 0 87px;
-        font-family: 'Inika';
-        font-style: normal;
         font-weight: 700;
         font-size: 15px;
         line-height: 20px;
         text-align: center;
-        background-color: rgba(0,0,0,0);
         color: #E06733;
         border: 1px solid #E06733;
         border-radius: 5px;
-        cursor: pointer;
     }
 
     .btn__city__bar {
@@ -296,33 +280,29 @@
         margin-top: 63px;
         margin-left: -42px;
         padding-right: 0;
-        background: #D6E7D2;
+        background: $color-city-box;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 0px;
         border: none;
         display: flex;
         justify-content: space-between;
         align-items: end;
-    }
-    .btn__city__bar span {
-        height: 40px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 40px;
-        letter-spacing: 0.05em;
-        color: #717171;
-        text-align: center;
-    }
-    .btn__city__bar img {
-        padding: 0 20px 17px 0;
-        cursor: pointer;
+        span {
+            height: 40px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 40px;
+            letter-spacing: 0.05em;
+            color: $color-main-text;
+            text-align: center;
+        }
+        img {
+            padding: 0 20px 17px 0;
+        }
     }
     .btn__accordion__city {
-        background-color: rgba(0,0,0,0);
         margin-right: 0px;
-        cursor: pointer;
     }
 
 
