@@ -2,30 +2,82 @@
     width: auto;
     background: $color-light;
 }
+
 .contact-us__wrapper {
     height: 550px;
     @include flex (flex, row-reverse, nowrap, none, none, none);
 }
+
 .contact-us__box-city {
     padding-top: 60px;
     padding-right: 109px;
     @include flex ();
 }
+
 .contact-us__title {
     min-width: 195px;
     height: 51px;
     padding-right: 68px;
 }
+
 .contact-us__woman {
     margin: 0 auto;
     padding: 0px;
 }
+
 .contact-us__img {
     width: 98%;
     height: 100%;
     margin: auto;
     padding-bottom: 1px;
 }
+
+
+/* Медиа-запрос для экранов с разрешением до 768px */
+@media (max-width: 768px) {
+    .contact-us {
+        width: auto;
+        background: $color-light;
+        padding: 30px 20px;
+    }
+
+    .contact-us__wrapper {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-us__box-city {
+        padding-top: 20px;
+        padding-right: 0;
+        @include flex (flex, column, none, none, center, center);
+        text-align: center;
+    }
+
+    .contact-us__title {
+        min-width: auto;
+        height: auto;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-us__woman {
+        margin: 20px auto;
+        padding: 0px;
+        max-width: 100%;
+    }
+
+    .contact-us__img {
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+        padding-bottom: 0;
+    }
+}
+
+
+
 
 @media (max-width: $tablet-width) {
     // .contact-us {

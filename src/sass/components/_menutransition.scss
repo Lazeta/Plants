@@ -1,12 +1,13 @@
-// .burger__menu {
-//     display: none;
-// }
-// .mobile-menu {
-//     display: none;
-// }
+.burger__menu {
+    display: none;
+}
+.mobile-menu {
+    display: none;
+}
 
 
-@media (max-width: $tablet-width) {
+@media (max-width: $mobile-big-width) {
+
     /* меню бургер в 4 полосы с анимацией, превращения в крестик */
     .burger__menu {
         width: 40px;
@@ -17,17 +18,21 @@
         right: 25px;
         z-index: 11;
         cursor: pointer;
-        &.__active .strip:nth-child(1){
+
+        &.__active .strip:nth-child(1) {
             width: 33px;
             transform: rotate(-45deg);
         }
-        &.__active .strip:nth-child(2){
+
+        &.__active .strip:nth-child(2) {
             opacity: 0;
         }
-        &.__active .strip:nth-child(3){
+
+        &.__active .strip:nth-child(3) {
             opacity: 0;
         }
-        &.__active .strip:nth-child(4){
+
+        &.__active .strip:nth-child(4) {
             width: 33px;
             transform: rotate(45deg);
         }
@@ -36,7 +41,7 @@
     .navigation {
         width: 100%;
         height: 50%;
-        display: none;
+        display: flex;
         flex-direction: column;
         padding: 100px 20px 0 50px;
         position: fixed;
@@ -49,14 +54,17 @@
         text-align: center;
         overflow-y: auto;
         z-index: 10;
+
         &.__burger__menu {
             display: flex;
             animation: burgerAnimationOpen 0.75s;
         }
+
         &.close {
             display: flex;
             animation: burgerAnimationClose 0.8s;
         }
+
         &.__show {
             display: flex;
         }
@@ -68,12 +76,15 @@
         background-color: $color-main-text;
         transition: transform 0.4s ease;
         z-index: 10;
+
         &.strip:nth-child(1) {
             transform-origin: top right;
         }
+
         &.strip:nth-child(2) {
             transform-origin: top left;
         }
+
         &.strip:nth-child(4) {
             transform-origin: bottom right;
         }
@@ -83,13 +94,17 @@
     .mobile-menu {
         margin: 0;
         padding-right: 50px;
-        @include flex (flex, column, none, none, none, flex-start);
+        // display: none;
+        // @include flex (flex, column, none, none, none, flex-start);
         list-style: none;
+
         li {
             @include font (2.4rem, 5rem, 700);
-            box-shadow:1px 1px rgba(0, 0, 0, 1);
+            box-shadow: 1px 1px rgba(0, 0, 0, 1);
         }
+
         a {
+
             // @extend %transition-400ms;
             &:hover {
                 // @extend %transition-2s;
@@ -107,6 +122,7 @@
         transform: translateX(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0%);
         opacity: 1;
@@ -118,6 +134,7 @@
         transform: translateX(0%);
         opacity: 1;
     }
+
     to {
         transform: translateX(100%);
         opacity: 0;
