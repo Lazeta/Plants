@@ -109,221 +109,221 @@
 
 
 @media (max-width: $tablet-width) {
-    .btn__learn-more {
-        width: 158px;
-        height: 44px;
-    }
+//     .btn__learn-more {
+//         width: 158px;
+//         height: 44px;
+//     }
     
-    .services__btns {
-        button {
-            width: 161px;
-            height: 50px;
-            color: $color-orange;
-            border: 1px solid $color-orange;
-            border-radius: 5px;
-        }
-    }
-    .btn__project__1 {
-        margin-right: 38px;
-    }
-    .btn__project__2 {
-        margin-right: 38px;
-    }
+//     .services__btns {
+//         button {
+//             width: 161px;
+//             height: 50px;
+//             color: $color-orange;
+//             border: 1px solid $color-orange;
+//             border-radius: 5px;
+//         }
+//     }
+//     .btn__project__1 {
+//         margin-right: 38px;
+//     }
+//     .btn__project__2 {
+//         margin-right: 38px;
+//     }
 
-    .btn__item {
-        width: 250px;
-        height: 50px;
-        margin: 16px 41px;
-        padding: 14px 40px;
-        background: $color-light;
-        @include flex (flex, none, none, none, space-between, none);
-        // text-align: start;
-        border-radius: 20px;
-        border: none;
-    }
-    .btn__accordion__item {
-        border-radius: 50%;
-    }
+//     .btn__item {
+//         width: 250px;
+//         height: 50px;
+//         margin: 16px 41px;
+//         padding: 14px 40px;
+//         background: $color-light;
+//         @include flex (flex, none, none, none, space-between, none);
+//         // text-align: start;
+//         border-radius: 20px;
+//         border: none;
+//     }
+//     .btn__accordion__item {
+//         border-radius: 50%;
+//     }
 
-    .btn__contact-us {
-        width: 162px;
-        height: 50px;
-        margin-top: 28px;
-        color: $color-orange;
-        border: 1px solid $color-orange;
-        border-radius: 5px;
+//     .btn__contact-us {
+//         width: 162px;
+//         height: 50px;
+//         margin-top: 28px;
+//         color: $color-orange;
+//         border: 1px solid $color-orange;
+//         border-radius: 5px;
 
-    }
-    .btn__city__bar {
-        width: 450px;
-        height: 50px;
-        margin-top: -11px;
-        margin-right: 159px;
-        background: $color-city-box;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 0px;
-        border: none;
-        @include flex (flex, row, none, none, space-between, flex-end);
-        span {
-            height: 40px;
-            letter-spacing: 0.05em;
-            color: $color-main-text;
-            text-align: center; 
-        }
-        img {
-            padding: 0 35px 18px 0;
-        }
-    }
-    .btn__accordion__city {
-        margin-right: 0;
-    }
-
-
-    .btn__animation {
-        transition: 0.6s;
-        transform: scale(1);
-    }
-    .btn__animation_2 {
-        transition: 0.6s;
-        transform: scale(1);
-    }
-    .btn__animation:hover {
-        transition: 3s;
-        transform: scale(1);
-        background-color: $color-hovered;
-        color: $color-white;
-    }
-    .btn__animation_2:hover {
-        transition: 2s;
-        transform: scale(1);
-        background-color: $color-hovered;
-        color: $color-white;
-    }
-}
-
-@media (max-width: $mobile-big-width) {
-    .btn__learn-more {
-        width: 100px;
-        height: 34.14px;
-        margin-bottom: 59px;
-        margin-left: 1px;
-        padding-left: 16px;
-    }
-
-    .services__button {
-        width: 121px;
-        height: 35px;
-        margin: 0px 10px 9px 0;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 20px;
-        text-align: center;
-        color: $color-orange;
-        border: 1px solid $color-orange;
-        border-radius: 5px;
-    }
-    .btn__item {
-        width: 180px;
-        height: 49.72px;
-        margin: 0px 25px 0px 15px;
-        padding: 0px 0 0 6px;
-        text-align: start;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 20px;
-        background: $color-city-box;
-        border-radius: 20px;
-        border: none;
-        display: flex;
-        justify-content: space-around;
-        align-content: normal;
-        flex-wrap: nowrap;
-        align-items: center;
-    }
-    .btn__item-basics button {
-        margin-top: 0px;
-        padding-left: 0px;
-        margin-left: 5px;
-    }
-    .btn__item-standard {
-        margin-top: 0px;
-    }
-    .btn__item-pro {
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    .btn__accordion__item {
-        padding-right: 22px;
-        padding-top: 4px;
-        border-radius: 50%;
-    }
-
-    .btn__contact-us {
-        display: block;
-        width: 121px;
-        height: 35px;
-        margin: 19px 0 0 87px;
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 20px;
-        text-align: center;
-        color: #E06733;
-        border: 1px solid #E06733;
-        border-radius: 5px;
-    }
-
-    .btn__city__bar {
-        width: 300px;
-        height: 50px;
-        margin-top: 63px;
-        margin-left: -42px;
-        padding-right: 0;
-        background: $color-city-box;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 0px;
-        border: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        span {
-            height: 40px;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 40px;
-            letter-spacing: 0.05em;
-            color: $color-main-text;
-            text-align: center;
-        }
-        img {
-            padding: 0 20px 17px 0;
-        }
-    }
-    .btn__accordion__city {
-        margin-right: 0px;
-    }
+//     }
+//     .btn__city__bar {
+//         width: 450px;
+//         height: 50px;
+//         margin-top: -11px;
+//         margin-right: 159px;
+//         background: $color-city-box;
+//         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//         border-radius: 0px;
+//         border: none;
+//         @include flex (flex, row, none, none, space-between, flex-end);
+//         span {
+//             height: 40px;
+//             letter-spacing: 0.05em;
+//             color: $color-main-text;
+//             text-align: center; 
+//         }
+//         img {
+//             padding: 0 35px 18px 0;
+//         }
+//     }
+//     .btn__accordion__city {
+//         margin-right: 0;
+//     }
 
 
-    .btn__animation {
-        transition: 0.6s;
-        transform: scale(1);
-    }
-    .btn__animation_2 {
-        transition: 0.6s;
-        transform: scale(1);
-    }
-    .btn__animation:hover {
-        transition: 3s;
-        transform: scale(1);
-        background-color: #E06733;
-        color:#ffffff;
-    }
-    .btn__animation_2:hover {
-        transition: 2s;
-        transform: scale(1);
-        background-color: #E06733;
-        color:#ffffff;
-    }
+//     .btn__animation {
+//         transition: 0.6s;
+//         transform: scale(1);
+//     }
+//     .btn__animation_2 {
+//         transition: 0.6s;
+//         transform: scale(1);
+//     }
+//     .btn__animation:hover {
+//         transition: 3s;
+//         transform: scale(1);
+//         background-color: $color-hovered;
+//         color: $color-white;
+//     }
+//     .btn__animation_2:hover {
+//         transition: 2s;
+//         transform: scale(1);
+//         background-color: $color-hovered;
+//         color: $color-white;
+//     }
+// }
+
+// @media (max-width: $mobile-big-width) {
+//     .btn__learn-more {
+//         width: 100px;
+//         height: 34.14px;
+//         margin-bottom: 59px;
+//         margin-left: 1px;
+//         padding-left: 16px;
+//     }
+
+//     .services__button {
+//         width: 121px;
+//         height: 35px;
+//         margin: 0px 10px 9px 0;
+//         font-weight: 400;
+//         font-size: 15px;
+//         line-height: 20px;
+//         text-align: center;
+//         color: $color-orange;
+//         border: 1px solid $color-orange;
+//         border-radius: 5px;
+//     }
+//     .btn__item {
+//         width: 180px;
+//         height: 49.72px;
+//         margin: 0px 25px 0px 15px;
+//         padding: 0px 0 0 6px;
+//         text-align: start;
+//         font-family: 'Inter';
+//         font-style: normal;
+//         font-weight: 700;
+//         font-size: 15px;
+//         line-height: 20px;
+//         background: $color-city-box;
+//         border-radius: 20px;
+//         border: none;
+//         display: flex;
+//         justify-content: space-around;
+//         align-content: normal;
+//         flex-wrap: nowrap;
+//         align-items: center;
+//     }
+//     .btn__item-basics button {
+//         margin-top: 0px;
+//         padding-left: 0px;
+//         margin-left: 5px;
+//     }
+//     .btn__item-standard {
+//         margin-top: 0px;
+//     }
+//     .btn__item-pro {
+//         margin-top: 0px;
+//         margin-bottom: 0px;
+//     }
+//     .btn__accordion__item {
+//         padding-right: 22px;
+//         padding-top: 4px;
+//         border-radius: 50%;
+//     }
+
+//     .btn__contact-us {
+//         display: block;
+//         width: 121px;
+//         height: 35px;
+//         margin: 19px 0 0 87px;
+//         font-weight: 700;
+//         font-size: 15px;
+//         line-height: 20px;
+//         text-align: center;
+//         color: #E06733;
+//         border: 1px solid #E06733;
+//         border-radius: 5px;
+//     }
+
+//     .btn__city__bar {
+//         width: 300px;
+//         height: 50px;
+//         margin-top: 63px;
+//         margin-left: -42px;
+//         padding-right: 0;
+//         background: $color-city-box;
+//         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//         border-radius: 0px;
+//         border: none;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: end;
+//         span {
+//             height: 40px;
+//             font-style: normal;
+//             font-weight: 400;
+//             font-size: 20px;
+//             line-height: 40px;
+//             letter-spacing: 0.05em;
+//             color: $color-main-text;
+//             text-align: center;
+//         }
+//         img {
+//             padding: 0 20px 17px 0;
+//         }
+//     }
+//     .btn__accordion__city {
+//         margin-right: 0px;
+//     }
+
+
+//     .btn__animation {
+//         transition: 0.6s;
+//         transform: scale(1);
+//     }
+//     .btn__animation_2 {
+//         transition: 0.6s;
+//         transform: scale(1);
+//     }
+//     .btn__animation:hover {
+//         transition: 3s;
+//         transform: scale(1);
+//         background-color: #E06733;
+//         color:#ffffff;
+//     }
+//     .btn__animation_2:hover {
+//         transition: 2s;
+//         transform: scale(1);
+//         background-color: #E06733;
+//         color:#ffffff;
+//     }
 }

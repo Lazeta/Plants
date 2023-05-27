@@ -28,57 +28,57 @@
 }
 
 @media (max-width: $tablet-width) {
-    .contact-us {
-        max-width: 768px;
-        width: 768px;
-        height: 739px;
-    }
-    .contact-us__wrapper {
-        width: 768px;
-        height: 490px;
-        padding-left: 200px;
-    }
-    .contact-us__title {
-        width: 200px;
-        height: 248.49px;
-    }
-    .contact-us__img {
-        width: 200px;
-        height: 248.49px;
-    }
+    // .contact-us {
+    //     max-width: 768px;
+    //     width: 768px;
+    //     height: 739px;
+    // }
+    // .contact-us__wrapper {
+    //     width: 768px;
+    //     height: 490px;
+    //     padding-left: 200px;
+    // }
+    // .contact-us__title {
+    //     width: 200px;
+    //     height: 248.49px;
+    // }
+    // .contact-us__img {
+    //     width: 200px;
+    //     height: 248.49px;
+    // }
 }
 
 @media (max-width: $mobile-big-width) {
-    .contact-us {
-        max-width: 380px;
-        width: 384px;
-        height: 444px;
-    }
-    .contact-us__wrapper {
-        width: 380px;
-        height: 490px;
-        padding-left: 21px;
-    }
-    .contact-us__box-city {
-        width: 300px;
-        @include flex (flex, column, none, none, none, none);
-    }
-    .contact-us__title {
-        width: 192px;
-        height: 34px;
-        margin: 0; 
-        padding-top: 155px;
-        padding-left: 12px;
-        @include font (2.5rem, 3.3rem, none);
-        text-align: center;
-        color: $color-green;
-    }
-    .contact-us__button {
-        width: 250px;
-    }
-    .contact-us__img {
-        margin-bottom: 30px;
-        width: 100px;
-        height: 124.25px;
-    }
+    // .contact-us {
+    //     max-width: 380px;
+    //     width: 384px;
+    //     height: 444px;
+    // }
+    // .contact-us__wrapper {
+    //     width: 380px;
+    //     height: 490px;
+    //     padding-left: 21px;
+    // }
+    // .contact-us__box-city {
+    //     width: 300px;
+    //     @include flex (flex, column, none, none, none, none);
+    // }
+    // .contact-us__title {
+    //     width: 192px;
+    //     height: 34px;
+    //     margin: 0; 
+    //     padding-top: 155px;
+    //     padding-left: 12px;
+    //     @include font (2.5rem, 3.3rem, none);
+    //     text-align: center;
+    //     color: $color-green;
+    // }
+    // .contact-us__button {
+    //     width: 250px;
+    // }
+    // .contact-us__img {
+    //     margin-bottom: 30px;
+    //     width: 100px;
+    //     height: 124.25px;
+    // }
 }

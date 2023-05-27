@@ -52,106 +52,106 @@
 
 
 @media (max-width: $tablet-width) {
-    .prices {
-        max-width: 768px;
-        width: 768px;
-        height: 585px;
-        background: $color-white;
-    }
-    .prices__container {
-        width: auto;
-        height: 405px;
-        padding: 0;
-        @include flex (inline-flex, column, wrap, space-between, flex-start, none);
-    }
-    .prices__bar {
-        width: 332px;
-        height: 391px;
-    }
-    .prices__bar__title {
-        padding-bottom: 0px;
-        padding-top: 42px;
-        margin-left: -96px;
-        text-align: center;
-    }
-    .prices__list {
-        width: 332px;
-        height: 281px;
-        margin: 55px 0 0 50px;
-        padding-top: 4px;
-        border: 1px solid $color-border;
-        border-radius: 20px;
-        @include flex (flex, column, none, none, center, none);
-    }
-    .price__info {
-        width: 296px;
-        height: 357.98px;
-        padding: 143px 0px 0px 90px;
-        @include flex (flex, column, none, none, space-between, flex-end);
-    }
-    .prices__content {
-        width: 296px;
-        height: 77.41px;
-        text-align: right;
-    }
-    .leafs {
-        margin-top: 100px;
-        margin-right: -10px;
-    }
+    // .prices {
+    //     max-width: 768px;
+    //     width: 768px;
+    //     height: 585px;
+    //     background: $color-white;
+    // }
+    // .prices__container {
+    //     width: auto;
+    //     height: 405px;
+    //     padding: 0;
+    //     @include flex (inline-flex, column, wrap, space-between, flex-start, none);
+    // }
+    // .prices__bar {
+    //     width: 332px;
+    //     height: 391px;
+    // }
+    // .prices__bar__title {
+    //     padding-bottom: 0px;
+    //     padding-top: 42px;
+    //     margin-left: -96px;
+    //     text-align: center;
+    // }
+    // .prices__list {
+    //     width: 332px;
+    //     height: 281px;
+    //     margin: 55px 0 0 50px;
+    //     padding-top: 4px;
+    //     border: 1px solid $color-border;
+    //     border-radius: 20px;
+    //     @include flex (flex, column, none, none, center, none);
+    // }
+    // .price__info {
+    //     width: 296px;
+    //     height: 357.98px;
+    //     padding: 143px 0px 0px 90px;
+    //     @include flex (flex, column, none, none, space-between, flex-end);
+    // }
+    // .prices__content {
+    //     width: 296px;
+    //     height: 77.41px;
+    //     text-align: right;
+    // }
+    // .leafs {
+    //     margin-top: 100px;
+    //     margin-right: -10px;
+    // }
 }
 
 @media (max-width: $mobile-big-width) {
-    .prices {
-        max-width: 380px;
-        width: 380px;
-        height: 512px;
-    }
-    .prices__wrapper {
-        width: 230px;
-        height: auto;
-        padding: 20px 0px 0px 0px;
-        @include flex (inline-flex, column, wrap, space-between, flex-start, none);
-    }
-    .prices__bar {
-        width: 382px;
-        height: auto;
-        margin: 0;
-        padding: 0;
-    }
-    .prices__bar__title {
-        margin-left: 0;
-        padding: 2px 0 0 0;
-        text-align: center;
-    }
-    .prices__list {
-        width: 224px;
-        height: 235px;
-        margin: 36px 0px 0px 80px;
-        padding: 0;
-        @include flex (flex, column, none, none, center, flex-end);
-        border: 1px solid $color-border;
-        border-radius: 20px;
-    }
-    .price__info {
-        width: 230px;
-        height: auto;
-        padding: 20px 0px 0px 75px;
-        @include flex (flex, column, wrap, center, none, none);
-    }
-    .prices__content {
-        width: 296px;
-        height: 77.41px;
-    }
-    .prices__content__title {
-        padding: 0 10px;
-        text-align: center;
-    }
-    .leafs {
-        margin-top: 0;
-        margin-right: 0;
-        display: none;
-    }
-    .leafs__img {
-        display: none;
-    }
+    // .prices {
+    //     max-width: 380px;
+    //     width: 380px;
+    //     height: 512px;
+    // }
+    // .prices__wrapper {
+    //     width: 230px;
+    //     height: auto;
+    //     padding: 20px 0px 0px 0px;
+    //     @include flex (inline-flex, column, wrap, space-between, flex-start, none);
+    // }
+    // .prices__bar {
+    //     width: 382px;
+    //     height: auto;
+    //     margin: 0;
+    //     padding: 0;
+    // }
+    // .prices__bar__title {
+    //     margin-left: 0;
+    //     padding: 2px 0 0 0;
+    //     text-align: center;
+    // }
+    // .prices__list {
+    //     width: 224px;
+    //     height: 235px;
+    //     margin: 36px 0px 0px 80px;
+    //     padding: 0;
+    //     @include flex (flex, column, none, none, center, flex-end);
+    //     border: 1px solid $color-border;
+    //     border-radius: 20px;
+    // }
+    // .price__info {
+    //     width: 230px;
+    //     height: auto;
+    //     padding: 20px 0px 0px 75px;
+    //     @include flex (flex, column, wrap, center, none, none);
+    // }
+    // .prices__content {
+    //     width: 296px;
+    //     height: 77.41px;
+    // }
+    // .prices__content__title {
+    //     padding: 0 10px;
+    //     text-align: center;
+    // }
+    // .leafs {
+    //     margin-top: 0;
+    //     margin-right: 0;
+    //     display: none;
+    // }
+    // .leafs__img {
+    //     display: none;
+    // }
 }
