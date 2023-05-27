@@ -5,14 +5,14 @@
 
 @media (max-width: $tablet-width) {
     .main {
-        max-width: auto;
+        max-width: $tablet-width;
         margin: 0 auto;
     }
 }
 
 @media (max-width: $mobile-big-width) {
     .main {
-        max-width: auto;
+        max-width: $mobile-big-width;
         margin: 0 auto;
     }
 }

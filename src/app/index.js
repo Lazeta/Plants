@@ -3,7 +3,7 @@
 This handler will operate at screen resolutions less than
 or equal to 768 pixels.
 */
-if (window.innerWidth <= 768){
+if (window.innerWidth <= 414){
     /* *RU* Для бургер меню из 4 полос где по нажатия всплывает окно навигации по сайту.
     Фиксируем константы нашего меню навигации и иконки меню.
     For a burger menu of 4 lanes where, when clicked, a site navigation window pops up.

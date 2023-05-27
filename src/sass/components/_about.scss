@@ -5,20 +5,24 @@
     margin: auto;
     padding: 93px 109px 94px 109px;
 }
+
 .about__wrapper {
     width: auto;
     height: 479px;
     @include flex (flex, row, none, none, space-between, center);
 }
+
 .about__content {
     width: 605px;
     height: 344px;
-    > h2 {
+
+    >h2 {
         @extend %font-inika;
         width: 463px;
         height: 102px;
         color: $color-orange;
     }
+
     p {
         padding-top: 40px;
     }
@@ -26,37 +30,40 @@
 
 
 @media (max-width: $tablet-width) {
-    // .about {
-    //     max-width: 768px;
-    //     width: auto;
-    //     height: 783px;
-    //     padding-left: 50px;
-    // }
-    // .about__wrapper {
-    //     width: auto;
-    //     @include flex (flex, column, none, none, space-between, none);
-    //     margin: 0;
-    //     padding-right: 50px;
-    //     p {
-    //         margin-top: 40px;
-    //         @include font (2rem, 3rem, none);
-    //     }
-    // }
-    // .about__img {
-    //     width: 250px;
-    // }
-    // .about__content {
-    //     width: 668px;
-    //     height: 350px;
-    //     padding: 40px 0 68px 0px;
-    //     > h2 {
-    //         padding-left: 102px;
-    //         @extend %font-inika;
-    //         color: $color-orange;
-    //         @include font (3.5rem, 4.6rem, 400);
-    //         text-align: center;
-    //     }
-    // }
+    .about {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .about__wrapper {
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about__content {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .about__content>h2 {
+        width: 100%;
+        height: auto;
+        font-size: 25px;
+        line-height: 35px;
+        margin: 0 0 15px;
+    }
+
+    .about__content p {
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        margin: 0;
+    }
 }
 
 @media (max-width: $mobile-big-width) {

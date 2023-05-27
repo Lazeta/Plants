@@ -4,9 +4,16 @@
 }
 
 @media (max-width: $tablet-width) {
-
+    .wrapper {
+        max-width: $tablet-width;
+        margin: auto;
+    }
 }
 
 @media (max-width: $mobile-big-width) {
-    
+    .wrapper {
+        max-width: $mobile-big-width;
+        margin: auto;
+    }
 }
+

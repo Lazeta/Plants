@@ -275,13 +275,13 @@ button {
 
 @media (max-width: 768px) {
   .main {
-    max-width: auto;
+    max-width: 768px;
     margin: 0 auto;
   }
 }
 @media (max-width: 414px) {
   .main {
-    max-width: auto;
+    max-width: 414px;
     margin: 0 auto;
   }
 }
@@ -290,6 +290,18 @@ button {
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+    margin: auto;
+  }
+}
+@media (max-width: 414px) {
+  .wrapper {
+    max-width: 414px;
+    margin: auto;
+  }
+}
 .header {
   background: #EDF2EC;
   margin: 0 auto;
@@ -320,28 +332,13 @@ button {
   color: #010201;
 }
 
-@media (max-width: 768px) {
-  .header {
-    max-width: 768px;
-    height: 117px;
-    background: #EDF2EC;
-    margin: 0 auto;
-  }
-}
 @media (max-width: 414px) {
-  .header {
-    width: 380px;
-    height: 96px;
-    padding: 0;
-  }
-}
-@media (max-width: 768px) {
   .header__wrapper {
-    padding: 0 16px;
-    margin: 0;
-  }
-  #Home {
-    padding: 42px 16px;
+    max-width: 768px;
+    height: auto;
+    margin: 0 auto;
+    padding: 42px 16 42px 16px;
+    background: #EDF2EC;
   }
   .logo__box {
     padding-top: 16px;
@@ -352,6 +349,7 @@ button {
     right: -100%;
     width: 100%;
     height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -510,63 +508,15 @@ button {
     padding-bottom: 1px;
   }
 }
-@media (max-width: 414px) {
-  .footer {
-    width: 100%;
-    height: 146px;
-    margin: 0 auto;
-  }
-  .footer__wrapper {
-    margin-top: -10px;
-    margin-bottom: 0;
-    padding-top: 20px;
-    padding-left: 2px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: none;
-    align-items: center;
-  }
-  .footer__wrapper li {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: none;
-    align-items: none;
-  }
-  .footer-data {
-    width: 190px;
-  }
-  .footer-data li {
-    padding: 8px;
-    margin-right: 0;
-  }
-  .rsschool li {
-    padding: 8px 0;
-    margin-left: -3px;
-    margin-top: -6px;
-  }
-  .social-list li {
-    padding: 0px 10px 5px 10px;
-  }
-  .instagram__svg__item a {
-    padding-bottom: 0;
-    margin-right: 7px;
-  }
-  .facebook__svg__item a {
-    padding-bottom: 0;
-    margin-right: 4px;
-  }
-  .twitter__svg__item a {
-    padding-bottom: 3px;
-  }
-  .pinterest__svg__item a {
-    padding-bottom: 1px;
-  }
+.burger__menu {
+  display: none;
 }
-@media (max-width: 768px) {
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 414px) {
   /* меню бургер в 4 полосы с анимацией, превращения в крестик */
   .burger__menu {
     width: 40px;
@@ -600,7 +550,7 @@ button {
   .navigation {
     width: 100%;
     height: 50%;
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 100px 20px 0 50px;
     position: fixed;
@@ -644,12 +594,6 @@ button {
   .mobile-menu {
     margin: 0;
     padding-right: 50px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: none;
-    align-items: flex-start;
     list-style: none;
   }
   .mobile-menu li {
@@ -739,10 +683,57 @@ button {
   display: none;
 }
 
+@media (max-width: 768px) {
+  .header__navigation {
+    margin: 0;
+    padding: 16px 0 0 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: none;
+    align-content: none;
+    justify-content: space-between;
+    align-items: none;
+  }
+  .header__navigation a {
+    text-decoration: none;
+  }
+  .header__navigation a:hover {
+    font-size: 100%;
+    background-color: #E3E1D5;
+    color: #010201;
+    border-radius: 5px;
+  }
+  .navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .navigation li:not(:last-child) {
+    margin-right: 10px;
+  }
+  .list__item {
+    margin: 0;
+    padding: 0 7.4px;
+  }
+  .menu-link {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #010201;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  .menu-link:hover {
+    color: #E06733;
+  }
+}
 .welcome {
   background: #EDF2EC;
   height: 532px;
-  padding: 63px 5% 0 5%;
+  padding: 0px 5% 0 5%;
   width: auto;
 }
 
@@ -791,82 +782,78 @@ button {
 
 @media (max-width: 768px) {
   .welcome {
+    background: #EDF2EC;
+    height: 532px;
+    padding: 63px 5% 0 5%;
     width: auto;
-    height: auto;
-    padding-left: 50px;
   }
   .welcome__wrapper {
-    width: auto;
-    padding: 0px;
+    margin: 0 auto;
+    padding: 0;
     display: flex;
+    flex-direction: row;
+    flex-wrap: none;
+    align-content: none;
+    justify-content: space-between;
+    align-items: none;
+    max-width: 668px;
+  }
+  .welcome__img {
+    width: 280px;
+    height: auto;
+    margin: 0px 0px 0px;
+    padding: 0 0 0 0px;
+  }
+  .welcome__img img {
+    max-width: 280px;
+  }
+  .welcome__section {
+    min-width: 350px;
+    max-height: 100%;
+    width: 47.5%;
+    height: 375px;
+    padding: 36px 0px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: none;
+    align-content: none;
+    justify-content: space-between;
+    align-items: none;
+  }
+  .welcome__section p {
+    line-height: 3.5rem;
+  }
+  .welcome__section button {
+    margin-top: 3px;
+  }
+  .welcome__wrapper {
     flex-direction: row-reverse;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: space-between;
-    align-items: none;
-  }
-  .welcome__section {
-    position: relative;
-    width: 346px;
-    height: 310px;
-    margin: 40px 42px 0px 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: space-between;
-    align-items: none;
-  }
-  .welcome__section p {
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 25px 0 30px 5px;
-    align-content: stretch;
+    align-items: center;
+    padding: 0 0 0 0px;
   }
   .welcome__img {
-    width: 40%;
-    margin: 0px;
-    padding: 0 50px 87px 0;
+    width: 280px;
+    height: auto;
+    margin-right: 0;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
   }
-}
-@media (max-width: 414px) {
-  .welcome {
-    width: auto;
-    height: 300px;
-    padding-left: 50px;
-  }
-  .welcome__wrapper {
-    width: auto;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-around;
-    align-items: none;
+  .welcome__img img {
+    max-width: 280px;
   }
   .welcome__section {
     width: 346px;
-    height: 310px;
-    margin: 25px 36px 0px 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: space-between;
-    align-items: none;
-  }
-  .welcome__section p {
-    width: auto;
     height: auto;
-    margin: 0px;
-    padding: 0px 0px 2px 1px;
-    align-content: stretch;
+    margin: 0 0 0 0;
+    padding: 0px 0px 0px 0px;
+    text-align: left;
   }
-  .welcome__img {
-    margin: 0;
-    padding: 0px;
+  .welcome__section > h1 {
+    min-width: 341px;
+    height: auto;
+    font-size: 3.5rem;
+    line-height: 5rem;
+    font-weight: 700;
   }
 }
 .about {
@@ -901,6 +888,38 @@ button {
   padding-top: 40px;
 }
 
+@media (max-width: 768px) {
+  .about {
+    height: auto;
+    padding: 50px 20px;
+  }
+  .about__wrapper {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__content {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .about__content > h2 {
+    width: 100%;
+    height: auto;
+    font-size: 25px;
+    line-height: 35px;
+    margin: 0 0 15px;
+  }
+  .about__content p {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    margin: 0;
+  }
+}
 .service {
   width: auto;
   height: 1300px;
@@ -977,155 +996,62 @@ button {
 }
 
 @media (max-width: 768px) {
+  /* Медиа-запрос для экранов с разрешением до 768px */
   .service {
-    max-width: 768px;
-    margin-top: 12px;
-    width: auto;
     height: auto;
-    background: #EDF2EC;
-    margin-bottom: 17px;
   }
-  .service__wrapper {
-    width: auto;
+  .service__content {
     height: auto;
-    padding: 48px 0 30px 50px;
-    display: flex;
+    padding: 50px 20px 0;
     flex-direction: column;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: none;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
   }
-  .service__wrapper > h2 {
-    width: 306px;
-    height: 94px;
-  }
-  .services__buttons {
-    width: 559px;
-    height: 50px;
-    margin: 0;
-    padding: 40px 0 0px 0;
-    display: flex;
-    flex-direction: none;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: space-between;
-    align-items: none;
+  .service__title {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+    padding-bottom: 20px;
   }
   .services {
-    width: auto;
     height: auto;
-    padding: 10px 0 50px 26px;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 278px);
-    gap: 38px 109px;
-  }
-  .service__item {
-    width: 281px;
-    height: 450px;
-    padding: 0 10px 0 0;
-  }
-  .service__item img {
-    width: 280px;
-    height: 350px;
-    border-radius: 20px 20px 0px 0px;
-    object-fit: none;
-  }
-  .description {
-    width: 278px;
-    height: 100px;
-    margin: -5px 0 0 24px;
-    padding: 0;
-    text-align: center;
-    border: 1px solid #E3E1D5;
-    border-radius: 0px 0px 20px 20px;
-  }
-  .description p {
-    width: 201;
-    height: 40px;
-    padding: 0 38px 20px 38px;
-    color: #717171;
-    text-align: center;
-  }
-}
-@media (max-width: 414px) {
-  .service {
-    max-width: 768px;
-    width: auto;
-    height: auto;
-    margin: 12px 0 -20px 0;
-    background: #E3E1D5;
-  }
-  .services__wrapper {
-    width: auto;
-    height: auto;
-    padding: 82px 0 30px 50px;
+    padding: 30px 10px 0;
     display: flex;
-    flex-direction: column;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: none;
-    align-items: flex-start;
-  }
-  .services__wrapper > h2 {
-    width: 187px;
-    height: 69px;
-    margin: -65px 0 0 -24px;
-  }
-  .services__buttons {
-    width: 282px;
-    height: 79px;
-    margin: 35px 0 0 -24px;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-content: none;
-    justify-content: flex-start;
-    align-items: none;
-  }
-  .services {
-    width: auto;
-    height: auto;
-    padding: 10px 0 50px 26px;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(1, 0px);
-    gap: 34px 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 281px);
+    gap: 40px;
   }
   .service__item {
-    width: 281px;
-    height: 450px;
-    padding: 0 10px 0 0;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
   }
-  .service__item img {
-    width: 280px;
-    height: 350px;
-    border-radius: 20px 20px 0px 0px;
-    object-fit: none;
-  }
-  .description {
-    width: 278px;
-    height: 100px;
-    margin: -5px 0 0 24px;
-    padding: 0;
-    text-align: center;
-    border: 1px solid #E3E1D5;
-    border-radius: 0px 0px 20px 20px;
-  }
-  .description > h3 {
-    margin: 11px 0 0 0;
-    padding: 0 3px 11px 0;
-    color: #E06733;
-  }
-  .description p {
-    width: 201;
-    height: 40px;
-    padding: 0 38px 20px 38px;
-    color: #717171;
-    text-align: center;
-  }
+  /*  Мы используем медиа-запрос `max-width: 768px`, чтобы применять стили только на экранах с разрешением до 768px. 
+
+    Для блока `.service` мы убираем фиксированную высоту, чтобы блок мог растягиваться по высоте в зависимости от содержимого. 
+
+    Для блока `.service__content` мы изменяем свойство `height` на `auto`, чтобы блок также мог растягиваться по высоте в 
+    зависимости от содержимого. Мы также меняем направление гибкого контейнера на колонку и выравниваем элементы по центру. 
+
+    Для заголовка `.service__title` мы устанавливаем новые свойства, чтобы заголовок занимал всю ширину блока и выравнивался 
+    по центру. Мы также удаляем свойство `margin-top` и добавляем свойство `padding-bottom`, чтобы создать отступ снизу.
+
+    Для блока `.services` мы также изменяем свойство `height` на `auto`, чтобы блок мог растягиваться по высоте в зависимости 
+    от содержимого. Мы меняем свойство `display` на `flex` и направление гибкого контейнера на колонку, чтобы плитки 
+    отображались в один столбец. Мы также изменяем свойство `gap` на `40px`, чтобы добавить отступ между плитками.
+
+    Для блока `.service__item` мы устанавливаем новые свойства, чтобы плитки занимали всю ширину блока и могли растягиваться 
+    по высоте в зависимости от содержимого. Мы также удаляем свойство `grid-template-columns` и добавляем свойство 
+    `border-radius`, чтобы углы плиток были закруглены.
+  */
 }
 .prices {
   width: 1440px;
@@ -1204,6 +1130,71 @@ button {
   padding-top: 33px;
 }
 
+/* Медиа-запрос для экранов с разрешением до 768px */
+@media (max-width: 768px) {
+  .prices {
+    width: auto;
+    height: auto;
+    padding: 30px 20px;
+  }
+  .prices__wrapper {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .prices__bar {
+    max-width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .prices__bar__title {
+    padding-bottom: 20px;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .prices__list {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 20px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .price__info {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: none;
+    align-content: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .prices__content {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .prices__content__title {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  .leafs {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    margin: 0;
+  }
+}
 .contact-us {
   width: auto;
   background: #EDF2EC;
@@ -1248,6 +1239,48 @@ button {
   padding-bottom: 1px;
 }
 
+/* Медиа-запрос для экранов с разрешением до 768px */
+@media (max-width: 768px) {
+  .contact-us {
+    width: auto;
+    background: #EDF2EC;
+    padding: 30px 20px;
+  }
+  .contact-us__wrapper {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-us__box-city {
+    padding-top: 20px;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: none;
+    align-content: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-us__title {
+    min-width: auto;
+    height: auto;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .contact-us__woman {
+    margin: 20px auto;
+    padding: 0px;
+    max-width: 100%;
+  }
+  .contact-us__img {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    padding-bottom: 0;
+  }
+}
 .btn__accordion__item {
   border-radius: 50%;
   cursor: pointer;
