@@ -1,0 +1,100 @@
+.about {
+    max-width: $content-width;
+    height: 666px;
+    background: $color-white;
+    margin: auto;
+    padding: 93px 109px 94px 109px;
+}
+.about__wrapper {
+    width: auto;
+    height: 479px;
+    @include flex (flex, row, none, none, space-between, center);
+}
+.about__content {
+    width: 605px;
+    height: 344px;
+    > h2 {
+        @extend %font-inika;
+        width: 463px;
+        height: 102px;
+        color: $color-orange;
+    }
+    p {
+        padding-top: 40px;
+    }
+}
+
+
+@media (max-width: $tablet-width) {
+    .about {
+        max-width: 768px;
+        width: auto;
+        height: 783px;
+        padding-left: 50px;
+    }
+    .about__wrapper {
+        width: auto;
+        @include flex (flex, column, none, none, space-between, none);
+        margin: 0;
+        padding-right: 50px;
+        p {
+            margin-top: 40px;
+            @include font (2rem, 3rem, none);
+        }
+    }
+    .about__img {
+        width: 250px;
+    }
+    .about__content {
+        width: 668px;
+        height: 350px;
+        padding: 40px 0 68px 0px;
+        > h2 {
+            padding-left: 102px;
+            @extend %font-inika;
+            color: $color-orange;
+            @include font (3.5rem, 4.6rem, 400);
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: $mobile-big-width) {
+    .about {
+        max-width: 380px;
+        width: 380px;
+        height: 516px;
+        padding-left: 50px;
+    }
+    .about__wrapper {
+        width: auto;
+        @include flex (flex, column, none, none, space-between, none);
+        margin: 0;
+        padding-top: 34px;
+        padding-right: 50px;
+        p {
+            margin-top: 21px;
+            margin-right: 50px;
+            @include font (1.5rem, 2.5rem, none);
+            text-align: left;
+        }
+    }
+    .about__content {
+        width: 380px;
+        padding: 0;
+        > h2 {
+            width: 288px;
+            height: 57.74px;
+            margin-top: -5px;
+            padding-left: 20px;
+            color: $color-orange;
+            @include font (2.5rem, 3.3rem, none);
+            text-align: center;
+        }
+    }
+    .about__img {
+        width: 150px;
+        margin-right: 48px;
+        margin-bottom: 25px;
+    }
+}
