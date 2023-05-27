@@ -1,0 +1,18 @@
+.main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+    .main {
+        max-width: auto;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: $mobile-big-width) {
+    .main {
+        max-width: auto;
+        margin: 0 auto;
+    }
+}

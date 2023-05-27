@@ -1,0 +1,98 @@
+.welcome {
+    background: $color-light;
+    height: 532px;
+    padding: 63px 5% 0 5%;
+    width: auto;
+}
+.welcome__wrapper {
+    margin: 0 auto;
+    padding: 0;
+    @include flex (flex, row, none, none, space-between, none);
+}
+.welcome__img {
+    width: 448.8px;
+    height: 407.36px;
+    margin: -10px 25px 0px;
+    padding: 0 0 0 75px;
+}
+.welcome__section {
+    min-width: 549px;
+    max-height: 100%;
+    width: calc(50% - 2.5%);
+    height: 375px;
+    padding: 36px 109px 0px 26px;
+    @include flex (flex, column, none, none, space-between, none);
+    & p {
+        line-height: 3.5rem;
+    }
+    & button {
+        margin-top: 3px;
+    }
+}
+.welcome__title {
+    min-width: 414px;
+    height: auto;
+}
+
+
+@media (max-width: $tablet-width) {
+    .welcome {
+        width: auto;
+        height: auto;
+        padding-left: 50px;
+    }
+    .welcome__wrapper {
+        width: auto;
+        padding: 0px;
+        @include flex (flex, row-reverse, none, none, space-between, none);
+    }
+    .welcome__section {
+        position: relative;
+        width: 346px;
+        height: 310px;
+        margin: 40px 42px 0px 0;
+        @include flex (flex, column, none, none, space-between, none);
+        & p {
+            width: auto;
+            height:  auto;
+            margin: 0;
+            padding: 25px 0 30px 5px;
+            align-content: stretch;
+        }
+    }
+    .welcome__img {
+        width: 40%;
+        margin: 0px;
+        padding: 0 50px 87px 0;
+    }
+}
+
+@media (max-width: $mobile-big-width) {
+    .welcome {
+        width: auto;
+        height: 300px;
+        padding-left: 50px;
+    }
+    .welcome__wrapper {
+        width: auto;
+        padding: 0px;
+        @include flex (flex, column, wrap, space-around, space-around, none);
+    }
+    .welcome__section {
+        width: 346px;
+        height: 310px;
+        margin: 25px 36px 0px 0;
+        @include flex (flex, column, none, none, space-between, none);
+        & p {
+            width: auto;
+            height:  auto;
+            margin: 0px;
+            padding: 0px 0px 2px 1px;
+            align-content: stretch;
+        }
+    }
+    .welcome__img {
+        margin: 0;
+        padding: 0px;
+    }
+}
