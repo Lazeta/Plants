@@ -105,13 +105,15 @@
     //     @include flex (none, none, none, none, none, flex-start);
     // }
 
-    // .navigation {
-    //     list-style: none;
-    //     margin: 0;
-    //     padding: 0;
-    //     display: none;
-    //     align-items: center;
-    // }
+    .navigation {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+    }
 
     // .logo__box {
     //     width:  77px;

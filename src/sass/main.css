@@ -729,6 +729,17 @@ button {
   color: #E06733;
 }
 
+@media (max-width: 414px) {
+  .navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .welcome {
   background: #EDF2EC;
   height: 532px;
