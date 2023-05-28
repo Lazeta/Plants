@@ -555,17 +555,17 @@ button {
     padding-bottom: 1px;
   }
 }
-.burger__menu {
+.strips {
   display: none;
 }
 
-.mobile-menu {
+.hamburger {
   display: none;
 }
 
 @media (max-width: 414px) {
   /* меню бургер в 4 полосы с анимацией, превращения в крестик */
-  .burger__menu {
+  .strips {
     width: 40px;
     height: 24px;
     display: flex;
@@ -579,19 +579,45 @@ button {
     right: 25px;
     z-index: 11;
   }
-  .burger__menu .burger__menu.__active .strip:nth-child(1) {
+  .strips .strips.__active .strip:nth-child(1) {
     width: 33px;
     transform: rotate(-45deg);
   }
-  .burger__menu .burger__menu.__active .strip:nth-child(2) {
+  .strips .strips.__active .strip:nth-child(2) {
     opacity: 0;
   }
-  .burger__menu .burger__menu.__active .strip:nth-child(3) {
+  .strips .strips.__active .strip:nth-child(3) {
     opacity: 0;
   }
-  .burger__menu .burger__menu.__active .strip:nth-child(4) {
+  .strips .strips.__active .strip:nth-child(4) {
     width: 33px;
     transform: rotate(45deg);
+  }
+  .hamburger {
+    margin: 0;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: none;
+    align-content: none;
+    justify-content: none;
+    align-items: flex-start;
+    list-style: none;
+  }
+  .hamburger li {
+    font-size: 2.4rem;
+    line-height: 5rem;
+    font-weight: 700;
+    box-shadow: 1px 1px rgb(0, 0, 0);
+  }
+  .hamburger a {
+    transition: all 400ms ease-out;
+    transform: scale(1);
+  }
+  .hamburger a:hover {
+    transition: all 2s ease-out;
+    transform: scale(1);
+    color: #000000;
   }
   .navigation {
     width: 100%;
@@ -610,12 +636,12 @@ button {
     overflow-y: auto;
     z-index: 10;
   }
-  .navigation._active {
-    display: flex;
+  .navigation.__active {
+    display: block;
     animation: burgerAnimationOpen 0.75s;
   }
   .navigation.close {
-    display: flex;
+    display: block;
     animation: burgerAnimationClose 0.8s;
   }
   .strip {
@@ -633,34 +659,6 @@ button {
   }
   .strip.strip:nth-child(4) {
     transform-origin: bottom right;
-  }
-  .mobile-menu {
-    margin: 0;
-    padding-right: 50px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: none;
-    align-items: flex-start;
-    list-style: none;
-  }
-  .mobile-menu li {
-    font-size: 2.4rem;
-    line-height: 5rem;
-    font-weight: 700;
-    box-shadow: 1px 1px rgb(0, 0, 0);
-  }
-  .mobile-menu a {
-    transition: all 400ms ease-out;
-    transform: scale(1);
-  }
-  .mobile-menu a:hover {
-    transition: all 2s ease-out;
-    transform: scale(1);
-    background-color: rgba(0, 0, 0, 0.025);
-    color: #000000;
-    border-radius: 5px;
   }
 }
 @keyframes burgerAnimationOpen {
@@ -792,6 +790,13 @@ button {
     align-content: none;
     justify-content: none;
     align-items: flex-start;
+  }
+  .navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    align-items: center;
   }
   .logo__box {
     width: 77px;

@@ -9,8 +9,8 @@ if (window.innerWidth <= 414){
     For a burger menu of 4 lanes where, when clicked, a site navigation window pops up.
     We fixed the constants of our navigation menu and menu icon.
     */
-    const burgerIcon = document.querySelector('.burger__menu');
-    const burgerMenu = document.querySelector('.mobile-menu');
+    const burgerIcon = document.querySelector('.strips');
+    const burgerMenu = document.querySelector('.hamburger');
 
     /* *RU* Получаем кнопку меню бургер и добавляем обработчик события click,
     где добавляем или удаляем класс в зависимости от того есть он уже или нет.
@@ -19,19 +19,19 @@ if (window.innerWidth <= 414){
     */
     burgerIcon.addEventListener("click", function () {
         burgerIcon.classList.toggle('__active');
-        burgerMenu.classList.toggle('_active');
+        burgerMenu.classList.toggle('__active');
     });
     // burgerIcon.addEventListener("click", function () {
     //     if (burgerIcon.classList.contains('__active')){
     //         burgerIcon.classList.remove('__active');
-    //         burgerMenu.classList.remove('_active');
+    //         burgerMenu.classList.remove('__active');
     //         burgerMenu.classList.add('close')
     //         setTimeout(function() {
     //             burgerMenu.classList.remove('close');
     //           }, 700);
     //     } else {
     //         burgerIcon.classList.add('__active');
-    //         burgerMenu.classList.add('_active');
+    //         burgerMenu.classList.add('__active');
     //         burgerMenu.classList.remove('close')
     //     }
     // });
@@ -43,7 +43,7 @@ if (window.innerWidth <= 414){
 //         if(e.key === 'Escape' || e.key === 'Esc') { 
 //             if(burgerIcon.classList.contains('__active')) {
 //                 burgerIcon.classList.remove('__active');
-//                 burgerMenu.classList.remove('_active');
+//                 burgerMenu.classList.remove('__active');
 //                 burgerMenu.classList.add('close');
 //                 setTimeout(function() {
 //                     burgerMenu.classList.remove('close');
@@ -57,7 +57,7 @@ if (window.innerWidth <= 414){
 //     document.addEventListener('click', function(e) {
 //             if(burgerIcon.classList.contains('__active')) {
 //                 if (!burgerIcon.contains(e.target) && !burgerMenu.contains(e.target)){
-//                     burgerMenu.classList.remove('_active');
+//                     burgerMenu.classList.remove('__active');
 //                     burgerIcon.classList.remove('__active');
 //                     burgerMenu.classList.add('close');
 //                     setTimeout(function() {
@@ -73,8 +73,8 @@ if (window.innerWidth <= 414){
 //     menuLinks[i].addEventListener('click', function(e) {
 //         // *RU* Закрываем меню.
 //         // Close the menu.
-//         if (burgerMenu.classList.contains('_active')) {
-//             burgerMenu.classList.remove('_active') 
+//         if (burgerMenu.classList.contains('__active')) {
+//             burgerMenu.classList.remove('__active') 
 //             burgerMenu.classList.add('close');
 //             setTimeout(function() {
 //                 burgerMenu.classList.remove('close');
