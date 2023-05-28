@@ -138,6 +138,11 @@
         border-radius: 0;
     }
 
+    .prices__item {
+        width: 300px;
+        margin: 0 20px 40px;
+    }
+
     .price__info {
         max-width: 100%;
         height: auto;
@@ -165,8 +170,15 @@
         padding-top: 20px;
         margin: 0;
     }
+}
 
-    .tiles + * {
-        clear: both;
+@media (max-width: $mobile-big-width) {
+    .prices__wrapper {
+        padding: 20px 20px 0px 0px;
+    }
+
+    .prices__item {
+        width: auto;
+        margin: 0;
     }
 }

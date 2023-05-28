@@ -1306,6 +1306,10 @@ button {
     border: none;
     border-radius: 0;
   }
+  .prices__item {
+    width: 300px;
+    margin: 0 20px 40px;
+  }
   .price__info {
     max-width: 100%;
     height: auto;
@@ -1335,8 +1339,14 @@ button {
     padding-top: 20px;
     margin: 0;
   }
-  .tiles + * {
-    clear: both;
+}
+@media (max-width: 414px) {
+  .prices__wrapper {
+    padding: 20px 20px 0px 0px;
+  }
+  .prices__item {
+    width: auto;
+    margin: 0;
   }
 }
 .contact-us {
