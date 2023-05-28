@@ -1163,8 +1163,8 @@ button {
   }
 }
 .prices {
-  width: 1440px;
-  height: 560px;
+  width: auto;
+  height: auto;
   padding: 40px 109px 115px 109px;
   background: #FFFFFF;
   margin: auto;
@@ -1172,7 +1172,7 @@ button {
 
 .prices__wrapper {
   width: auto;
-  height: 405px;
+  height: auto;
   margin: -1px 0;
   display: flex;
   flex-direction: row;
@@ -1239,6 +1239,37 @@ button {
   padding-top: 33px;
 }
 
+@media screen and (max-width: 1335px) {
+  .prices {
+    height: auto;
+    padding: 40px 0 115px;
+  }
+  .prices__wrapper {
+    flex-direction: row;
+    align-items: center;
+    margin: 250px 0 0px 0;
+    padding: 50px 25px 0 25px;
+  }
+  .prices__bar {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  .prices__list {
+    max-width: 600px;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .prices__item {
+    width: 300px;
+    margin: 0 20px 40px;
+  }
+  .price__info {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
 /* Медиа-запрос для экранов с разрешением до 768px */
 @media (max-width: 768px) {
   .prices {
@@ -1249,7 +1280,8 @@ button {
   .prices__wrapper {
     width: 100%;
     height: auto;
-    margin: 0;
+    margin: 0px 0 0px 0;
+    padding: 20px 25px 0 25px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -1302,6 +1334,9 @@ button {
     height: auto;
     padding-top: 20px;
     margin: 0;
+  }
+  .tiles + * {
+    clear: both;
   }
 }
 .contact-us {
