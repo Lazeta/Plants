@@ -145,8 +145,9 @@
     //         align-content: stretch;
     //     }
     // }
-    // .welcome__img {
-    //     margin: 0;
-    //     padding: 0px;
-    // }
+    .welcome__img {
+        display: none;
+        margin: 0;
+        padding: 0px;
+    }
 }
