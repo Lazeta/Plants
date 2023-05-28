@@ -824,7 +824,7 @@ button {
 
 .welcome__wrapper {
   margin: 0 auto;
-  padding: 0;
+  padding: 63px 23px 40px 26px;
   display: flex;
   flex-direction: row;
   flex-wrap: none;
@@ -836,7 +836,7 @@ button {
 .welcome__img {
   width: 448.8px;
   height: 407.36px;
-  margin: -10px 25px 0px;
+  margin: -10px 0px 25px 0px;
   padding: 0 0 0 75px;
 }
 
@@ -861,7 +861,7 @@ button {
 }
 
 .welcome__title {
-  min-width: 414px;
+  min-width: inherit;
   height: auto;
 }
 
