@@ -1031,7 +1031,7 @@ button {
 
 .service__content {
   height: 94px;
-  padding: 70px 20px 20px 20px;
+  padding: 70px 20px 20px 108px;
   display: flex;
   flex-direction: row;
   flex-wrap: none;
@@ -1094,6 +1094,17 @@ button {
   font-weight: none;
 }
 
+@media (max-width: 1335px) {
+  .services {
+    height: max-content;
+    padding: 130px 50px 0px 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 328px);
+    align-items: center;
+    justify-content: center;
+    gap: 25px 100px;
+  }
+}
 @media (max-width: 768px) {
   /* Медиа-запрос для экранов с разрешением до 768px */
   .service {
@@ -1118,13 +1129,10 @@ button {
   .services {
     height: auto;
     padding: 30px 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     grid-template-columns: repeat(2, 281px);
-    gap: 40px;
+    gap: 20px 40px;
   }
   .service__item {
     width: 100%;
@@ -1133,24 +1141,26 @@ button {
     border-radius: 20px;
     overflow: hidden;
   }
-  /*  Мы используем медиа-запрос `max-width: 768px`, чтобы применять стили только на экранах с разрешением до 768px. 
-
-    Для блока `.service` мы убираем фиксированную высоту, чтобы блок мог растягиваться по высоте в зависимости от содержимого. 
-
-    Для блока `.service__content` мы изменяем свойство `height` на `auto`, чтобы блок также мог растягиваться по высоте в 
-    зависимости от содержимого. Мы также меняем направление гибкого контейнера на колонку и выравниваем элементы по центру. 
-
-    Для заголовка `.service__title` мы устанавливаем новые свойства, чтобы заголовок занимал всю ширину блока и выравнивался 
-    по центру. Мы также удаляем свойство `margin-top` и добавляем свойство `padding-bottom`, чтобы создать отступ снизу.
-
-    Для блока `.services` мы также изменяем свойство `height` на `auto`, чтобы блок мог растягиваться по высоте в зависимости 
-    от содержимого. Мы меняем свойство `display` на `flex` и направление гибкого контейнера на колонку, чтобы плитки 
-    отображались в один столбец. Мы также изменяем свойство `gap` на `40px`, чтобы добавить отступ между плитками.
-
-    Для блока `.service__item` мы устанавливаем новые свойства, чтобы плитки занимали всю ширину блока и могли растягиваться 
-    по высоте в зависимости от содержимого. Мы также удаляем свойство `grid-template-columns` и добавляем свойство 
-    `border-radius`, чтобы углы плиток были закруглены.
-  */
+}
+@media (max-width: 605px) {
+  .services {
+    height: auto;
+    padding: 30px 10px 0;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 281px);
+    gap: 40px;
+  }
+}
+@media (max-width: 414px) {
+  .services {
+    height: auto;
+    padding: 30px 10px 0;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 281px);
+    gap: 15px;
+  }
 }
 .prices {
   width: 1440px;
