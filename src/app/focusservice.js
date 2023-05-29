@@ -1,14 +1,14 @@
 // берём кнопки и предметы обслуживания
 // get the btn and service items
-const btn = document.querySelectorAll("button");
+const btn = document.querySelectorAll(".btn__project");
 const serviceItems = document.querySelectorAll(".service__item");
 
 // добавляем события прослушивания кнопок
 // add event listeners to the btn
-btn.forEach(button => {
-    button.addEventListener('click', () => {
+btn.forEach(btn => {
+    btn.addEventListener('click', () => {
         // get the name of the button
-        const name = button.innerText;
+        const name = btn.innerText;
 
         // Loop through the service items
         serviceItems.forEach(item => {
