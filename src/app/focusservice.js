@@ -2,6 +2,8 @@
 // get the btn and service items
 const btn = document.querySelectorAll(".btn__project");
 const serviceItems = document.querySelectorAll(".service__item");
+const serviceBlock = document.getElementById("Service-section");
+
 
 // добавляем события прослушивания кнопок
 // add event listeners to the btn
@@ -25,4 +27,26 @@ btn.forEach(btn => {
             }
         });
     });
+});
+
+
+// удаляем модификаторы serviceItems если клик произошёл вне блока Service
+// remove modifier serviceItems if click event happened outside the Service block
+document.querySelectorAll(':not(#Service-section)').forEach(function (element) {
+    element.addEventListener('click', function (event) {
+        const isClickInsideBlock = serviceBlock.contains(event.target);
+        if (!isClickInsideBlock) {
+            // перебираем все элементы serviceItem и удаляем класс focused, active
+            // iterate all elements serviceItem and remove class 'focused', 'active'
+            serviceItems.forEach(item => {
+                item.classList.remove('focused');
+                item.classList.remove('active');
+            });
+            event.stopPropagation();
+        } else {
+            // если click внутри блока Service
+            // if click inside the block 'Service'
+            event.stopPropagation();
+        }
+    })
 });

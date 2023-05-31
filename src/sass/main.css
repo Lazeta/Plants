@@ -965,6 +965,7 @@ button {
   }
 }
 .prices {
+  max-width: 1440px;
   width: auto;
   height: auto;
   padding: 40px 109px 115px 109px;
@@ -1238,10 +1239,6 @@ button {
   }
 }
 .strips {
-  display: none;
-}
-
-.hamburger {
   display: none;
 }
 
