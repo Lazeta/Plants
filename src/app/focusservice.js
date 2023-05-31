@@ -14,8 +14,8 @@ btn.forEach(btn => {
 
         // Loop through the service items
         serviceItems.forEach(item => {
-            // check if the service item has the same id as the button name
-            if (item.id === name) {
+            // check if the service item has the same data attribute as the button name innerText
+            if (item.getAttribute('data') === name) {
                 // add the 'focused' class to the service item
                 item.classList.add('focused');
                 item.classList.remove('active');
