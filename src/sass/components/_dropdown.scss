@@ -1,9 +1,55 @@
+.accordion {
+    border: 2px dashed #ccc;
+    padding: 0px;
+}
 
+.btn__accordion__item {
+    width: auto;
+    height: auto;
+    animation: flip 2s normal;
+}
 
-@media (max-width: $tablet-width) {
+.accordion_content {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.content-item {
+    transition: 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.content-text {
 
 }
 
-@media (max-width: $mobile-big-width) {
-    
+.cost {
+
+}
+
+.per-hour {
+
+}
+
+.for-order {
+    display: none;
+}
+
+
+
+@media (max-width: $tablet-width) {}
+
+@media (max-width: $mobile-big-width) {}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    // 50% {
+    // }
+    100% {
+        transform: rotateX(180deg);
+    }
 }
