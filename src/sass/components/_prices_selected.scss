@@ -1,13 +1,10 @@
-.btn__accordion__item {
-    border-radius: 50%;
-    cursor: pointer;
-    &:nth-last-child(1) {
-        margin: 0;   
-    }
-} 
-// .btn__accordion__item::selection {
-//     transform:rotate(180deg)
-// }
+// .btn__accordion__item {
+//     border-radius: 50%;
+//     cursor: pointer;
+//     &:nth-last-child(1) {
+//         margin: 0;   
+//     }
+// } 
 
 @media (max-width: $tablet-width) {
 

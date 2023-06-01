@@ -1371,40 +1371,6 @@ button {
   filter: none;
 }
 
-.btn__accordion__item {
-  border-radius: 50%;
-  cursor: pointer;
-}
-.btn__accordion__item:nth-last-child(1) {
-  margin: 0;
-}
-
-.accordion {
-  border: 2px dashed #ccc;
-  padding: 0px;
-}
-
-.btn__accordion__item {
-  width: auto;
-  height: auto;
-  animation: flip 2s normal;
-}
-
-.accordion_content {
-  max-height: 0;
-  overflow: hidden;
-}
-
-.content-item {
-  transition: 0.3s ease-in-out;
-  max-height: 0;
-  overflow: hidden;
-}
-
-.for-order {
-  display: none;
-}
-
 @keyframes flip {
   0% {
     transform: rotateX(0deg);
