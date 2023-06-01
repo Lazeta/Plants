@@ -6,6 +6,11 @@
 //     }
 // } 
 
+.accordion__content {
+    background-color: $color-accordion-content;
+}
+
+
 @media (max-width: $tablet-width) {
 
 }

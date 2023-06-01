@@ -5,82 +5,165 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-*, *:after, *:before {
+
+*,
+*:after,
+*:before {
     box-sizing: inherit;
     font-style: normal;
 }
+
 body {
-    font-size: 1.6rem; 
+    font-size: 1.6rem;
 }
+
 a {
     @extend %font-inika;
     @include font(1.6rem, 5rem, 400);
     color: $color-links;
     text-decoration: none;
     cursor: pointer;
+
     &:hover {
         text-decoration: underline;
     }
 }
+
 h1 {
     @extend %font-inter;
     @include font(4.5rem, 5rem, 700);
     color: $color-main-text;
 }
+
 h2 {
     @extend %font-inika;
     @include font(4rem, 5.2rem, 400);
     color: $color-green;
 }
+
 h3 {
     @extend %font-inter;
     @include font(2rem, 5rem, 700);
     color: $color-orange;
 }
+
 p {
     @extend %font-inter;
     @include font(2rem, 3rem, 400);
     color: $color-paragraph;
 }
-strong {
+
+strong,
+summary {
     @extend %font-inter;
     @include font(2rem, 2rem, 700);
     color: $color-paragraph;
 }
-span { 
+
+span {
     color: $color-orange;
 }
+
 em {
     color: $color-green;
 }
+
 li {
     color: $color-links;
+
     &:hover {
         text-decoration: underline;
     }
 }
+
 button {
     @extend %font-inika;
     @include font(normal, 2.6rem, 400);
     cursor: pointer;
 }
 
-summary {
-    
-}
-
 details {
-    
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: $tablet-width) {
-     
+summary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 16px 16px 16px;
+    cursor: pointer;
+    position: relative;
 }
 
-@media (max-width: $mobile-big-width) {
-
+summary:focus {
+    outline: none;
 }
 
-@media (max-width: $mobile-small-width) {
-
+summary::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid $color-black;
+    position: relative;
 }
+
+summary::before::after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 2.35px;
+    border-top: 2px solid $color-black;
+    border-right: 2px solid $color-black;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+summary::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 2.35px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(-45deg);
+    margin-right: 8px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $color-black;
+    transition: transform 0.2s ease-in-out;
+}
+
+details[open] summary:after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+@media (max-width: $tablet-width) {}
+
+@media (max-width: $mobile-big-width) {}
+
+@media (max-width: $mobile-small-width) {}

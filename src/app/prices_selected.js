@@ -1,1 +1,1 @@
-const accordion = document.querySelectorAll('.accordion')
+const accordion = document.querySelectorAll('.accordion__item')
