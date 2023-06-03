@@ -3,8 +3,9 @@ div[data-color="red"] {
 }
 
 .prices__item {
+    position: relative;
     width: 250px;
-    height: 50px;
+    min-height: 50px;
     margin: 0px 22px 0px 22px;
     padding: 6px 40px 5px 40px;
     background: $color-light;
@@ -36,16 +37,18 @@ div[data-color="red"] {
 
 .accordion__content {
     display: none;
-}
-.accordion__content.selected {
-    position: relative;
-    display: block;
-    width: 250px;
-    height: 154px;
-    border-radius: 20px;
-    padding: 14px 40px;
-    background-color: $color-accordion-block;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    &.selected {
+        position: relative;
+        display: block;
+        width: 250px;
+        height: 154px;
+        margin: -10px 50px 0px -35%;
+        padding: 14px 40px;
+        border-radius: 20px;
+        background-color: $color-accordion-block;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
 }
 
 
@@ -58,19 +61,21 @@ div[data-color="red"] {
     border-top: 1px solid $color-accordion-arrow-closes;
     border-right: 1px solid $color-accordion-arrow-closes;
     cursor: pointer;
-}
-.arrow.open {
-    border-top: 1px solid $color-accordion-arrow-open;
-    border-right: 1px solid $color-accordion-arrow-open;
+
+    &.open {
+        border-top: 1px solid $color-accordion-arrow-open;
+        border-right: 1px solid $color-accordion-arrow-open;
+    }
 }
 
 
 .arrow-bottom {
     display: block;
     transform: rotate(135deg);
-}
-.arrow-bottom.closes {
-    display: none;
+
+    &.closes {
+        display: none;
+    }
 }
 .arrow-top {
     display: block;
@@ -125,6 +130,7 @@ div[data-color="red"] {
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 400;
+    border-radius: 10px;
     cursor: pointer;
 
     & > a {
