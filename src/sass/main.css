@@ -140,86 +140,6 @@ button {
   cursor: pointer;
 }
 
-details {
-  margin-top: 20px;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-summary {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 16px 16px 16px 16px;
-  cursor: pointer;
-  position: relative;
-}
-
-summary:focus {
-  outline: none;
-}
-
-summary::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 2px solid #000000;
-  position: relative;
-}
-
-summary::before::after {
-  content: "";
-  display: block;
-  width: 4px;
-  height: 2.35px;
-  border-top: 2px solid #000000;
-  border-right: 2px solid #000000;
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-summary::before {
-  content: "";
-  display: inline-block;
-  width: 4px;
-  height: 2.35px;
-  border-top: 2px solid;
-  border-right: 2px solid;
-  transform: rotate(-45deg);
-  margin-right: 8px;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #000000;
-  transition: transform 0.2s ease-in-out;
-}
-
-details[open] summary:after {
-  transform: translateY(-50%) rotate(90deg);
-}
-
 .btn__learn-more {
   width: 158px;
   height: 44px;
@@ -250,22 +170,6 @@ details[open] summary:after {
   align-items: center;
   border: 1px solid #E06733;
   border-radius: 5px;
-}
-
-.accordion__item {
-  width: 250px;
-  height: 50px;
-  margin: 30px 22px 31px 22px;
-  padding: 6px 25px 5px 40px;
-  background: #EDF2EC;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
-  border: none;
 }
 
 .btn__contact-us {
@@ -1020,7 +924,7 @@ details[open] summary:after {
   max-width: 1440px;
   width: auto;
   height: auto;
-  padding: 40px 109px 115px 109px;
+  padding: 40px 109px 128px 109px;
   background: #FFFFFF;
   margin: auto;
 }
@@ -1423,8 +1327,155 @@ details[open] summary:after {
   filter: none;
 }
 
+div[data-color=red] {
+  color: red;
+}
+
+.prices__item {
+  width: 250px;
+  height: 50px;
+  margin: 0px 22px 0px 22px;
+  padding: 6px 40px 5px 40px;
+  background: #EDF2EC;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.accordion__header {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+}
+
+.accordion__header.open {
+  display: none;
+}
+
+.accordion__header__selected {
+  position: absolute;
+  display: inline-block;
+  margin: 16px 40px 0 0;
+  right: 0;
+  top: 0;
+}
+
 .accordion__content {
-  background-color: #AEA1A1;
+  display: none;
+}
+
+.accordion__content.selected {
+  position: relative;
+  display: block;
+  width: 250px;
+  height: 154px;
+  border-radius: 20px;
+  padding: 14px 40px;
+  background-color: #D6E7D2;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.arrow {
+  position: absolute;
+  left: 6px;
+  top: 7px;
+  width: 3px;
+  height: 3px;
+  border-top: 1px solid #717171;
+  border-right: 1px solid #717171;
+  cursor: pointer;
+}
+
+.arrow.open {
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+}
+
+.arrow-bottom {
+  display: block;
+  transform: rotate(135deg);
+}
+
+.arrow-bottom.closes {
+  display: none;
+}
+
+.arrow-top {
+  display: block;
+  transform: rotate(-45deg);
+  border-color: #FFFFFF;
+}
+
+.line::before {
+  content: "";
+  position: relative;
+  display: block;
+  margin: 5px 0px 6px 0px;
+  top: 0%;
+  left: 0%;
+  width: 164px;
+  height: 0;
+  border: 0.5px solid #AEA1A1;
+}
+
+.content-text {
+  font-family: "Inter";
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 300;
+  color: #717171;
+  margin-bottom: 6px;
+}
+
+.cost {
+  font-family: "Inter";
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #E06733;
+  margin-bottom: 12px;
+}
+
+.per-hour {
+  font-family: "Inter";
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.for-order {
+  width: 86px;
+  height: 25px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  border: none;
+  color: #717171;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.for-order > a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  color: #717171;
+  text-decoration: none;
 }
 
 @keyframes flip {
