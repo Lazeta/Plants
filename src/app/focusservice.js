@@ -19,11 +19,22 @@ btn.forEach(btn => {
                 // add the 'focused' class to the service item
                 item.classList.add('focused');
                 item.classList.remove('active');
+                window.addEventListener('keydown', function(event) {
+                    if (event.key === 'Escape' || event.key === 'Esc') {
+                        item.classList.remove('focused');
+                    }
+                });
             }
             else {
                 // remove the 'focused' class from other service items
                 item.classList.remove('focused');
                 item.classList.add('active');
+
+                window.addEventListener('keydown', function(event) {
+                    if (event.key === 'Escape' || event.key === 'Esc') {
+                        item.classList.remove('active');
+                    }
+                });
             }
         });
     });
