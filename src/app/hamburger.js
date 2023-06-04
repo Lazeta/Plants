@@ -94,7 +94,7 @@ if (window.innerWidth <= 414) {
                     behavior: 'smooth'
                 });
             }
-            e.preventDefault();
+            // e.preventDefault();
         });
     }
     // *RU* Функция плавного скроллинга к якорю
@@ -125,7 +125,7 @@ if (window.innerWidth <= 414) {
     document.querySelectorAll(".menu-link[href^='#']").forEach(link => {
         link.addEventListener('click', function (e) {
             smoothScroll(this.getAttribute("href"));
-            e.preventDefault();
+            // e.preventDefault();
         });
     });
 }

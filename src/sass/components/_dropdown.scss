@@ -1,42 +1,34 @@
-// div[data-color="red"] {
-//     color: red;
-// }
+div[data-color="red"] {
+    color: red;
+}
 
 .prices__item {
     position: relative;
     width: 250px;
     min-height: 50px;
-    margin: 0px 22px 0px 22px;
+    margin: 0px 40px;
     padding: 6px 40px 5px 40px;
     background: $color-light;
     @include flex (flex, row, nowrap, center, space-between, center);
     border-radius: 20px;
     border: none;
     cursor: pointer;
+
+    > strong {
+        min-width: 0px;
+    }
 }
-
-
-// .accordion {
-    
-
-//     &.active {
-
-//     }
-// }
 
 
 .accordion__header {
     position: relative;
-    display: block;
+    display: inline-block;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background-color: $color-accordion-header-noopen;
     &.close {
         display: none;
-        opacity: 0;
-        height: 0;
-        width: 0;
     }
 }
 .accordion__header__selected {
@@ -55,8 +47,9 @@
         display: block;
         width: 250px;
         height: 154px;
-        margin: -10px 50px 0px -35%;
+        margin: -5px 0 0px 0%;
         padding: 14px 40px;
+        right: 15%;
         border-radius: 20px;
         background-color: $color-accordion-block;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
