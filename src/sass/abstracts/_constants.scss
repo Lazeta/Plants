@@ -12,11 +12,23 @@ $color-paragraph: #636060;
 $color-links: #010201;
 $color-city-box-active: #C1E698;
 $color-hovered: #E06733;
+$color-accordion-block: #D6E7D2;
+$color-accordion-header-noopen: #D9D9D9;
+$color-accordion-header-open: #AEA1A1;
+$color-accordion-arrow-closes: #717171;
+$color-accordion-arrow-open: #FFFFFF;
 
 $color-black: #000000;
 $color-white: #FFFFFF;
 $color-orange: #E06733;
 $color-green: #499A18;
+
+$colors: (red, blue, green);
+// Обращение к первому, второму, третьему элементу списка 
+$first-color: nth($colors, 1);
+$second-color: nth($colors, 2);
+$third-color: nth($colors, 3);
+
 
 // $color-primary
 // $color-additional
