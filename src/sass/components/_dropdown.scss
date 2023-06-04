@@ -20,35 +20,16 @@ div[data-color="red"] {
 }
 
 
-.accordion__header {
-    position: relative;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: $color-accordion-header-noopen;
-    &.close {
-        display: none;
-    }
-}
-.accordion__header__selected {
-    position: absolute;
-    display: inline-block;
-    margin: 16px 40px 0 0;
-    right: 0;
-    top: 0;
-    background-color: $color-accordion-header-noopen;
-}
 
 .accordion__content {
     display: none;
-
+    
     &.selected {
         position: relative;
         display: block;
         width: 250px;
         height: 154px;
-        margin: -5px 0 0px 0%;
+        margin: -20px 0 0px 0%;
         padding: 14px 40px;
         right: 15%;
         border-radius: 20px;
@@ -58,39 +39,53 @@ div[data-color="red"] {
 }
 
 
-.arrow {
+.accordion__header {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $color-accordion-header-noopen;
+}
+
+.accordion__header__selected {
     position: absolute;
-    left: 6px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 16px 42px 0 0;
+    right: 0;
+    top: 0;
+    background-color: $color-accordion-header-open;
+}
+
+
+.arrow-bottom {
+    position: absolute;
+    display: block;
+    right: 7px;
     top: 7px;
     width: 3px;
     height: 3px;
     border-top: 1px solid $color-accordion-arrow-closes;
     border-right: 1px solid $color-accordion-arrow-closes;
-    cursor: pointer;
-
-    &.open {
-        border-top: 1px solid $color-accordion-arrow-open;
-        border-right: 1px solid $color-accordion-arrow-open;
-    }
-}
-
-
-.arrow-bottom {
-    display: block;
     transform: rotate(135deg);
-
-    &.close {
-        display: none;
-    }
 }
 .arrow-top {
+    position: absolute;
     display: block;
+    right: 7px;
+    top: 7px;
+    width: 3px;
+    height: 3px;
+    border-top: 1px solid $color-accordion-arrow-open;
+    border-right: 1px solid $color-accordion-arrow-open;
     transform: rotate(-45deg);
-    border-color: $color-accordion-arrow-open;
 }
 
 
-.line::before {
+.line::after {
     content: "";
     position: relative;
     display: block;
@@ -168,3 +163,6 @@ div[data-color="red"] {
         transform: rotateX(180deg);
     }
 }
+
+
+
