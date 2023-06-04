@@ -37,6 +37,7 @@ div[data-color="red"] {
     margin: 16px 40px 0 0;
     right: 0;
     top: 0;
+    background-color: $color-accordion-header-noopen;
 }
 
 .accordion__content {
@@ -80,9 +81,6 @@ div[data-color="red"] {
 
     &.close {
         display: none;
-        opacity: 0;
-        height: 0;
-        width: 0;
     }
 }
 .arrow-top {
