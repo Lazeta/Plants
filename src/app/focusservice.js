@@ -42,11 +42,9 @@ document.querySelectorAll(':not(#Service-section)').forEach(function (element) {
                 item.classList.remove('focused');
                 item.classList.remove('active');
             });
-            event.stopPropagation();
         } else {
             // если click внутри блока Service
             // if click inside the block 'Service'
-            event.stopPropagation();
         }
     })
 });

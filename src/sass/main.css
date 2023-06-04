@@ -1327,10 +1327,6 @@ button {
   filter: none;
 }
 
-div[data-color=red] {
-  color: red;
-}
-
 .prices__item {
   position: relative;
   width: 250px;
@@ -1357,9 +1353,11 @@ div[data-color=red] {
   border-radius: 50%;
   background-color: #D9D9D9;
 }
-
-.accordion__header.open {
+.accordion__header.close {
   display: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
 .accordion__header__selected {
@@ -1404,8 +1402,11 @@ div[data-color=red] {
   display: block;
   transform: rotate(135deg);
 }
-.arrow-bottom.closes {
+.arrow-bottom.close {
   display: none;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
 .arrow-top {

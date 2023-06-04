@@ -3,7 +3,7 @@
 This handler will operate at screen resolutions less than
 or equal to 768 pixels.
 */
-if (window.innerWidth <= 414){
+if (window.innerWidth <= 414) {
     /* *RU* Для бургер меню из 4 полос где по нажатия всплывает окно навигации по сайту.
     Фиксируем константы нашего меню навигации и иконки меню.
     For a burger menu of 4 lanes where, when clicked, a site navigation window pops up.
@@ -22,13 +22,13 @@ if (window.innerWidth <= 414){
     //     burgerMenu.classList.toggle('__active');
     // });
     burgerIcon.addEventListener("click", function () {
-        if (burgerIcon.classList.contains('__active')){
+        if (burgerIcon.classList.contains('__active')) {
             burgerIcon.classList.remove('__active');
             burgerMenu.classList.remove('__active');
             burgerMenu.classList.add('close')
-            setTimeout(function() {
+            setTimeout(function () {
                 burgerMenu.classList.remove('close');
-              }, 700);
+            }, 700);
         } else {
             burgerIcon.classList.add('__active');
             burgerMenu.classList.add('__active');
@@ -37,15 +37,15 @@ if (window.innerWidth <= 414){
     });
 
 
-//     // *RU* Добавляем обработчик нажатия на клавишу Escape для закрытия меню.
-//     // Add a handler for pressing the Escape key to close the menu.
-    document.addEventListener('keydown', function(e) {
-        if(e.key === 'Escape' || e.key === 'Esc') { 
-            if(burgerIcon.classList.contains('__active')) {
+    //     // *RU* Добавляем обработчик нажатия на клавишу Escape для закрытия меню.
+    //     // Add a handler for pressing the Escape key to close the menu.
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' || e.key === 'Esc') {
+            if (burgerIcon.classList.contains('__active')) {
                 burgerIcon.classList.remove('__active');
                 burgerMenu.classList.remove('__active');
                 burgerMenu.classList.add('close');
-                setTimeout(function() {
+                setTimeout(function () {
                     burgerMenu.classList.remove('close');
                 }, 700);
             }
@@ -54,45 +54,47 @@ if (window.innerWidth <= 414){
 
     // *RU* Будем скрывать меню если кликать вне списка за его пределами.
     // We will hide the menu if you click outside the list outside of it.
-    document.addEventListener('click', function(e) {
-            if(burgerIcon.classList.contains('__active')) {
-                if (!burgerIcon.contains(e.target) && !burgerMenu.contains(e.target)){
-                    burgerMenu.classList.remove('__active');
-                    burgerIcon.classList.remove('__active');
-                    burgerMenu.classList.add('close');
-                    setTimeout(function() {
-                        burgerMenu.classList.remove('close');
-                    }, 700);
+    document.addEventListener('click', function (e) {
+        if (burgerIcon.classList.contains('__active')) {
+            if (!burgerIcon.contains(e.target) && !burgerMenu.contains(e.target)) {
+                burgerMenu.classList.remove('__active');
+                burgerIcon.classList.remove('__active');
+                burgerMenu.classList.add('close');
+                setTimeout(function () {
+                    burgerMenu.classList.remove('close');
+                }, 700);
             }
         }
+
+
     });
     // *RU* Получаем ссылки меню и добавляем обработчик события click.
     // Get the menu links and add a click event handler.
     const menuLinks = document.querySelectorAll('.menu-link');
     for (let i = 0; i < menuLinks.length; i++) {
-    menuLinks[i].addEventListener('click', function(e) {
-        // *RU* Закрываем меню.
-        // Close the menu.
-        if (burgerMenu.classList.contains('__active')) {
-            burgerMenu.classList.remove('__active') 
-            burgerMenu.classList.add('close');
-            setTimeout(function() {
-                burgerMenu.classList.remove('close');
-            }, 700);
-        }
-        if (burgerIcon.classList.contains('__active')) {
-            burgerIcon.classList.remove('__active') 
-        }
-        // *RU* Получаем якорь и осуществляем переход.
-        // We get the anchor and make the thansition.
-        const target = this.getAttribute('href');
-        const targetElement = document.querySelector(target);
-        if (targetElement) {
-        targetElement.scrollIntoView({
-            behavior: 'smooth'
-            });
-        }
-        e.preventDefault();
+        menuLinks[i].addEventListener('click', function (e) {
+            // *RU* Закрываем меню.
+            // Close the menu.
+            if (burgerMenu.classList.contains('__active')) {
+                burgerMenu.classList.remove('__active')
+                burgerMenu.classList.add('close');
+                setTimeout(function () {
+                    burgerMenu.classList.remove('close');
+                }, 700);
+            }
+            if (burgerIcon.classList.contains('__active')) {
+                burgerIcon.classList.remove('__active')
+            }
+            // *RU* Получаем якорь и осуществляем переход.
+            // We get the anchor and make the thansition.
+            const target = this.getAttribute('href');
+            const targetElement = document.querySelector(target);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            e.preventDefault();
         });
     }
     // *RU* Функция плавного скроллинга к якорю
@@ -122,8 +124,8 @@ if (window.innerWidth <= 414){
     */
     document.querySelectorAll(".menu-link[href^='#']").forEach(link => {
         link.addEventListener('click', function (e) {
-            e.preventDefault();
             smoothScroll(this.getAttribute("href"));
+            e.preventDefault();
         });
     });
 }
