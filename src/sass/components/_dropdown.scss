@@ -2,64 +2,62 @@ div[data-color="red"] {
     color: red;
 }
 
-.prices__item {
-    position: relative;
-    width: 250px;
-    min-height: 50px;
-    margin: 0px 40px;
-    padding: 6px 40px 5px 40px;
-    background: $color-light;
-    @include flex (flex, row, nowrap, center, space-between, center);
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
+// .prices__item {
+//     position: relative;
+//     width: 250px;
+//     min-height: 50px;
+//     margin: 0px 0px;
+//     padding: 12px 10px 5px 40px;
+//     background: $color-light;
+//     @include flex (flex, row, nowrap, center, space-between, center);
+//     border-radius: 20px;
+//     border: none;
+//     cursor: pointer;
+// }
 
-    > strong {
-        min-width: 0px;
-    }
-}
+// .accordion__content {
+//     display: none;
 
-
-
-.accordion__content {
-    display: none;
-    
-    &.selected {
-        position: relative;
-        display: block;
-        width: 250px;
-        height: 154px;
-        margin: -20px 0 0px 0%;
-        padding: 14px 40px;
-        right: 15%;
-        border-radius: 20px;
-        background-color: $color-accordion-block;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    }
-}
+//     &.selected {
+//         position: relative;
+//         display: block;
+//         width: 250px;
+//         height: 154px;
+//         margin: -20px 0 0px 0%;
+//         padding: 14px 40px;
+//         right: 15%;
+//         border-radius: 20px;
+//         background-color: $color-accordion-block;
+//         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+//     }
+// }
 
 
-.accordion__header {
-    position: relative;
-    display: inline-block;
+// .accordion__header {
+//     position: relative;
+//     display: inline-block;
+//     width: 16px;
+//     height: 16px;
+//     border-radius: 50%;
+//     background-color: $color-accordion-header-noopen;
+// }
+
+// .accordion__header__selected {
+//     position: absolute;
+//     display: inline-block;
+//     width: 16px;
+//     height: 16px;
+//     border-radius: 50%;
+//     margin: 16px 42px 0 0;
+//     right: 0;
+//     top: 0;
+//     background-color: $color-accordion-header-open;
+// }
+
+.arrow-body {
     width: 16px;
     height: 16px;
-    border-radius: 50%;
-    background-color: $color-accordion-header-noopen;
 }
-
-.accordion__header__selected {
-    position: absolute;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    margin: 16px 42px 0 0;
-    right: 0;
-    top: 0;
-    background-color: $color-accordion-header-open;
-}
-
 
 .arrow-bottom {
     position: absolute;
@@ -72,6 +70,7 @@ div[data-color="red"] {
     border-right: 1px solid $color-accordion-arrow-closes;
     transform: rotate(135deg);
 }
+
 .arrow-top {
     position: absolute;
     display: block;
@@ -134,7 +133,7 @@ div[data-color="red"] {
     border-radius: 10px;
     cursor: pointer;
 
-    & > a {
+    &>a {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -163,6 +162,3 @@ div[data-color="red"] {
         transform: rotateX(180deg);
     }
 }
-
-
-

@@ -64,6 +64,9 @@ html {
 *:before {
   box-sizing: inherit;
   font-style: normal;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 body {
@@ -1331,62 +1334,9 @@ div[data-color=red] {
   color: red;
 }
 
-.prices__item {
-  position: relative;
-  width: 250px;
-  min-height: 50px;
-  margin: 0px 40px;
-  padding: 6px 40px 5px 40px;
-  background: #EDF2EC;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-}
-.prices__item > strong {
-  min-width: 0px;
-}
-
-.accordion__content {
-  display: none;
-}
-.accordion__content.selected {
-  position: relative;
-  display: block;
-  width: 250px;
-  height: 154px;
-  margin: -20px 0 0px 0%;
-  padding: 14px 40px;
-  right: 15%;
-  border-radius: 20px;
-  background-color: #D6E7D2;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.accordion__header {
-  position: relative;
-  display: inline-block;
+.arrow-body {
   width: 16px;
   height: 16px;
-  border-radius: 50%;
-  background-color: #D9D9D9;
-}
-
-.accordion__header__selected {
-  position: absolute;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  margin: 16px 42px 0 0;
-  right: 0;
-  top: 0;
-  background-color: #AEA1A1;
 }
 
 .arrow-bottom {
@@ -1485,6 +1435,65 @@ div[data-color=red] {
     transform: rotateX(180deg);
   }
 }
+.prices__item {
+  position: relative;
+  width: 250px;
+  min-height: 50px;
+  margin: 0px 0px;
+  padding: 12px 10px 5px 40px;
+  background: #EDF2EC;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.accordion {
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  color: #fff;
+  position: relative;
+}
+
+.prices__list._init .accordion {
+  cursor: pointer;
+}
+
+.prices__list._init .accordion {
+  padding: 10px 40px 10px 10px;
+}
+
+.prices__list._init .accordion::before,
+.prices__list._init .accordion::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  transition: transform 0.3s ease 0s;
+}
+
+.prices__list._init .accordion::after {
+  transform: rotate(-90deg);
+}
+
+.prices__list._init .accordion._active::after {
+  transform: rotate(0deg);
+}
+
+.accordion__content {
+  display: none;
+  padding: 0 10px 10px;
+}
+
 /* button changed background color */
 .change__button {
   position: absolute;
