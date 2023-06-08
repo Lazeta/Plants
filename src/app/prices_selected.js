@@ -1,252 +1,205 @@
 "use strict"
 
-const spollersArray = document.querySelectorAll("[data-spollers]");
+// Spollers
+const spollersArray = document.querySelectorAll('[data-spollers]');
 if (spollersArray.length > 0) {
-    const spollerRegular = document.querySelectorAll("[data-spoller]");
-    console.log(spollerRegular)
+    window.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' || event.key === 'Esc') {
+            const apollersArray = document.querySelectorAll('[data-spollers]._init');
+            spollersArray.forEach(spollersBlock => {
+                hideSpollersBody(spollersBlock);
+            });
+        }
+    });
+
+    // Получение обычных спойлеров
+    const spollerRegular = Array.from(spollersArray).filter(function (item, index, self) {
+        return !item.dataset.spollers.split(",")[0];
+    });
+    // Инициализация обычных спойлеров
+    if (spollerRegular.length > 0) {
+        initSpollers(spollerRegular);
+    }
+    // Получение спойлеров с медиа запросами
+    const spollersMedia = Array.from(spollersArray).filter(function (item, index, self) {
+        return item.dataset.spollers.split(",")[0];
+    });
+    // Инициализация спойлеров с медиа запросами
+    if (spollersMedia.length > 0) {
+        const breakpointsArray = [];
+        spollersMedia.forEach(item => {
+            const params = item.dataset.spollers;
+            const breakpoint = {};
+            const paramsArray = params.split(",");
+            breakpoint.value = paramsArray[0];
+            breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
+            breakpoint.item = item;
+            // Добавляем объект структурированный в переменную массива.
+            breakpointsArray.push(breakpoint);
+        });
+
+        // Получаем уникальные брейкпоинты
+        let mediaQuaries = breakpointsArray.map(function (item) {
+            return '(' + item.type + "-width: " + item.value + "px)," + item.value + ',' + item.type;
+        })
+        mediaQuaries = mediaQuaries.filter(function (item, index, self) {
+            return self.indexOf(item) === index;
+        });
+
+        // Работаем с каждым брейкпоинтом
+        mediaQueries.forEach(breakpoint => {
+            const paramsArray = breakpoint.split(",");
+            const mediaBreakpoint = paramsArray[1];
+            const mediaType = paramsArray[2];
+            const matchMedia = window.matchMedia(paramsArray[0]);
+
+            // Объекты с нужными условиями
+            const spollersArray = breakpointsArray.filter(function (item) {
+                if (item.value === mediaBreakpoint && item.type === mediaType) {
+                    return true;
+                }
+            });
+            // Событие
+            matchMedia.addEventListener(function () {
+                initSpollers(spollersArray, matchMedia);
+            });
+            initSpollers(spollersArray, matchMedia);
+        });
+    }
+    // Инициализация
+    function initSpollers(spollersArray, matchMedia = false) {
+        spollersArray.forEach(spollersBlock => {
+            spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
+            if (matchMedia.matches || !matchMedia) {
+                spollersBlock.classList.add('_init');
+                initSpollerBody(spollersBlock);
+                spollersBlock.addEventListener("click", setSpollerAction);
+            } else {
+                spollersBlock.classList.remove('_init');
+                initSpollerBody(spollersBlock, false);
+                spollersBlock.removeEventListener("click", setSpollerAction);
+            }
+        });
+    }
+
+    // Работа с контентом
+    function initSpollerBody(spollersBlock, hideSpollerBody = true) {
+        const spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
+        if (spollerTitles.length > 0) {
+            spollerTitles.forEach(spollerTitle => {
+                if (hideSpollerBody) {
+                    spollerTitle.removeAttribute('tabindex');
+                    if (!spollerTitle.classList.contains('_active')) {
+                        spollerTitle.nextElementSibling.hidden = true;
+                    }
+                } else {
+                    spollerTitle.setAttribute('tabindex', '-1');
+                    spollerTitle.nextElementSibling.hidden = false;
+                }
+            });
+        }
+    }
+
+    function setSpollerAction(e) {
+        const el = e.target;
+        if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
+            const spollerTitle = el.hasAttribute('data-spoller') ? el : el.closest('[data-spoller]');
+            const spollersBlock = spollerTitle.closest('[data-spollers]');
+            const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
+            if (!spollersBlock.querySelectorAll('._slide').length) {
+                if (oneSpoller && !spollerTitle.classList.contains('_active')) {
+                    hideSpollersBody(spollersBlock);
+                }
+                spollerTitle.classList.toggle('_active');
+                _slideToggle(spollerTitle.nextElementSibling, 500);
+
+                // Скрытие других элементов с классом accordion
+                const accordionElements = document.querySelectorAll('.accordion');
+                accordionElements.forEach(accordionElements => {
+                    if (accordionElements !== spollersBlock) {
+                        hideSpollersBody(accordionElements);
+                    }
+                });
+            }
+            e.preventDefault();
+        }
+    }
+    function hideSpollersBody(spollersBlock) {
+        const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');
+        if (spollerActiveTitle) {
+            spollerActiveTitle.classList.remove('_active');
+            _slideUp(spollerActiveTitle.nextElementSibling, 500);
+        }
+    }
 }
 
-// const spollersBlock = document.closest("[data-spollers]");
-// const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
-
-// получаем все элементы с классом "prices__item" и добавляем обработчик события клика
-// document.querySelectorAll(".prices__list").forEach((item) => {
-//     item.addEventListener("click", () => {
-//         // Получаем элементы меню: заголовок, содержимое и стрелки
-//         const accordionHeader = item.querySelector(".accordion");
-//         const accordionContent = item.querySelector(".accordion__content");
-//         const accordionArrowTop = item.querySelector(".arrow-top");
-
-//         // Проверяем, открыто ли меню
-//         const isAccordionActive = accordionHeader.classList.contains("arrow-body");
-
-//         if (isAccordionActive) {
-//             // Если меню уже открыто, то закрываем его и удаляем соответствующие классы
-//             accordionHeader.classList.remove("arrow-body");
-//             accordionContent.classList.remove("selected");
-//         } else {
-//             // Если меню закрыто, то закрываем предыдущее открытое меню, если имеется в наличии
-//             const activeAccordion = document.querySelector(".prices__item arrow-body");
-
-//             if (activeAccordion) {
-//                 const activeAccordionItem = activeAccordion.closest(".prices__item");
-//                 const activeAccordionHeader = activeAccordionItem.querySelector(".accordion");
-//                 const activeAccordionContent = activeAccordionItem.querySelector(".accordion__content");
-//                 const activeAccordionArrowTop = activeAccordionItem.querySelector(".arrow-top");
-
-//                 // Проверяем наличие активного меню перед удалением класса
-//                 if (activeAccordionHeader) {
-//                     activeAccordionHeader.classList.remove("arrow-body");
-//                 }
-//                 if (activeAccordionContent) {
-//                     activeAccordionContent.classList.remove("selected");
-//                  }
-//                 // if (activeAccordionArrowTop) {
-//                 //     activeAccordionArrowTop.style.overflow = "hidden";
-//                 // }
-//             }
-
-//             // Открываем текущее меню и добавляем соответствующие классы
-//             accordionHeader.classList.add("arrow-body");
-//             accordionContent.classList.add("selected");
-//         }
-
-//         window.addEventListener("keydown", function (event) {
-//             if (event.key === "Escape" || event.key === "Esc") {
-//                 accordionContent.classList.remove("selected");
-//                 accordionHeader.classList.remove("arrow-body");
-//             }
-//         });
-//     });
-// });
 
 
-// <--------------------------------->
-// <--------------------------------->
-
-// // Spollers
-// const spollersArray = document.querySelectorAll('[data-spollers]');
-// if (spollersArray.length > 0) {
-//     // Получение обычных спойлеров
-//     const spollerRegular = Array.from(spollersArray).filter(function (item, index, self) {
-//         return !item.dataset.spollers.split(",")[0];
-//     });
-//     // Инициализация обычных спойлеров
-//     if (spollerRegular.length >0) {
-//         initSpollers(spollerRegular);
-//     }
-//     // Получение спойлеров с медиа запросами
-//     const spollersMedia = Array.from(spollersArray).filter(function (item, index, self) {
-//         return item.dataset.spollers.split(",")[0];
-//     });
-//     // Инициализация спойлеров с медиа запросами
-//     if (spollersMedia.length > 0) {
-//         const breakpointsArray = [];
-//         spollersMedia.forEach(item => {
-//             const params = item.dataset.spollers;
-//             const breakpoint = {};
-//             const paramsArray = params.split(",");
-//             breakpoint.value = paramsArray[0];
-//             breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
-//             breakpoint.item = item;
-//             // Добавляем объект структурированный в переменную массива.
-//             breakpointsArray.push(breakpoint);
-//         });
-
-//         // Получаем уникальные брейкпоинты
-//         let mediaQuaries = breakpointsArray.map(function (item) {
-//             return '(' + item.type + "-width: " + item.value + "px)," + item.value + ',' + item.type;
-//         })
-//         mediaQuaries = mediaQuaries.filter(function (item, index, self) {
-//             return self.indexOf(item) === index;
-//         });
-
-//         // Работаем с каждым брейкпоинтом
-//         mediaQueries.forEach(breakpoint => {
-//             const paramsArray = breakpoint.split(",");
-//             const mediaBreakpoint = paramsArray[1];
-//             const mediaType = paramsArray[2];
-//             const matchMedia = window.matchMedia(paramsArray[0]);
-
-//             // Объекты с нужными условиями
-//             const spollersArray = breakpointsArray.filter(function (item) {
-//                 if (item.value === mediaBreakpoint && item.type === mediaType) {
-//                     return true;
-//                 }
-//             });
-//             // Событие
-//             matchMedia.addListener(function () {
-//                 initSpollers(spollersArray, matchMedia);
-//             });
-//             initSpollers(spollersArray, matchMedia);
-//         });
-//     }
-//     // Инициализация
-// 	function initSpollers(spollersArray, matchMedia = false) {
-// 		spollersArray.forEach(spollersBlock => {
-// 			spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
-// 			if (matchMedia.matches || !matchMedia) {
-// 				spollersBlock.classList.add('_init');
-// 				initSpollerBody(spollersBlock);
-// 				spollersBlock.addEventListener("click", setSpollerAction);
-// 			} else {
-// 				spollersBlock.classList.remove('_init');
-// 				initSpollerBody(spollersBlock, false);
-// 				spollersBlock.removeEventListener("click", setSpollerAction);
-// 			}
-// 		});
-// 	}
-
-//     // Работа с контентом
-// 	function initSpollerBody(spollersBlock, hideSpollerBody = true) {
-// 		const spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
-// 		if (spollerTitles.length > 0) {
-// 			spollerTitles.forEach(spollerTitle => {
-// 				if (hideSpollerBody) {
-// 					spollerTitle.removeAttribute('tabindex');
-// 					if (!spollerTitle.classList.contains('_active')) {
-// 						spollerTitle.nextElementSibling.hidden = true;
-// 					}
-// 				} else {
-// 					spollerTitle.setAttribute('tabindex', '-1');
-// 					spollerTitle.nextElementSibling.hidden = false;
-// 				}
-// 			});
-// 		}
-// 	}
-
-//     function setSpollerAction(e) {
-//         const el = e.target;
-// 		if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
-// 			const spollerTitle = el.hasAttribute('data-spoller') ? el : el.closest('[data-spoller]');
-// 			const spollersBlock = spollerTitle.closest('[data-spollers]');
-// 			const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
-// 			if (!spollersBlock.querySelectorAll('._slide').length) {
-// 				if (oneSpoller && !spollerTitle.classList.contains('_active')) {
-// 					hideSpollersBody(spollersBlock);
-// 				}
-// 				spollerTitle.classList.toggle('_active');
-// 				_slideToggle(spollerTitle.nextElementSibling, 500);
-// 			}
-// 			e.preventDefault();
-// 		}
-//     }
-//     function hideSpollersBody(spollersBlock) {
-//         const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');
-//         if (spollerActiveTitle) {
-//             spollerActiveTitle.classList.remove('_active');
-//             _slideUp(spollerActiveTitle.nextElementSibling, 500);
-//         }
-//     }
-// }
-
-
-
-// // Slide toggle
-// let _slideUp = (target, duration = 500) => {
-// 	if (!target.classList.contains('_slide')) {
-// 		target.classList.add('_slide');
-// 		target.style.transitionProperty = 'height, margin, padding';
-// 		target.style.transitionDuration = duration + 'ms';
-// 		target.style.height = target.offsetHeight + 'px';
-// 		target.offsetHeight;
-// 		target.style.overflow = 'hidden';
-// 		target.style.height = 0;
-// 		target.style.paddingTop = 0;
-// 		target.style.paddingBottom = 0;
-// 		target.style.marginTop = 0;
-// 		target.style.marginBottom = 0;
-// 		window.setTimeout(() => {
-// 			target.hidden = true;
-// 			target.style.removeProperty('height');
-// 			target.style.removeProperty('padding-top');
-// 			target.style.removeProperty('padding-bottom');
-// 			target.style.removeProperty('margin-top');
-// 			target.style.removeProperty('margin-bottom');
-// 			target.style.removeProperty('overflow');
-// 			target.style.removeProperty('transition-duration');
-// 			target.style.removeProperty('transition-property');
-// 			target.classList.remove('_slide');
-// 		}, duration);
-// 	}
-// }
-// let _slideDown = (target, duration = 500) => {
-// 	if (!target.classList.contains('_slide')) {
-// 		target.classList.add('_slide');
-// 		if (target.hidden) {
-// 			target.hidden = false;
-// 		}
-// 		let height = target.offsetHeight;
-// 		target.style.overflow = 'hidden';
-// 		target.style.height = 0;
-// 		target.style.paddingTop = 0;
-// 		target.style.paddingBottom = 0;
-// 		target.style.marginTop = 0;
-// 		target.style.marginBottom = 0;
-// 		target.offsetHeight;
-// 		target.style.transitionProperty = "height, margin, padding";
-// 		target.style.transitionDuration = duration + 'ms';
-// 		target.style.height = height + 'px';
-// 		target.style.removeProperty('padding-top');
-// 		target.style.removeProperty('padding-bottom');
-// 		target.style.removeProperty('margin-top');
-// 		target.style.removeProperty('margin-bottom');
-// 		window.setTimeout(() => {
-// 			target.style.removeProperty('height');
-// 			target.style.removeProperty('overflow');
-// 			target.style.removeProperty('transition-duration');
-// 			target.style.removeProperty('transition-property');
-// 			target.classList.remove('_slide');
-// 		}, duration);
-// 	}
-// }
-// let _slideToggle = (target, duration = 500) => {
-// 	if (target.hidden) {
-// 		return _slideDown(target, duration);
-// 	} else {
-// 		return _slideUp(target, duration);
-// 	}
-// }
+// Slide toggle
+let _slideUp = (target, duration = 500) => {
+    if (!target.classList.contains('_slide')) {
+        target.classList.add('_slide');
+        target.style.transitionProperty = 'height, margin, padding';
+        target.style.transitionDuration = duration + 'ms';
+        target.style.height = target.offsetHeight + 'px';
+        target.offsetHeight;
+        target.style.overflow = 'hidden';
+        target.style.height = 0;
+        target.style.paddingTop = 0;
+        target.style.paddingBottom = 0;
+        target.style.marginTop = 0;
+        target.style.marginBottom = 0;
+        window.setTimeout(() => {
+            target.hidden = true;
+            target.style.removeProperty('height');
+            target.style.removeProperty('padding-top');
+            target.style.removeProperty('padding-bottom');
+            target.style.removeProperty('margin-top');
+            target.style.removeProperty('margin-bottom');
+            target.style.removeProperty('overflow');
+            target.style.removeProperty('transition-duration');
+            target.style.removeProperty('transition-property');
+            target.classList.remove('_slide');
+        }, duration);
+    }
+}
+let _slideDown = (target, duration = 500) => {
+    if (!target.classList.contains('_slide')) {
+        target.classList.add('_slide');
+        if (target.hidden) {
+            target.hidden = false;
+        }
+        let height = target.offsetHeight;
+        target.style.overflow = 'hidden';
+        target.style.height = 0;
+        target.style.paddingTop = 0;
+        target.style.paddingBottom = 0;
+        target.style.marginTop = 0;
+        target.style.marginBottom = 0;
+        target.offsetHeight;
+        target.style.transitionProperty = "height, margin, padding";
+        target.style.transitionDuration = duration + 'ms';
+        target.style.height = height + 'px';
+        target.style.removeProperty('padding-top');
+        target.style.removeProperty('padding-bottom');
+        target.style.removeProperty('margin-top');
+        target.style.removeProperty('margin-bottom');
+        window.setTimeout(() => {
+            target.style.removeProperty('height');
+            target.style.removeProperty('overflow');
+            target.style.removeProperty('transition-duration');
+            target.style.removeProperty('transition-property');
+            target.classList.remove('_slide');
+        }, duration);
+    }
+}
+let _slideToggle = (target, duration = 500) => {
+    if (target.hidden) {
+        return _slideDown(target, duration);
+    } else {
+        return _slideUp(target, duration);
+    }
+}
 
 
 //========================================================================================================================================================

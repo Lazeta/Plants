@@ -19,38 +19,21 @@
 	position: relative;
 }
 
-.prices__item._init .accordion {
-	cursor: pointer;
+.accordion._active {
+    padding: 10px 40px 10px 10px;
+    cursor: pointer;
+    display: none;
 }
-.prices__item._init .accordion {
-	padding: 10px 40px 10px 10px;
-}
-.prices__item._init .accordion::before,
-.prices__item._init .accordion::after {
-	content: "";
-	width: 20px;
-	height: 1px;
-	background-color: #fff;
-	position: absolute;
-	right: 10px;
-	top: 20px;
-	transition: transform 0.3s ease 0s;
-}
-.prices__item._init .accordion::after {
+.prices__item._active .accordion::after {
 	transform: rotate(-90deg);
 }
-.prices__item._init .accordion._active::after {
+.prices__item._active .accordion._active::after {
 	transform: rotate(0deg);
 }
 .accordion__content {
-    display: none;
-	padding: 0 10px 10px;
-}
-.accordion__content._active {
-    display: block;
-}
-.accordion._active {
-    display: none;
+    position: relative;
+	padding: 0 0 5px 0;
+    margin: 0 0px;
 }
 
 
@@ -71,6 +54,7 @@
     @include font (1rem, 1rem, 300);
     color: $color-main-text;
     margin-bottom: 6px;
+    padding-right: 24px;
 }
 
 .cost {
