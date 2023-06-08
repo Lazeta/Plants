@@ -1,59 +1,64 @@
 "use strict"
 
-document.queruSelectorAll("[data-spollers]").forEach((item) => {
-    
-})
+const spollersArray = document.querySelectorAll("[data-spollers]");
+if (spollersArray.length > 0) {
+    const spollerRegular = document.querySelectorAll("[data-spoller]");
+    console.log(spollerRegular)
+}
+
+// const spollersBlock = document.closest("[data-spollers]");
+// const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
 
 // получаем все элементы с классом "prices__item" и добавляем обработчик события клика
-document.querySelectorAll(".prices__list").forEach((item) => {
-    item.addEventListener("click", () => {
-        // Получаем элементы меню: заголовок, содержимое и стрелки
-        const accordionHeader = item.querySelector(".accordion");
-        const accordionContent = item.querySelector(".accordion__content");
-        const accordionArrowTop = item.querySelector(".arrow-top");
+// document.querySelectorAll(".prices__list").forEach((item) => {
+//     item.addEventListener("click", () => {
+//         // Получаем элементы меню: заголовок, содержимое и стрелки
+//         const accordionHeader = item.querySelector(".accordion");
+//         const accordionContent = item.querySelector(".accordion__content");
+//         const accordionArrowTop = item.querySelector(".arrow-top");
 
-        // Проверяем, открыто ли меню
-        const isAccordionActive = accordionHeader.classList.contains("arrow-body");
+//         // Проверяем, открыто ли меню
+//         const isAccordionActive = accordionHeader.classList.contains("arrow-body");
 
-        if (isAccordionActive) {
-            // Если меню уже открыто, то закрываем его и удаляем соответствующие классы
-            accordionHeader.classList.remove("arrow-body");
-            accordionContent.classList.remove("selected");
-        } else {
-            // Если меню закрыто, то закрываем предыдущее открытое меню, если имеется в наличии
-            const activeAccordion = document.querySelector(".prices__item arrow-body");
+//         if (isAccordionActive) {
+//             // Если меню уже открыто, то закрываем его и удаляем соответствующие классы
+//             accordionHeader.classList.remove("arrow-body");
+//             accordionContent.classList.remove("selected");
+//         } else {
+//             // Если меню закрыто, то закрываем предыдущее открытое меню, если имеется в наличии
+//             const activeAccordion = document.querySelector(".prices__item arrow-body");
 
-            if (activeAccordion) {
-                const activeAccordionItem = activeAccordion.closest(".prices__item");
-                const activeAccordionHeader = activeAccordionItem.querySelector(".accordion__header");
-                const activeAccordionContent = activeAccordionItem.querySelector(".accordion__content");
-                const activeAccordionArrowTop = activeAccordionItem.querySelector(".arrow-top");
+//             if (activeAccordion) {
+//                 const activeAccordionItem = activeAccordion.closest(".prices__item");
+//                 const activeAccordionHeader = activeAccordionItem.querySelector(".accordion");
+//                 const activeAccordionContent = activeAccordionItem.querySelector(".accordion__content");
+//                 const activeAccordionArrowTop = activeAccordionItem.querySelector(".arrow-top");
 
-                // Проверяем наличие активного меню перед удалением класса
-                if (activeAccordionHeader) {
-                    activeAccordionHeader.classList.remove("arrow-body");
-                }
-                if (activeAccordionContent) {
-                    activeAccordionContent.classList.remove("selected");
-                }
-                if (activeAccordionArrowTop) {
-                    activeAccordionArrowTop.style.display = "block";
-                }
-            }
+//                 // Проверяем наличие активного меню перед удалением класса
+//                 if (activeAccordionHeader) {
+//                     activeAccordionHeader.classList.remove("arrow-body");
+//                 }
+//                 if (activeAccordionContent) {
+//                     activeAccordionContent.classList.remove("selected");
+//                  }
+//                 // if (activeAccordionArrowTop) {
+//                 //     activeAccordionArrowTop.style.overflow = "hidden";
+//                 // }
+//             }
 
-            // Открываем текущее меню и добавляем соответствующие классы
-            accordionHeader.classList.add("arrow-body");
-            accordionContent.classList.add("selected");
-        }
+//             // Открываем текущее меню и добавляем соответствующие классы
+//             accordionHeader.classList.add("arrow-body");
+//             accordionContent.classList.add("selected");
+//         }
 
-        window.addEventListener("keydown", function (event) {
-            if (event.key === "Escape" || event.key === "Esc") {
-                accordionContent.classList.remove("selected");
-                accordionHeader.classList.remove("arrow-body");
-            }
-        });
-    });
-});
+//         window.addEventListener("keydown", function (event) {
+//             if (event.key === "Escape" || event.key === "Esc") {
+//                 accordionContent.classList.remove("selected");
+//                 accordionHeader.classList.remove("arrow-body");
+//             }
+//         });
+//     });
+// });
 
 
 // <--------------------------------->

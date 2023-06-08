@@ -43,7 +43,14 @@
 	transform: rotate(0deg);
 }
 .accordion__content {
+    display: none;
 	padding: 0 10px 10px;
+}
+.accordion__content._active {
+    display: block;
+}
+.accordion._active {
+    display: none;
 }
 
 
