@@ -1416,11 +1416,27 @@ div[data-color=red] {
   display: none;
 }
 
-.prices__item._active .accordion::after {
+.prices__list._init .accordion {
+  cursor: pointer;
+}
+
+.prices__list._init .accordion::before,
+.prices__list._init .accordion::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  transition: transform 0.3s ease 0s;
+}
+
+.prices__list._init .accordion::after {
   transform: rotate(-90deg);
 }
 
-.prices__item._active .accordion._active::after {
+.prices__list._init .accordion._active::after {
   transform: rotate(0deg);
 }
 

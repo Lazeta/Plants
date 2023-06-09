@@ -3,14 +3,31 @@
 // Spollers
 const spollersArray = document.querySelectorAll('[data-spollers]');
 if (spollersArray.length > 0) {
-    window.addEventListener('keydown', function(event) {
+    // Закрываем меню если нажали эскейп
+    window.addEventListener('keydown', function (event) {
         if (event.key === 'Escape' || event.key === 'Esc') {
-            const apollersArray = document.querySelectorAll('[data-spollers]._init');
-            spollersArray.forEach(spollersBlock => {
+            const spollersArrayActive = document.querySelectorAll('[data-spollers]._init');
+            spollersArrayActive.forEach(spollersBlock => {
                 hideSpollersBody(spollersBlock);
             });
         }
     });
+
+    
+    // Скрываем меню при нажатии на dropdown
+    window.addEventListener('click', function (event) {
+        const dropdown = document.querySelector('[data-spollers]._init');
+        if (!event.target.closest('[data-spollers]') && dropdown.classList.contains('_active')) {
+            const spollersArrayActive = document.querySelectorAll('[data-spollers]._active');
+            spollersArrayActive.forEach(spollersBlock => {
+                hideSpollersBody(spollersBlock);
+                spollersBlock.classList.remove('_active');
+            });
+        }
+    });
+
+
+
 
     // Получение обычных спойлеров
     const spollerRegular = Array.from(spollersArray).filter(function (item, index, self) {
@@ -106,13 +123,20 @@ if (spollersArray.length > 0) {
             const spollerTitle = el.hasAttribute('data-spoller') ? el : el.closest('[data-spoller]');
             const spollersBlock = spollerTitle.closest('[data-spollers]');
             const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
+    
             if (!spollersBlock.querySelectorAll('._slide').length) {
                 if (oneSpoller && !spollerTitle.classList.contains('_active')) {
                     hideSpollersBody(spollersBlock);
                 }
+    
                 spollerTitle.classList.toggle('_active');
                 _slideToggle(spollerTitle.nextElementSibling, 500);
-
+    
+                // if (arrowBody && arrowBody.contains(el)) {
+                //     spollerTitle.classList.remove('_active');
+                //     _slideUp(spollerTitle.nextElementSibling, 500);
+                // }
+    
                 // Скрытие других элементов с классом accordion
                 const accordionElements = document.querySelectorAll('.accordion');
                 accordionElements.forEach(accordionElements => {
@@ -124,6 +148,7 @@ if (spollersArray.length > 0) {
             e.preventDefault();
         }
     }
+
     function hideSpollersBody(spollersBlock) {
         const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');
         if (spollerActiveTitle) {
