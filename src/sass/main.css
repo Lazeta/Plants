@@ -1461,7 +1461,7 @@ div[data-color=red] {
 .btn__city__bar {
   width: 450px;
   height: 50px;
-  margin-top: 85px;
+  margin-top: 89px;
   background: #D6E7D2;
   display: inline-flex;
   flex-direction: none;
@@ -1483,17 +1483,17 @@ div[data-color=red] {
 }
 .btn__city__bar img {
   padding-top: 16px;
-  padding-right: 27px;
+  padding-right: 35px;
 }
 .btn__city__bar._active {
-  background: #C1E698;
+  background: #ffffff;
   border: 1px solid #D6E7D2;
   border-radius: 0px;
   box-shadow: none;
 }
 .btn__city__bar._active img {
   margin-top: 15px;
-  margin-right: 26px;
+  margin-right: 33px;
   transform: rotate(-180deg);
 }
 
