@@ -25,9 +25,7 @@ if (spollersArray.length > 0) {
             });
         }
     });
-
-
-
+    
 
     // Получение обычных спойлеров
     const spollerRegular = Array.from(spollersArray).filter(function (item, index, self) {

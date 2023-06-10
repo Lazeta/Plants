@@ -31,7 +31,7 @@ input {
   font-family: "Inika", serif;
 }
 
-.prices__content__title, .prices__bar__title, .description p, .footer-data li:nth-of-type(2), .footer__wrapper * a, .btn__city__bar > span, .btn__learn-more, strong,
+.btn__city__bar span, .prices__content__title, .prices__bar__title, .description p, .footer-data li:nth-of-type(2), .footer__wrapper * a, .btn__learn-more, strong,
 summary, p, h3, h1 {
   font-family: "Inter", sans-serif;
 }
@@ -187,34 +187,6 @@ button {
   border-radius: 5px;
 }
 
-.btn__city__bar {
-  width: 450px;
-  height: 50px;
-  margin-top: 85px;
-  background: #D6E7D2;
-  display: inline-flex;
-  flex-direction: none;
-  flex-wrap: none;
-  align-content: none;
-  justify-content: space-between;
-  align-items: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border: none;
-}
-.btn__city__bar > span {
-  height: 40px;
-  padding: 5px 0px 5px 17px;
-  font-size: 2rem;
-  line-height: 4rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: #717171;
-}
-.btn__city__bar img {
-  padding-top: 16px;
-  padding-right: 27px;
-}
-
 .btn__animation:hover {
   background-color: #E06733;
   color: #FFFFFF;
@@ -252,31 +224,6 @@ button {
     align-items: center;
     border: 1px solid #E06733;
     border-radius: 5px;
-  }
-  .btn__city__bar {
-    width: auto;
-    height: auto;
-    margin: 20px 0 0 0;
-    background: #D6E7D2;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 0px;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: none;
-    align-content: none;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  .btn__city__bar span {
-    padding-right: 50vw;
-    height: auto;
-    letter-spacing: 0.05em;
-    color: #717171;
-    text-align: center;
-  }
-  .btn__city__bar img {
-    padding: 0 35px 18px 0;
   }
   .btn__accordion__city {
     margin-right: 0;
@@ -1509,6 +1456,45 @@ div[data-color=red] {
   display: inline-block;
   color: #717171;
   text-decoration: none;
+}
+
+.btn__city__bar {
+  width: 450px;
+  height: 50px;
+  margin-top: 85px;
+  background: #D6E7D2;
+  display: inline-flex;
+  flex-direction: none;
+  flex-wrap: none;
+  align-content: none;
+  justify-content: space-between;
+  align-items: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+.btn__city__bar span {
+  height: 40px;
+  padding: 5px 0px 5px 17px;
+  font-size: 2rem;
+  line-height: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #717171;
+}
+.btn__city__bar img {
+  padding-top: 16px;
+  padding-right: 27px;
+}
+.btn__city__bar._active {
+  background: #C1E698;
+  border: 1px solid #D6E7D2;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.btn__city__bar._active img {
+  margin-top: 15px;
+  margin-right: 26px;
+  transform: rotate(-180deg);
 }
 
 /* button changed background color */
