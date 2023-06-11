@@ -1485,16 +1485,78 @@ div[data-color=red] {
   padding-top: 16px;
   padding-right: 35px;
 }
+.btn__city__bar .btn__accordion__city__active {
+  display: none;
+}
 .btn__city__bar._active {
-  background: #ffffff;
-  border: 1px solid #D6E7D2;
+  width: 450px;
+  height: 50px;
+  background: #C1E698;
   border-radius: 0px;
   box-shadow: none;
 }
+.btn__city__bar._active span {
+  padding: 5px 0px 5px 35px;
+}
 .btn__city__bar._active img {
-  margin-top: 15px;
-  margin-right: 33px;
-  transform: rotate(-180deg);
+  display: none;
+}
+.btn__city__bar._active .btn__accordion__city__active {
+  display: inline;
+}
+
+.city-selection__bar {
+  display: none;
+}
+.city-selection__bar.city-selection__bar._active {
+  width: 450px;
+  height: 234px;
+  background: #DCE9D9;
+  display: flex;
+  flex-direction: none;
+  flex-wrap: none;
+  align-content: none;
+  justify-content: none;
+  align-items: none;
+  padding: 3px 35px 10px 37px;
+  letter-spacing: 0.05em;
+}
+
+.city-selection__list {
+  width: 380px;
+  height: auto;
+}
+.city-selection__list li {
+  position: relative;
+  width: 380px;
+  height: 35px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  color: #499A18;
+  padding: 23.5px 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: none;
+}
+.city-selection__list li:hover {
+  color: #717171;
+  text-decoration: none;
+  cursor: pointer;
+}
+.city-selection__list li:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #717171;
 }
 
 /* button changed background color */

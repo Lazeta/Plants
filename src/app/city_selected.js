@@ -1,11 +1,13 @@
-const cityBtn = document.querySelector(".contact-us__selected")
-const cityBtnOld = document.querySelector(".btn__city__bar");
+const cityBtn = document.querySelector(".btn__city__bar")
+const cityList = document.querySelector(".city-selection__bar");
 
-if (cityBtn.classList.contains("contact-us__selected._active")) {
-
-} else {
-    cityBtn.addEventListener("click", function () {
-        cityBtnOld.classList.toggle("_active");
-        // cityBtn.classList.toggle("_active");
-    })
-}
+cityBtn.addEventListener("click", function () {
+    const cityBtnActive = cityBtn.classList.contains("._active");
+    // if (cityBtnActive > 0) {
+    //     cityBtn.classList.remove("_active");
+    // } else {
+    //     cityBtn.classList.add("_active");
+    // }
+    cityBtn.classList.toggle("_active");
+    cityList.classList.toggle("_active");
+})
