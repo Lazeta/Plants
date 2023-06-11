@@ -1,0 +1,62 @@
+.city__card {
+    display: none;
+    width: 448px;
+    height: 214px;
+    // min-height: 200px;
+    margin: 47px 0px 83px 0px;
+    border: 1px solid $color-black;
+    border-radius: 20px;
+    padding: 17px 32px 33px;
+
+    &._init {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.card__info {
+    width: 339px;
+    li {
+        position: relative;
+        width: 339px;
+        @extend %font-inter;
+        @include font (1.6rem, 4rem, 400);
+        // @include flex (flex, row, nowrap, space-between, space-between, none);
+    
+    }
+}
+.btn__call-us {
+    width: 122px;
+    border: 1px solid $color-orange;
+    border-radius: 5px;
+}
+.city {
+
+}
+.phone {
+
+}
+.office-adress {
+
+}
+.item__title {
+
+}
+.item__text {
+
+}
+.Canandaigua._select {
+    display: none;
+}
+.New-York-City._select {
+    display: none;
+}
+.Yonkers._select {
+    display: none;
+}
+.Sherrill {
+    display: none;
+
+    &._select {
+
+    }
+}

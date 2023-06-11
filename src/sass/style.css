@@ -31,7 +31,7 @@ input {
   font-family: "Inika", serif;
 }
 
-.btn__city__bar span, .prices__content__title, .prices__bar__title, .description p, .footer-data li:nth-of-type(2), .footer__wrapper * a, .btn__learn-more, strong,
+.city-selection__list li, .btn__city__bar span, .card__info li, .prices__content__title, .prices__bar__title, .description p, .footer-data li:nth-of-type(2), .footer__wrapper * a, .btn__learn-more, strong,
 summary, p, h3, h1 {
   font-family: "Inter", sans-serif;
 }
@@ -199,8 +199,6 @@ button {
 
 @media (max-width: 768px) {
   .services__buttons {
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
     max-width: max-content;
     width: auto;
     height: auto;
@@ -783,8 +781,7 @@ button {
   min-width: 329px;
   max-height: 350px;
   border-radius: 20px 20px 0px 0px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .description {
@@ -807,8 +804,6 @@ button {
 
 @media (max-width: 1335px) {
   .services {
-    height: -webkit-max-content;
-    height: -moz-max-content;
     height: max-content;
     padding: 130px 50px 0px 50px;
     display: grid;
@@ -1260,16 +1255,6 @@ button {
     flex-direction: column;
   }
 }
-@-webkit-keyframes burgerAnimationOpen {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
 @keyframes burgerAnimationOpen {
   from {
     transform: translateX(-100%);
@@ -1278,16 +1263,6 @@ button {
   to {
     transform: translateX(0%);
     opacity: 1;
-  }
-}
-@-webkit-keyframes burgerAnimationClose {
-  from {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
   }
 }
 @keyframes burgerAnimationClose {
@@ -1309,6 +1284,52 @@ button {
   filter: none;
 }
 
+.city__card {
+  display: none;
+  width: 448px;
+  height: 214px;
+  margin: 47px 0px 83px 0px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 17px 32px 33px;
+}
+.city__card._init {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__info {
+  width: 339px;
+}
+.card__info li {
+  position: relative;
+  width: 339px;
+  font-size: 1.6rem;
+  line-height: 4rem;
+  font-weight: 400;
+}
+
+.btn__call-us {
+  width: 122px;
+  border: 1px solid #E06733;
+  border-radius: 5px;
+}
+
+.Canandaigua._select {
+  display: none;
+}
+
+.New-York-City._select {
+  display: none;
+}
+
+.Yonkers._select {
+  display: none;
+}
+
+.Sherrill {
+  display: none;
+}
 .arrow-body {
   position: relative;
   display: inline-block;
@@ -1510,7 +1531,7 @@ button {
   align-content: none;
   justify-content: none;
   align-items: none;
-  padding: 3px 35px 10px 37px;
+  padding: 15px 35px 0px 37px;
   letter-spacing: 0.05em;
 }
 
@@ -1521,34 +1542,28 @@ button {
 .city-selection__list li {
   position: relative;
   width: 380px;
-  height: 35px;
-  font-family: "Inter";
-  font-style: normal;
+  height: 37px;
+  font-size: 1.6rem;
+  line-height: 4rem;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 40px;
   color: #499A18;
-  padding: 23.5px 5px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: space-between;
-  justify-content: space-between;
-  align-items: none;
+  padding: 0px 5px 0px 5px;
+  margin: 10px 0 10px 0;
 }
 .city-selection__list li:hover {
   color: #717171;
   text-decoration: none;
   cursor: pointer;
 }
-.city-selection__list li:hover::after {
+.city-selection__list li:hover::before {
   content: "";
   position: absolute;
-  bottom: -12px;
+  display: block;
+  bottom: 0px;
   left: 0;
   width: 100%;
-  height: 1px;
-  background: #717171;
+  height: 0px;
+  border: 1px solid #717171;
 }
 
 /* button changed background color */
@@ -1577,4 +1592,6 @@ button {
   .change__button {
     display: none;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
