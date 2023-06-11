@@ -199,6 +199,8 @@ button {
 
 @media (max-width: 768px) {
   .services__buttons {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
     max-width: max-content;
     width: auto;
     height: auto;
@@ -781,7 +783,8 @@ button {
   min-width: 329px;
   max-height: 350px;
   border-radius: 20px 20px 0px 0px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .description {
@@ -804,6 +807,8 @@ button {
 
 @media (max-width: 1335px) {
   .services {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     padding: 130px 50px 0px 50px;
     display: grid;
@@ -1255,6 +1260,16 @@ button {
     flex-direction: column;
   }
 }
+@-webkit-keyframes burgerAnimationOpen {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 @keyframes burgerAnimationOpen {
   from {
     transform: translateX(-100%);
@@ -1263,6 +1278,16 @@ button {
   to {
     transform: translateX(0%);
     opacity: 1;
+  }
+}
+@-webkit-keyframes burgerAnimationClose {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
 @keyframes burgerAnimationClose {
@@ -1352,26 +1377,6 @@ button {
 
 .prices__list._init .accordion {
   cursor: pointer;
-}
-
-.prices__list._init .accordion::before,
-.prices__list._init .accordion::after {
-  content: "";
-  width: 20px;
-  height: 1px;
-  background-color: #fff;
-  position: absolute;
-  right: 10px;
-  top: 20px;
-  transition: transform 0.3s ease 0s;
-}
-
-.prices__list._init .accordion::after {
-  transform: rotate(-90deg);
-}
-
-.prices__list._init .accordion._active::after {
-  transform: rotate(0deg);
 }
 
 .accordion__content {
@@ -1572,6 +1577,4 @@ button {
   .change__button {
     display: none;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
