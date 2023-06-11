@@ -1,9 +1,119 @@
-
-
-@media (max-width: $tablet-width) {
-
+.prices__item {
+    position: relative;
+    width: 250px;
+    min-height: 50px;
+    margin: 0px 0px;
+    padding: 12px 10px 5px 40px;
+    background: $color-light;
+    @include flex (flex, row, nowrap, center, space-between, center);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
 }
 
-@media (max-width: $mobile-big-width) {
-    
+.accordion {
+    width: 100%;
+	text-align: left;
+	background-color: transparent;
+	color: #fff;
+	position: relative;
+}
+
+.accordion._active {
+    padding: 10px 40px 10px 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.prices__list._init .accordion {
+	cursor: pointer;
+}
+.prices__list._init .accordion::before,
+.prices__list._init .accordion::after {
+	content: "";
+	width: 20px;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	right: 10px;
+	top: 20px;
+	transition: transform 0.3s ease 0s;
+}
+.prices__list._init .accordion::after {
+	transform: rotate(-90deg);
+}
+.prices__list._init .accordion._active::after {
+	transform: rotate(0deg);
+}
+
+.accordion__content {
+    position: relative;
+	padding: 0 0 5px 0;
+    margin: 0 0px;
+}
+
+
+.line::after {
+    content: "";
+    position: relative;
+    display: block;
+    margin: 5px 0px 6px 0px;
+    top: 0%;
+    left: 0%;
+    width: 164px;
+    height: 0;
+    border: 0.5px solid $color-accordion-header-open;
+}
+
+.content-text {
+    font-family: 'Inter';
+    @include font (1rem, 1rem, 300);
+    color: $color-main-text;
+    margin-bottom: 6px;
+    padding-right: 24px;
+}
+
+.cost {
+    font-family: 'Inter';
+    @include font (1.6rem, 2rem, 700);
+    color: $color-orange;
+
+    margin-bottom: 12px;
+}
+
+.per-hour {
+    font-family: 'Inter';
+    @include font (1.2rem, 2rem, 400);
+    color: $color-black;
+}
+
+.for-order {
+    width: 86px;
+    height: 25px;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $color-white;
+    border: none;
+    color: $color-main-text;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &>a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // используется для перемещения элемента на определенное расстояние по горизонтали и вертикали, 
+        // относительно его начальной позиции. Конкретно, -50% означает, что элемент будет перемещен на 
+        // 50% своей ширины и высоты влево и вверх соответственно. Таким образом, translate(-50%, -50%) 
+        // центрирует элемент относительно его родительского элемента по обеим осям.
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        color: $color-main-text;
+        text-decoration: none;
+    }
 }

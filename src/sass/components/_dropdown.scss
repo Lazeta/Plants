@@ -1,164 +1,43 @@
-div[data-color="red"] {
-    color: red;
-}
 
-.prices__item {
-    position: relative;
-    width: 250px;
-    min-height: 50px;
-    margin: 0px 40px;
-    padding: 6px 40px 5px 40px;
-    background: $color-light;
-    @include flex (flex, row, nowrap, center, space-between, center);
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-
-    > strong {
-        min-width: 0px;
-    }
-}
-
-
-.accordion__header {
+.arrow-body {
     position: relative;
     display: inline-block;
+    float: right;
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: $color-accordion-header-noopen;
-    &.close {
-        display: none;
-    }
-}
-.accordion__header__selected {
-    position: absolute;
-    display: inline-block;
-    margin: 16px 40px 0 0;
-    right: 0;
-    top: 0;
+    margin: 2px 30px 0 0;
     background-color: $color-accordion-header-noopen;
 }
 
-.accordion__content {
-    display: none;
-
-    &.selected {
-        position: relative;
-        display: block;
-        width: 250px;
-        height: 154px;
-        margin: -5px 0 0px 0%;
-        padding: 14px 40px;
-        right: 15%;
-        border-radius: 20px;
-        background-color: $color-accordion-block;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    }
-}
-
-
-.arrow {
+.arrow-bottom {
     position: absolute;
-    left: 6px;
-    top: 7px;
+    display: block;
+    right: 6px;
+    top: 6px;
     width: 3px;
     height: 3px;
     border-top: 1px solid $color-accordion-arrow-closes;
     border-right: 1px solid $color-accordion-arrow-closes;
-    cursor: pointer;
-
-    &.open {
-        border-top: 1px solid $color-accordion-arrow-open;
-        border-right: 1px solid $color-accordion-arrow-open;
-    }
-}
-
-
-.arrow-bottom {
-    display: block;
     transform: rotate(135deg);
-
-    &.close {
-        display: none;
-    }
 }
+
 .arrow-top {
+    position: absolute;
     display: block;
+    right: 6px;
+    top: 6px;
+    width: 3px;
+    height: 3px;
+    border-top: 1px solid $color-accordion-arrow-open;
+    border-right: 1px solid $color-accordion-arrow-open;
     transform: rotate(-45deg);
-    border-color: $color-accordion-arrow-open;
 }
 
 
-.line::before {
-    content: "";
-    position: relative;
-    display: block;
-    margin: 5px 0px 6px 0px;
-    top: 0%;
-    left: 0%;
-    width: 164px;
-    height: 0;
-    border: 0.5px solid $color-accordion-header-open;
+div[data-color="red"] {
+    color: red;
 }
-
-.content-text {
-    font-family: 'Inter';
-    @include font (1rem, 1rem, 300);
-    color: $color-main-text;
-    margin-bottom: 6px;
-}
-
-.cost {
-    font-family: 'Inter';
-    @include font (1.6rem, 2rem, 700);
-    color: $color-orange;
-
-    margin-bottom: 12px;
-}
-
-.per-hour {
-    font-family: 'Inter';
-    @include font (1.2rem, 2rem, 400);
-    color: $color-black;
-}
-
-.for-order {
-    width: 86px;
-    height: 25px;
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: $color-white;
-    border: none;
-    color: $color-main-text;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-weight: 400;
-    border-radius: 10px;
-    cursor: pointer;
-
-    & > a {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        // используется для перемещения элемента на определенное расстояние по горизонтали и вертикали, 
-        // относительно его начальной позиции. Конкретно, -50% означает, что элемент будет перемещен на 
-        // 50% своей ширины и высоты влево и вверх соответственно. Таким образом, translate(-50%, -50%) 
-        // центрирует элемент относительно его родительского элемента по обеим осям.
-        transform: translate(-50%, -50%);
-        display: inline-block;
-        color: $color-main-text;
-        text-decoration: none;
-    }
-}
-
-
-@media (max-width: $tablet-width) {}
-
-@media (max-width: $mobile-big-width) {}
-
 @keyframes flip {
     0% {
         transform: rotateX(0deg);

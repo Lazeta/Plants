@@ -84,11 +84,10 @@
     }
 
     .prices__list {
-        max-width: 600px;
-        height: auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 40px 20px;
+        width: 332px;
+        height: 281px;
+        padding: 10px 20px;
+        @include flex (flex, column, nowrap, none, space-evenly, center);
     }
 
     .prices__item {
@@ -137,11 +136,9 @@
 
     .prices__list {
         width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 20px 0;
-        border: none;
-        border-radius: 0;
+        height: 281px;
+        padding: 10px 10px;
+        @include flex (flex, column, nowrap, none, space-evenly, center);
     }
 
     .prices__item {
