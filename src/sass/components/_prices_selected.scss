@@ -13,42 +13,45 @@
 
 .accordion {
     width: 100%;
-	text-align: left;
-	background-color: transparent;
-	color: #fff;
-	position: relative;
-}
+    text-align: left;
+    background-color: transparent;
+    color: #fff;
+    position: relative;
 
-.accordion._active {
-    padding: 10px 40px 10px 10px;
-    cursor: pointer;
-    display: none;
+    &._active {
+        padding: 10px 40px 10px 10px;
+        cursor: pointer;
+        display: none;
+    }
 }
 
 .prices__list._init .accordion {
-	cursor: pointer;
+    cursor: pointer;
 }
+
 .prices__list._init .accordion::before,
 .prices__list._init .accordion::after {
-	content: "";
-	width: 20px;
-	height: 1px;
-	background-color: #fff;
-	position: absolute;
-	right: 10px;
-	top: 20px;
-	transition: transform 0.3s ease 0s;
+    content: "";
+    width: 20px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    transition: transform 0.3s ease 0s;
 }
+
 .prices__list._init .accordion::after {
-	transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
+
 .prices__list._init .accordion._active::after {
-	transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 
 .accordion__content {
     position: relative;
-	padding: 0 0 5px 0;
+    padding: 0 0 5px 0;
     margin: 0 0px;
 }
 

@@ -14,9 +14,7 @@
     'layout/main',
     'layout/wrapper',
     'layout/header',
-    'layout/footer',
-    'layout/columns',
-    'layout/forms';
+    'layout/footer';
     
 @import 
     'components/navigation',
@@ -28,18 +26,9 @@
     'components/menutransition',
     'components/focusservice',
     'components/adresses',
-    'components/accordion',
     'components/dropdown',
     'components/prices_selected',
     'components/contact-us__selected';
-    
-@import 
-    'pages/home',
-    'pages/contact';
 
 @import 
-    'themes/bgcolor',
-    'themes/theme';
-
-@import 
-    'vendors/bootstrap';
+    'themes/bgcolor';
