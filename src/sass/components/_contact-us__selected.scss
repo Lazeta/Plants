@@ -47,24 +47,37 @@
 }
 
 .city-selection__bar {
+    position: relative;
     display: none;
+    z-index: 1;
 
 
-    &.city-selection__bar._active {
+    &._active {
         width: 450px;
         height: 234px;
         background: $color-accordion-list-active;
         @include flex (flex);
         padding: 15px 35px 0px 37px;
         letter-spacing: 0.05em;
+        z-index: 0;
     }
+    &._hidden {
+        position: absolute;
+        z-index: 0;
+        background: $color-light;
+        color: $color-light;
+    }
+}
+
+.city-selection__bar._hidden > ul > li {
+    color: $color-light;
 }
 
 .city-selection__list {
     width: 380px;
     height: auto;
 
-    li {
+    >li {
         position: relative;
         width: 380px;
         height: 37px;
@@ -73,7 +86,8 @@
         color: $color-green;
         padding: 0px 5px 0px 5px;
         margin: 10px 0 10px 0;
-
+        z-index: 1;
+        
         &:hover {
             color: $color-main-text;
             text-decoration: none;
@@ -90,5 +104,44 @@
                 border: 1px solid $color-main-text;
             }
         }
+        &._hidden {
+            position: absolute;
+            z-index: 0;
+            background: $color-light;
+            color: $color-light;
+        }
+    }
+}
+
+.city-name__Canandaigua {
+    ._hidden {
+        position: absolute;
+        z-index: 0;
+        background: $color-light;
+        color: $color-light;
+    }
+}
+.city-name__New-York-City {
+    ._hidden {
+        position: absolute;
+        z-index: 0;
+        background: $color-light;
+        color: $color-light;
+    }
+}
+.city-name__Yonkers {
+    ._hidden {
+        position: absolute;
+        z-index: 0;
+        background: $color-light;
+        color: $color-light;
+    }
+}
+.city-name__Sherrill {
+    ._hidden {
+        position: absolute;
+        z-index: 0;
+        background: $color-light;
+        color: $color-light;
     }
 }

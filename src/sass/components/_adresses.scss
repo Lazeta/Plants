@@ -2,61 +2,51 @@
     display: none;
     width: 448px;
     height: 214px;
-    // min-height: 200px;
     margin: 47px 0px 83px 0px;
     border: 1px solid $color-black;
     border-radius: 20px;
     padding: 17px 32px 33px;
+    z-index: 2;
 
     &._init {
-        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
         flex-direction: column;
     }
 }
+
 .card__info {
     width: 339px;
+
     li {
         position: relative;
         width: 339px;
+        height: auto;
         @extend %font-inter;
         @include font (1.6rem, 4rem, 400);
-        // @include flex (flex, row, nowrap, space-between, space-between, none);
-    
+        @include flex (flex, row, nowrap, none, none, flex-end);
+
     }
 }
+
 .btn__call-us {
     width: 122px;
     border: 1px solid $color-orange;
     border-radius: 5px;
 }
-.city {
 
-}
-.phone {
+.city {}
 
-}
-.office-adress {
+.phone {}
 
-}
-.item__title {
+.office-adress {}
 
+*.item__title {
+    color: #000000;
 }
+
 .item__text {
-
-}
-.Canandaigua._select {
-    display: none;
-}
-.New-York-City._select {
-    display: none;
-}
-.Yonkers._select {
-    display: none;
-}
-.Sherrill {
-    display: none;
-
-    &._select {
-
-    }
+    color: #717171;
 }

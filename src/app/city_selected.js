@@ -7,12 +7,12 @@ const cityItemTwo = document.querySelector(".city-name__New-York-City");
 const cityItemThree = document.querySelector(".city-name__Yonkers");
 const cityItemFour = document.querySelector(".city-name__Sherrill");
 const ItemCity = document.querySelectorAll("[data-city]");
+const selectOne = document.querySelector(".Canandaigua");
 
 cityBtn.addEventListener("click", function () {
-    const cityBtnActive = cityBtn.classList.contains("._active");
+    // let IsCityBtnActive = cityBtn.classList.contains("_active");
+    // const IsCityListActive = cityList.classList.contains("_active");
 
-
-    // if (itemCity)
 
     cityBtn.classList.toggle("_active");
     cityList.classList.toggle("_active");
@@ -21,27 +21,84 @@ cityBtn.addEventListener("click", function () {
         if (event.key === "Escape" || event.key === "Esc") {
             cityBtn.classList.remove("_active");
             cityList.classList.remove("_active");
+            
         }
     });
-
-    // document.addEventListener('mouseover', function (e) {
-    //     const target = e.target;
-    //     const nearData = target.closest('[data-display]')
-    //     if (target.matches('[data-display]')) {
-    //         target.style.display = 'block';
-    //     }
-    // });
-
-    // document.addEventListener('mouseout', function (e) {
-    //     const target = e.target;
-    //     const nearData = target.closest('[data-display]')
-    //     if (target.matches('[data-display]')) {
-    //         target.style.display = 'none';
-    //     }
-    // });
 });
 
-// ItemCity.addEventListener("click", function (event) {
-//     let item = event.target.classList.closest(".city__card")
-//     item.classList.add("._select");
-// });
+cityItemOne.addEventListener("click", function () {
+    const cityList = document.querySelector(".city-selection__bar");
+    const list = document.querySelector(".city-selection__list");
+    const elem = document.querySelector(".Canandaigua");
+    
+    if (!elem) {
+        console.log('!!!Not elem!!!');
+    } 
+    if (elem) {
+        cityList.classList.toggle("_hidden");
+        list.classList.toggle("_hidden");
+        elem.closest(".city__card").classList.toggle("_init");
+        ItemCity.classList.toggle("_hidden");
+
+
+        console.log('script work');
+    }
+});
+
+cityItemTwo.addEventListener("click", function () {
+    const cityList = document.querySelector(".city-selection__bar");
+    const list = document.querySelector(".city-selection__list");
+    const elem = document.querySelector(".Canandaigua");
+    
+    if (!elem) {
+        console.log('!!!Not elem!!!');
+    } 
+    if (elem) {
+        cityList.classList.toggle("_hidden");
+        list.classList.toggle("_hidden");
+        elem.closest(".city__card").classList.toggle("_init");
+        ItemCity.classList.toggle("_hidden");
+
+
+        console.log('script work');
+    }
+});
+
+cityItemThree.addEventListener("click", function () {
+    const cityList = document.querySelector(".city-selection__bar");
+    const list = document.querySelector(".city-selection__list");
+    const elem = document.querySelector(".Canandaigua");
+    
+    if (!elem) {
+        console.log('!!!Not elem!!!');
+    } 
+    if (elem) {
+        cityList.classList.toggle("_hidden");
+        list.classList.toggle("_hidden");
+        elem.closest(".city__card").classList.toggle("_init");
+        ItemCity.classList.toggle("_hidden");
+
+
+        console.log('script work');
+    }
+});
+
+cityItemFour.addEventListener("click", function () {
+    const cityList = document.querySelector(".city-selection__bar");
+    const list = document.querySelector(".city-selection__list");
+    const elem = document.querySelector(".Canandaigua");
+    
+    if (!elem) {
+        console.log('!!!Not elem!!!');
+    } 
+    if (elem) {
+        cityList.classList.toggle("_hidden");
+        list.classList.toggle("_hidden");
+        elem.closest(".city__card").classList.toggle("_init");
+        ItemCity.classList.toggle("_hidden");
+
+
+        console.log('script work');
+    }
+});
+
