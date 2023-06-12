@@ -38,7 +38,7 @@ cityItemOne.addEventListener("click", function () {
         cityList.classList.toggle("_hidden");
         list.classList.toggle("_hidden");
         elem.closest(".city__card").classList.toggle("_init");
-        ItemCity.classList.toggle("_hidden");
+        // ItemCity.classList.toggle("_hidden");
 
 
         console.log('script work');

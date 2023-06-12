@@ -5,24 +5,26 @@
     margin: 47px 0px 83px 0px;
     border: 1px solid $color-black;
     border-radius: 20px;
-    padding: 17px 32px 33px;
+    padding: 16px 20px 0px 32px;
     z-index: 2;
 
     &._init {
         position: absolute;
         top: 0;
         left: 0;
-        display: block;
+        display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
     }
 }
 
 .card__info {
-    width: 339px;
+    width: max-content;
 
     li {
         position: relative;
-        width: 339px;
+        width: max-content;
         height: auto;
         @extend %font-inter;
         @include font (1.6rem, 4rem, 400);
@@ -32,16 +34,47 @@
 }
 
 .btn__call-us {
+    margin: 19px 0 0 129px;
+    padding: 6px 0;
     width: 122px;
     border: 1px solid $color-orange;
     border-radius: 5px;
+    @extend %font-inika;
+    @include font (1rem, 1.3rem, 700);
+    text-align: center;
+
+    color: #717171;
 }
 
-.city {}
+.city {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
-.phone {}
+    li {
+        padding-right: 96px;
+    }
+}
 
-.office-adress {}
+.phone {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    li {
+        padding-right: 75px;
+    }
+}
+
+.office-adress {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    li {
+        padding-right: 15px;
+    }
+}
 
 *.item__title {
     color: #000000;

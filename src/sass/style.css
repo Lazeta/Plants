@@ -27,7 +27,7 @@ input {
   outline: none;
 }
 
-.about__content > h2, .logo__name, .btn__contact-us, button, h2, a {
+.btn__call-us, .about__content > h2, .logo__name, .btn__contact-us, button, h2, a {
   font-family: "Inika", serif;
 }
 
@@ -1316,23 +1316,29 @@ button {
   margin: 47px 0px 83px 0px;
   border: 1px solid #000000;
   border-radius: 20px;
-  padding: 17px 32px 33px;
+  padding: 16px 20px 0px 32px;
   z-index: 2;
 }
 .city__card._init {
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
+  display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
 .card__info {
-  width: 339px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .card__info li {
   position: relative;
-  width: 339px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   height: auto;
   font-size: 1.6rem;
   line-height: 4rem;
@@ -1346,9 +1352,43 @@ button {
 }
 
 .btn__call-us {
+  margin: 19px 0 0 129px;
+  padding: 6px 0;
   width: 122px;
   border: 1px solid #E06733;
   border-radius: 5px;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #717171;
+}
+
+.city {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.city li {
+  padding-right: 96px;
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.phone li {
+  padding-right: 75px;
+}
+
+.office-adress {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.office-adress li {
+  padding-right: 15px;
 }
 
 *.item__title {
