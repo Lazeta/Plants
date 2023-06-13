@@ -1566,6 +1566,7 @@ button {
 .btn__city__bar img {
   padding-top: 16px;
   padding-right: 35px;
+  display: inline-block;
 }
 .btn__city__bar .btn__accordion__city__active {
   display: none;
@@ -1588,7 +1589,6 @@ button {
 }
 
 .city-selection__bar {
-  position: relative;
   display: none;
   z-index: 1;
 }

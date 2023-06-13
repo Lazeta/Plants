@@ -2,11 +2,7 @@ const cityBtn = document.querySelector(".btn__city__bar")
 const cityList = document.querySelector(".city-selection__bar");
 const itemCity = document.querySelectorAll("[data-city]");
 const cardList = document.querySelectorAll("[city-item]")
-
-cityBtn.addEventListener("click", function () {
-    cityBtn.classList.toggle("_active");
-    cityList.classList.toggle("_active");
-});
+const isClicked = false;
 
 
 window.addEventListener("keydown", function (event) {
@@ -19,19 +15,67 @@ window.addEventListener("keydown", function (event) {
 });
 
 function mouseOverButton() {
-    let cityList = document.querySelector(".city-selection__bar");
-    let cityBtn = document.querySelector(".btn__city__bar");
+    cityBtn.addEventListener("mouseover", (event) => {
 
-    cityBtn.addEventListener("mouseout", function (event) {
+        if (event.type === "click") {
+            // cityBtn.addEventListener("click", () => {
+            //     cityBtn.classList.add("_active");
+            //     cityList.classList.add("_active");
+
+            //     console.log("При наведении на cityBtn нажата ЛКМ на cityBtn")
+            // })
+        } else {
+            cityBtn.classList.add("_active");
+            cityList.classList.add("_active");
+
+            // console.log("При наведении на cityBtn")
+        }
+    });
+
+    cityBtn.addEventListener("mouseout", (event) => {
+        cityBtn.classList.remove("_active");
         cityList.classList.remove("_active");
-    }); 
-    cityBtn.addEventListener("mouseover", function(event) {
-        cityList.classList.add("_active"); 
+
+        // console.log("Hover покинул cityBtn")
     });
 }
 
 function mouseOverList() {
+    cityList.addEventListener("mouseover",  (event) => {
 
+        if (event.type === "click") {
+            // cityBtn.addEventListener("click", () => {
+            //     cityBtn.classList.add("_active");
+            //     cityList.classList.add("_active");
+            //     // removeEventListener("mouseover", click)
+
+            //     console.log("В состоянии наведения мыши на cityList кликнули по cityBtn")
+            // })
+        } else {
+            cityBtn.classList.add("_active");
+            cityList.classList.add("_active");
+
+            // console.log("В состоянии наведения мыши на cityList")
+        }
+
+        // cityBtn.addEventListener("click",  () => {
+        //     cityBtn.classList.add("_active");
+
+        //     console.log("Нажата ЛКМ на cityBtn")
+        // });
+    });
+    cityList.addEventListener("mouseout", (event) => {
+        if (cityBtn.type === "click") {
+            // cityList.classList.add("_active");
+            // removeEventListener("mouseout", click)
+            // console.log("Если нажата ЛКМ на cityBtn когда hover ушёл с элемента cityList")
+        } else {
+            cityList.classList.remove("_active");
+            cityBtn.classList.remove("_active");
+
+            // console.log("Если hover прекращен на элементе cityList и не было клика мыши")
+        }
+    });
 }
 
 itemCity.forEach(function (item) {

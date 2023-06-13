@@ -19,6 +19,7 @@
     img {
         padding-top: 16px;
         padding-right: 35px;
+        display: inline-block;
     }
 
     .btn__accordion__city__active {
@@ -47,7 +48,6 @@
 }
 
 .city-selection__bar {
-    position: relative;
     display: none;
     z-index: 1;
 
