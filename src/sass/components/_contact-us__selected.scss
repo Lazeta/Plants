@@ -37,18 +37,21 @@
         }
 
         img {
-            display: none;
+            display: inline;
+            visibility: hidden;
         }
 
         .btn__accordion__city__active {
             display: inline;
+            visibility: visible;
         }
     }
 }
 
 .city-selection__bar {
-    position: relative;
-    display: none;
+    // position: relative;
+    display: block;
+    visibility: hidden;
     z-index: 1;
 
 
@@ -56,27 +59,11 @@
         width: 450px;
         height: 234px;
         background: $color-accordion-list-active;
-        @include flex (flex);
+        visibility: visible;
         padding: 15px 35px 0px 37px;
         letter-spacing: 0.05em;
         z-index: 0;
     }
-
-    &._hidden {
-        position: absolute;
-        z-index: 0;
-        background: $color-light;
-        color: $color-light;
-    }
-}
-
-.city-selection__bar._hidden>ul>li {
-    display: none;
-
-    &:hover::before {
-        display: none;
-    }
-
 }
 
 .city-selection__list {
@@ -129,43 +116,13 @@
 }
 
 .city-name__New-York-City {
-    ._hidden {
-        position: absolute;
-        z-index: 0;
-        background: $color-light;
 
-        li {
-            color: $color-light;
-            text-decoration: none;
-            cursor: none;
-        }
-    }
 }
 
 .city-name__Yonkers {
-    ._hidden {
-        position: absolute;
-        z-index: 0;
-        background: $color-light;
-
-        li {
-            color: $color-light;
-            text-decoration: none;
-            cursor: none;
-        }
-    }
+ 
 }
 
 .city-name__Sherrill {
-    ._hidden {
-        position: absolute;
-        z-index: 0;
-        background: $color-light;
 
-        :hover {
-            color: $color-light;
-            text-decoration: none;
-            cursor: none;
-        }
-    }
 }

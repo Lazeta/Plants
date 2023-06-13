@@ -1581,43 +1581,27 @@ button {
   padding: 5px 0px 5px 35px;
 }
 .btn__city__bar._active img {
-  display: none;
+  display: inline;
+  visibility: hidden;
 }
 .btn__city__bar._active .btn__accordion__city__active {
   display: inline;
+  visibility: visible;
 }
 
 .city-selection__bar {
-  position: relative;
-  display: none;
+  display: block;
+  visibility: hidden;
   z-index: 1;
 }
 .city-selection__bar._active {
   width: 450px;
   height: 234px;
   background: #DCE9D9;
-  display: flex;
-  flex-direction: none;
-  flex-wrap: none;
-  align-content: none;
-  justify-content: none;
-  align-items: none;
+  visibility: visible;
   padding: 15px 35px 0px 37px;
   letter-spacing: 0.05em;
   z-index: 0;
-}
-.city-selection__bar._hidden {
-  position: absolute;
-  z-index: 0;
-  background: #EDF2EC;
-  color: #EDF2EC;
-}
-
-.city-selection__bar._hidden > ul > li {
-  display: none;
-}
-.city-selection__bar._hidden > ul > li:hover::before {
-  display: none;
 }
 
 .city-selection__list {
@@ -1658,39 +1642,6 @@ button {
   background: #EDF2EC;
 }
 .city-name__Canandaigua ._hidden li {
-  color: #EDF2EC;
-  text-decoration: none;
-  cursor: none;
-}
-
-.city-name__New-York-City ._hidden {
-  position: absolute;
-  z-index: 0;
-  background: #EDF2EC;
-}
-.city-name__New-York-City ._hidden li {
-  color: #EDF2EC;
-  text-decoration: none;
-  cursor: none;
-}
-
-.city-name__Yonkers ._hidden {
-  position: absolute;
-  z-index: 0;
-  background: #EDF2EC;
-}
-.city-name__Yonkers ._hidden li {
-  color: #EDF2EC;
-  text-decoration: none;
-  cursor: none;
-}
-
-.city-name__Sherrill ._hidden {
-  position: absolute;
-  z-index: 0;
-  background: #EDF2EC;
-}
-.city-name__Sherrill ._hidden :hover {
   color: #EDF2EC;
   text-decoration: none;
   cursor: none;

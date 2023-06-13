@@ -44,17 +44,14 @@ itemCity.forEach(function (item) {
             elem4.classList.remove("_init");
         }
         if(item.classList.contains("city-name__Canandaigua")) {
-            cityList.classList.add("_hidden");
             cityBtn.classList.add("_hidden");
             elem1.closest(".city__card").classList.add("_init");
             return item 
         } else if (item.classList.contains('city-name__New-York-City')) {
-            cityList.classList.add("_hidden");
             cityBtn.classList.add("_hidden");
             elem2.closest(".city__card").classList.add("_init");
             return item
         } else if (item.classList.contains('city-name__Yonkers')) {
-            cityList.classList.add("_hidden");
             cityBtn.classList.add("_hidden");
             elem3.closest(".city__card").classList.add("_init");
             return item
