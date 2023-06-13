@@ -61,6 +61,7 @@
         letter-spacing: 0.05em;
         z-index: 0;
     }
+
     &._hidden {
         position: absolute;
         z-index: 0;
@@ -69,8 +70,13 @@
     }
 }
 
-.city-selection__bar._hidden > ul > li {
-    color: $color-light;
+.city-selection__bar._hidden>ul>li {
+    display: none;
+
+    &:hover::before {
+        display: none;
+    }
+
 }
 
 .city-selection__list {
@@ -87,12 +93,12 @@
         padding: 0px 5px 0px 5px;
         margin: 10px 0 10px 0;
         z-index: 1;
-        
+
         &:hover {
             color: $color-main-text;
             text-decoration: none;
             cursor: pointer;
-            
+
             &::before {
                 content: "";
                 position: absolute;
@@ -103,12 +109,7 @@
                 height: 0px;
                 border: 1px solid $color-main-text;
             }
-        }
-        &._hidden {
-            position: absolute;
-            z-index: 0;
-            background: $color-light;
-            color: $color-light;
+
         }
     }
 }
@@ -118,30 +119,53 @@
         position: absolute;
         z-index: 0;
         background: $color-light;
-        color: $color-light;
+
+        li {
+            color: $color-light;
+            text-decoration: none;
+            cursor: none;
+        }
     }
 }
+
 .city-name__New-York-City {
     ._hidden {
         position: absolute;
         z-index: 0;
         background: $color-light;
-        color: $color-light;
+
+        li {
+            color: $color-light;
+            text-decoration: none;
+            cursor: none;
+        }
     }
 }
+
 .city-name__Yonkers {
     ._hidden {
         position: absolute;
         z-index: 0;
         background: $color-light;
-        color: $color-light;
+
+        li {
+            color: $color-light;
+            text-decoration: none;
+            cursor: none;
+        }
     }
 }
+
 .city-name__Sherrill {
     ._hidden {
         position: absolute;
         z-index: 0;
         background: $color-light;
-        color: $color-light;
+
+        :hover {
+            color: $color-light;
+            text-decoration: none;
+            cursor: none;
+        }
     }
 }

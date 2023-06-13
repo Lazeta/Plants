@@ -1,20 +1,9 @@
 const cityBtn = document.querySelector(".btn__city__bar")
 const cityList = document.querySelector(".city-selection__bar");
-// const cityCard = document.querySelector(".city__card");
-// const cityCardList = document.querySelectorAll(".city__card");
-// const cityItemOne = document.querySelector(".city-name__Canandaigua");
-// const cityItemTwo = document.querySelector(".city-name__New-York-City");
-// const cityItemThree = document.querySelector(".city-name__Yonkers");
-// const cityItemFour = document.querySelector(".city-name__Sherrill");
-const selectOne = document.querySelector(".Canandaigua");
 const itemCity = document.querySelectorAll("[data-city]");
 const cardList = document.querySelectorAll("[city-item]")
-const list = document.querySelector(".city-selection__list");
 
-// console.log(itemCity)
 cityBtn.addEventListener("click", function () {
-    // let IsCityBtnActive = cityBtn.classList.contains("_active");
-    // const IsCityListActive = cityList.classList.contains("_active");
     cityBtn.classList.toggle("_active");
     cityList.classList.toggle("_active");
 });
@@ -26,7 +15,6 @@ window.addEventListener("keydown", function (event) {
         cityBtn.classList.remove("_hidden");
         cityList.classList.remove("_active");
         cityList.classList.remove("_hidden");
-        // cardList.classList.remove("_init");
     }
 });
 
@@ -35,45 +23,48 @@ window.addEventListener("keydown", function (event) {
 itemCity.forEach(function (item) {
     
     item.addEventListener("click", function() {
-        const elem = document.querySelector(".Canandaigua");
+        const elem1 = document.querySelector(".Canandaigua");
         const elem2 = document.querySelector(".New-York-City");
         const elem3 = document.querySelector(".Yonkers");
         const elem4 = document.querySelector(".Sherrill");
 
-        if(elem) {
+        window.addEventListener("keydown", function(e) {
+            if (e.key === "Escape" || e.key === "Esc") {
+                elem1.classList.remove("_init");
+                elem2.classList.remove("_init");
+                elem3.classList.remove("_init");
+                elem4.classList.remove("_init");
+            }
+        });
+
+        if (elem1.classList.contains('_init') || elem2.classList.contains('_init') || elem3.classList.contains('_init') || elem4.classList.contains('_init')){
+            elem1.classList.remove("_init");
+            elem2.classList.remove("_init");
+            elem3.classList.remove("_init");
+            elem4.classList.remove("_init");
+        }
+        if(item.classList.contains("city-name__Canandaigua")) {
             cityList.classList.add("_hidden");
             cityBtn.classList.add("_hidden");
-            elem.closest(".city__card").classList.toggle("_init");
-        } if (elem2) {
+            elem1.closest(".city__card").classList.add("_init");
+            return item 
+        } else if (item.classList.contains('city-name__New-York-City')) {
             cityList.classList.add("_hidden");
             cityBtn.classList.add("_hidden");
-            ele2.closest(".city__card").classList.toggle("_init");
-        } if (elem3) {
+            elem2.closest(".city__card").classList.add("_init");
+            return item
+        } else if (item.classList.contains('city-name__Yonkers')) {
             cityList.classList.add("_hidden");
             cityBtn.classList.add("_hidden");
-            ele3.closest(".city__card").classList.toggle("_init");
-        } if (elem4) {
+            elem3.closest(".city__card").classList.add("_init");
+            return item
+        } else if (item.classList.contains('city-name__Sherrill')) {
             cityList.classList.toggle("_hidden");
             cityBtn.classList.toggle("_hidden");
-            elem4.closest(".city__card").classList.toggle("_init");
+            elem4.closest(".city__card").classList.add("_init");
+            return item
         } else {
-            console.log("isn't this element!")
+            console.log("this element does not exist!");
         }
     });
 });
-
-
-// Проверить этот варик
-// itemCity.forEach(function (item) {
-//     item.addEventListener("click", function() {
-//         const city = this.dataset.city;
-//         const elem = document.querySelector(`[data-city="${city}"]`);
-//         if (elem) {
-//             cityList.classList.add("_hidden");
-//             cityBtn.classList.add("_hidden");
-//             elem.closest(".city__card").classList.toggle("_init");
-//         } else {
-//             console.log("This element doesn't exist!");
-//         }
-//     });
-// });

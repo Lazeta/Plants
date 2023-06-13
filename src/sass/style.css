@@ -1614,7 +1614,10 @@ button {
 }
 
 .city-selection__bar._hidden > ul > li {
-  color: #EDF2EC;
+  display: none;
+}
+.city-selection__bar._hidden > ul > li:hover::before {
+  display: none;
 }
 
 .city-selection__list {
@@ -1648,39 +1651,49 @@ button {
   height: 0px;
   border: 1px solid #717171;
 }
-.city-selection__list > li._hidden {
-  position: absolute;
-  z-index: 0;
-  background: #EDF2EC;
-  color: #EDF2EC;
-}
 
 .city-name__Canandaigua ._hidden {
   position: absolute;
   z-index: 0;
   background: #EDF2EC;
+}
+.city-name__Canandaigua ._hidden li {
   color: #EDF2EC;
+  text-decoration: none;
+  cursor: none;
 }
 
 .city-name__New-York-City ._hidden {
   position: absolute;
   z-index: 0;
   background: #EDF2EC;
+}
+.city-name__New-York-City ._hidden li {
   color: #EDF2EC;
+  text-decoration: none;
+  cursor: none;
 }
 
 .city-name__Yonkers ._hidden {
   position: absolute;
   z-index: 0;
   background: #EDF2EC;
+}
+.city-name__Yonkers ._hidden li {
   color: #EDF2EC;
+  text-decoration: none;
+  cursor: none;
 }
 
 .city-name__Sherrill ._hidden {
   position: absolute;
   z-index: 0;
   background: #EDF2EC;
+}
+.city-name__Sherrill ._hidden :hover {
   color: #EDF2EC;
+  text-decoration: none;
+  cursor: none;
 }
 
 /* button changed background color */
