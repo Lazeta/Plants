@@ -1,21 +1,18 @@
 .city__card {
     display: none;
-    width: 448px;
-    height: 214px;
-    margin: 47px 0px 83px 0px;
-    border: 1px solid $color-black;
-    border-radius: 20px;
-    padding: 16px 20px 0px 32px;
-    z-index: 2;
 
     &._init {
+        width: 448px;
+        min-height: 213px;
+        margin: 47px 0px 83px 0px;
+        border: 1px solid $color-black;
+        border-radius: 20px;
+        padding: 16px 20px 0px 32px;
+        z-index: 2;
         position: absolute;
         top: 0;
         left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-wrap: nowrap;
+        @include flex (flex, column, nowrap, none, none, flex-start);
     }
 }
 
@@ -25,7 +22,7 @@
     li {
         position: relative;
         width: max-content;
-        height: auto;
+        // height: auto;
         @extend %font-inter;
         @include font (1.6rem, 4rem, 400);
         @include flex (flex, row, nowrap, none, none, flex-end);
@@ -34,7 +31,7 @@
 }
 
 .btn__call-us {
-    margin: 19px 0 0 129px;
+    margin: 19px 0 20px 129px;
     padding: 6px 0;
     width: 122px;
     border: 1px solid $color-orange;
@@ -80,6 +77,6 @@
     color: #000000;
 }
 
-.item__text {
+*.item__text {
     color: #717171;
 }

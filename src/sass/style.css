@@ -1311,22 +1311,24 @@ button {
 
 .city__card {
   display: none;
+}
+.city__card._init {
   width: 448px;
-  height: 214px;
+  min-height: 213px;
   margin: 47px 0px 83px 0px;
   border: 1px solid #000000;
   border-radius: 20px;
   padding: 16px 20px 0px 32px;
   z-index: 2;
-}
-.city__card._init {
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   flex-wrap: nowrap;
+  align-content: none;
+  justify-content: none;
+  align-items: flex-start;
 }
 
 .card__info {
@@ -1339,7 +1341,6 @@ button {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  height: auto;
   font-size: 1.6rem;
   line-height: 4rem;
   font-weight: 400;
@@ -1352,7 +1353,7 @@ button {
 }
 
 .btn__call-us {
-  margin: 19px 0 0 129px;
+  margin: 19px 0 20px 129px;
   padding: 6px 0;
   width: 122px;
   border: 1px solid #E06733;
@@ -1395,7 +1396,7 @@ button {
   color: #000000;
 }
 
-.item__text {
+*.item__text {
   color: #717171;
 }
 
@@ -1650,50 +1651,6 @@ button {
   width: 100%;
   height: 0px;
   border: 1px solid #717171;
-}
-
-.city-name__Canandaigua ._hidden {
-  position: absolute;
-  z-index: 0;
-  background: #EDF2EC;
-}
-.city-name__Canandaigua ._hidden li {
-  color: #EDF2EC;
-  text-decoration: none;
-  cursor: none;
-}
-
-.city-name__New-York-City ._hidden {
-  position: absolute;
-  z-index: 0;
-  background: #EDF2EC;
-}
-.city-name__New-York-City ._hidden li {
-  color: #EDF2EC;
-  text-decoration: none;
-  cursor: none;
-}
-
-.city-name__Yonkers ._hidden {
-  position: absolute;
-  z-index: 0;
-  background: #EDF2EC;
-}
-.city-name__Yonkers ._hidden li {
-  color: #EDF2EC;
-  text-decoration: none;
-  cursor: none;
-}
-
-.city-name__Sherrill ._hidden {
-  position: absolute;
-  z-index: 0;
-  background: #EDF2EC;
-}
-.city-name__Sherrill ._hidden :hover {
-  color: #EDF2EC;
-  text-decoration: none;
-  cursor: none;
 }
 
 /* button changed background color */

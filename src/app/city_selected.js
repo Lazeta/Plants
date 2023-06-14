@@ -1,9 +1,8 @@
 const cityBtn = document.querySelector(".btn__city__bar")
 const cityList = document.querySelector(".city-selection__bar");
 const itemCity = document.querySelectorAll("[data-city]");
-const cardList = document.querySelectorAll("[city-item]")
-const isClicked = false;
-
+// const cardList = document.querySelectorAll("[city-item]")
+// const isClicked = false;
 
 window.addEventListener("keydown", function (event) {
     if (event.key === "Escape" || event.key === "Esc") {
@@ -15,112 +14,60 @@ window.addEventListener("keydown", function (event) {
 });
 
 function mouseOverButton() {
-    cityBtn.addEventListener("mouseover", (event) => {
-
-        if (event.type === "click") {
-            // cityBtn.addEventListener("click", () => {
-            //     cityBtn.classList.add("_active");
-            //     cityList.classList.add("_active");
-
-            //     console.log("При наведении на cityBtn нажата ЛКМ на cityBtn")
-            // })
-        } else {
-            cityBtn.classList.add("_active");
-            cityList.classList.add("_active");
-
-            // console.log("При наведении на cityBtn")
-        }
+    cityBtn.addEventListener("mouseover", () => {
+        cityBtn.classList.add("_active");
+        cityList.classList.add("_active");
     });
 
-    cityBtn.addEventListener("mouseout", (event) => {
+    cityBtn.addEventListener("mouseout", () => {
         cityBtn.classList.remove("_active");
         cityList.classList.remove("_active");
-
-        // console.log("Hover покинул cityBtn")
     });
 }
 
 function mouseOverList() {
-    cityList.addEventListener("mouseover",  (event) => {
-
-        if (event.type === "click") {
-            // cityBtn.addEventListener("click", () => {
-            //     cityBtn.classList.add("_active");
-            //     cityList.classList.add("_active");
-            //     // removeEventListener("mouseover", click)
-
-            //     console.log("В состоянии наведения мыши на cityList кликнули по cityBtn")
-            // })
-        } else {
-            cityBtn.classList.add("_active");
-            cityList.classList.add("_active");
-
-            // console.log("В состоянии наведения мыши на cityList")
-        }
-
-        // cityBtn.addEventListener("click",  () => {
-        //     cityBtn.classList.add("_active");
-
-        //     console.log("Нажата ЛКМ на cityBtn")
-        // });
+    cityList.addEventListener("mouseover", () => {
+        cityBtn.classList.add("_active");
+        cityList.classList.add("_active");
     });
+
     cityList.addEventListener("mouseout", (event) => {
-        if (cityBtn.type === "click") {
-            // cityList.classList.add("_active");
-            // removeEventListener("mouseout", click)
-            // console.log("Если нажата ЛКМ на cityBtn когда hover ушёл с элемента cityList")
-        } else {
+        if (!event.relatedTarget || !cityList.contains(event.relatedTarget)) {
             cityList.classList.remove("_active");
             cityBtn.classList.remove("_active");
-
-            // console.log("Если hover прекращен на элементе cityList и не было клика мыши")
         }
     });
 }
 
-itemCity.forEach(function (item) {
+function CityClick(event) { 
+    const target = event.target; // на каком элементе был совершен клик
+    const city = target.dataset.city; // Получаем значение атрибута data-city элемента, на котором произошел клик.
+    if (!city) { 
+        return;
+    }
 
-    item.addEventListener("click", function () {
-        const elem1 = document.querySelector(".Canandaigua");
-        const elem2 = document.querySelector(".New-York-City");
-        const elem3 = document.querySelector(".Yonkers");
-        const elem4 = document.querySelector(".Sherrill");
+    const elem = document.querySelector(`.${city}`);
+    if (!elem) {
+        console.log("this element does not exist!");
+        return;
+    }
 
-        window.addEventListener("keydown", function (e) {
-            if (e.key === "Escape" || e.key === "Esc") {
-                elem1.classList.remove("_init");
-                elem2.classList.remove("_init");
-                elem3.classList.remove("_init");
-                elem4.classList.remove("_init");
-            }
+    if (elem.classList.contains('_init')) {
+        elem.classList.remove("_init");
+    } else {
+        document.querySelectorAll("[city-item]._init").forEach((el) => {
+            el.classList.remove("_init");
         });
+        elem.classList.add("_init");
+    }
 
-        if (elem1.classList.contains('_init') || elem2.classList.contains('_init') || elem3.classList.contains('_init') || elem4.classList.contains('_init')) {
-            elem1.classList.remove("_init");
-            elem2.classList.remove("_init");
-            elem3.classList.remove("_init");
-            elem4.classList.remove("_init");
-        }
-        if (item.classList.contains("city-name__Canandaigua")) {
-            cityList.classList.add("_hidden");
-            cityBtn.classList.add("_hidden");
-            elem1.closest(".city__card").classList.add("_init");
-            return item
-        } else if (item.classList.contains('city-name__New-York-City')) {
-            cityList.classList.add("_hidden");
-            cityBtn.classList.add("_hidden");
-            elem2.closest(".city__card").classList.add("_init");
-            return item
-        } else if (item.classList.contains('city-name__Yonkers')) {
-            cityList.classList.add("_hidden");
-            cityBtn.classList.add("_hidden");
-            elem3.closest(".city__card").classList.add("_init");
-            return item
-        } else if (item.classList.contains('city-name__Sherrill')) {
-            cityList.classList.toggle("_hidden");
-            cityBtn.classList.toggle("_hidden");
-            elem4.closest(".city__card").classList.add("_init");
-            return item
-        } else console.log("this element does not exist!");
-    });
+    cityList.classList.add("_hidden");
+    cityBtn.classList.add("_hidden");
+}
+
+itemCity.forEach((element) => {
+    element.addEventListener("click", CityClick);
 });
+
+mouseOverButton();
+mouseOverList();
