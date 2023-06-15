@@ -31,7 +31,7 @@ input {
   font-family: "Inika", serif;
 }
 
-.city-selection__list > li, .btn__city__bar span, .card__info li, .prices__content__title, .prices__bar__title, .description p, .footer-data li:nth-of-type(2), .footer__wrapper * a, .btn__learn-more, strong,
+.city__name, .city-selection__list > li, .card__info li, .prices__content__title, .prices__bar__title, .description p, .footer-data li:nth-of-type(2), .footer__wrapper * a, .btn__learn-more, strong,
 summary, p, h3, h1 {
   font-family: "Inter", sans-serif;
 }
@@ -1556,12 +1556,6 @@ button {
   border: none;
 }
 .btn__city__bar span {
-  height: 40px;
-  padding: 5px 0px 5px 17px;
-  font-size: 2rem;
-  line-height: 4rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
   color: #717171;
 }
 .btn__city__bar img {
@@ -1580,7 +1574,7 @@ button {
   box-shadow: none;
 }
 .btn__city__bar._active span {
-  padding: 5px 0px 5px 35px;
+  padding-left: 19px;
 }
 .btn__city__bar._active img {
   display: none;
@@ -1651,6 +1645,15 @@ button {
   width: 100%;
   height: 0px;
   border: 1px solid #717171;
+}
+
+.city__name {
+  height: 40px;
+  padding: 5px 0px 5px 20px;
+  font-size: 2rem;
+  line-height: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 /* button changed background color */

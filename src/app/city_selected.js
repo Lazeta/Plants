@@ -1,8 +1,9 @@
-const cityBtn = document.querySelector(".btn__city__bar")
+const cityBtn = document.querySelector(".btn__city__bar");
 const cityList = document.querySelector(".city-selection__bar");
 const itemCity = document.querySelectorAll("[data-city]");
-// const cardList = document.querySelectorAll("[city-item]")
-// const isClicked = false;
+const cityName = document.querySelector(".city__name");
+
+
 
 window.addEventListener("keydown", function (event) {
     if (event.key === "Escape" || event.key === "Esc") {
@@ -10,6 +11,7 @@ window.addEventListener("keydown", function (event) {
         cityBtn.classList.remove("_hidden");
         cityList.classList.remove("_active");
         cityList.classList.remove("_hidden");
+        return cityName.textContent = 'City';
     }
 });
 
@@ -39,10 +41,10 @@ function mouseOverList() {
     });
 }
 
-function CityClick(event) { 
+function CityClick(event) {
     const target = event.target; // на каком элементе был совершен клик
     const city = target.dataset.city; // Получаем значение атрибута data-city элемента, на котором произошел клик.
-    if (!city) { 
+    if (!city) {
         return;
     }
 
@@ -57,8 +59,10 @@ function CityClick(event) {
     } else {
         document.querySelectorAll("[city-item]._init").forEach((el) => {
             el.classList.remove("_init");
+            // cityName.textContent = elem.textContent;
         });
         elem.classList.add("_init");
+        
     }
 
     cityList.classList.add("_hidden");
@@ -67,6 +71,9 @@ function CityClick(event) {
 
 itemCity.forEach((element) => {
     element.addEventListener("click", CityClick);
+    element.addEventListener("click", () => {
+        return cityName.textContent = element.textContent;
+    });
 });
 
 mouseOverButton();

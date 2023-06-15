@@ -8,11 +8,7 @@
     border: none;
 
     span {
-        height: 40px;
-        padding: 5px 0px 5px 17px;
-        @extend %font-inter;
-        @include font (2rem, 4rem, 400);
-        letter-spacing: 0.05em;
+
         color: $color-main-text;
     }
 
@@ -34,7 +30,7 @@
         box-shadow: none;
 
         span {
-            padding: 5px 0px 5px 35px;
+            padding-left: 19px;
         }
 
         img {
@@ -112,4 +108,12 @@
 
         }
     }
+}
+
+.city__name {
+    height: 40px;
+    padding: 5px 0px 5px 20px;
+    @extend %font-inter;
+    @include font (2rem, 4rem, 400);
+    letter-spacing: 0.05em;
 }
