@@ -199,8 +199,6 @@ button {
 
 @media (max-width: 768px) {
   .services__buttons {
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
     max-width: max-content;
     width: auto;
     height: auto;
@@ -783,8 +781,7 @@ button {
   min-width: 329px;
   max-height: 350px;
   border-radius: 20px 20px 0px 0px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .description {
@@ -807,8 +804,6 @@ button {
 
 @media (max-width: 1335px) {
   .services {
-    height: -webkit-max-content;
-    height: -moz-max-content;
     height: max-content;
     padding: 130px 50px 0px 50px;
     display: grid;
@@ -1260,16 +1255,6 @@ button {
     flex-direction: column;
   }
 }
-@-webkit-keyframes burgerAnimationOpen {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
 @keyframes burgerAnimationOpen {
   from {
     transform: translateX(-100%);
@@ -1278,16 +1263,6 @@ button {
   to {
     transform: translateX(0%);
     opacity: 1;
-  }
-}
-@-webkit-keyframes burgerAnimationClose {
-  from {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
   }
 }
 @keyframes burgerAnimationClose {
@@ -1332,14 +1307,10 @@ button {
 }
 
 .card__info {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
 }
 .card__info li {
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   font-size: 1.6rem;
   line-height: 4rem;
@@ -1656,30 +1627,4 @@ button {
   letter-spacing: 0.05em;
 }
 
-/* button changed background color */
-.change__button {
-  position: absolute;
-  width: 65px;
-  right: 160px;
-  top: 50px;
-  color: darkred;
-  border-color: #636060;
-  border-radius: 10px;
-  border-style: double;
-}
-
-.change__button {
-  display: none;
-}
-
-@media (max-width: 1900px) {
-  .change__button {
-    position: absolute;
-    right: 10px;
-  }
-}
-@media (max-width: 1614px) {
-  .change__button {
-    display: none;
-  }
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
