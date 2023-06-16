@@ -4,7 +4,7 @@
   "description": "https://lazeta.github.io/plants2/",
   "main": "index.js",
   "scripts": {
-    "style": "sass src/sass/main.scss src/sass/main.css",
+    "style": "sass --watch src/sass/style.scss src/sass/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Lazeta/plants2/issues"
   },
-  "homepage": "https://github.com/Lazeta/plants2#readme"
+  "homepage": "https://github.com/Lazeta/plants2#readme",
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "eslint-plugin-react": "^7.32.2"
+  }
 }

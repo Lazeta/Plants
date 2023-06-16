@@ -1,125 +1,145 @@
 .service {
-    width: auto;
-    height: 1300px;
-    background: $color-light;
+	width: auto;
+	height: 1300px;
+	background: $color-light;
 }
+
 .service__wrapper {
-    display: block
+	display: block
 }
+
 .service__content {
-    height: 94px;
-    padding: 70px 50px 20px 109px;
-    @include flex (flex, row, none, none, flex-start, flex-start);
+	height: 94px;
+	padding: 70px 20px 20px 108px;
+	@include flex (flex, row, none, none, flex-start, flex-start);
 }
+
 .service__title {
-    width: 429px;
-    height: 94px;
-    margin-top: -30px;
-    line-height: 5.2rem;
+	width: 429px;
+	height: 94px;
+	margin-top: -30px;
+	line-height: 5.2rem;
 }
+
 .services__buttons {
-    height: 50px;
-    @include flex (flex, row, none, none, space-between, none);
+	height: 50px;
+	@include flex (flex, row, none, none, space-between, none);
 }
 
 .services {
-    height: 955px;
-    padding: 130px 109px 0px 109px;
-    display: grid;
-    grid-template-columns: repeat(3, 330px);
-    gap: 55px 116px;
+	height: 955px;
+	padding: 130px 109px 0px 109px;
+	display: grid;
+	grid-template-columns: repeat(3, 330px);
+	gap: 55px 116px;
 }
+
 .service__item {
-    width: 330px;
-    height: 450px;
-    & img {
-        min-width: 329px;
-        max-height: 350px;
-        border-radius: 20px 20px 0px 0px;
-        object-fit: cover;
-    }
+	width: 330px;
+	height: 450px;
+
+	& img {
+		min-width: 329px;
+		max-height: 350px;
+		border-radius: 20px 20px 0px 0px;
+		object-fit: cover;
+	}
 }
+
 .description {
-    width: 327px;
-    height: 100px;
-    margin: -3px 0 0 1px;
-    text-align: center;
-    border: 1px solid $color-border;
-    border-radius: 0px 0px 20px 20px;
-    & > h3 {
-        line-height: 4.6rem;
-    }
-    & p {
-        color: $color-main-text;
-        @extend %font-inter;
-        @include font (1.6rem, 2rem, none);
-    }
+	width: 327px;
+	height: 100px;
+	margin: -3px 0 0 1px;
+	text-align: center;
+	border: 1px solid $color-border;
+	border-radius: 0px 0px 20px 20px;
+
+	&>h3 {
+		line-height: 4.6rem;
+	}
+
+	& p {
+		color: $color-main-text;
+		@extend %font-inter;
+		@include font (1.6rem, 2rem, none);
+	}
+}
+
+@media (max-width: 1335px) {
+	.services {
+		height:max-content;
+		padding: 130px 50px 0px 50px;
+		display: grid;
+		grid-template-columns: repeat(2, 328px);
+		align-items: center;
+		justify-content: center;
+		gap: 25px 100px;
+	}
 }
 
 
 @media (max-width: $tablet-width) {
-    /* Медиа-запрос для экранов с разрешением до 768px */
-    .service {
-      height: auto;
-    }
-    
-    .service__content {
-      height: auto;
-      padding: 50px 20px 0;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .service__title {
-      width: 100%;
-      height: auto;
-      margin-top: 0;
-      text-align: center;
-      font-size: 25px;
-      line-height: 35px;
-      padding-bottom: 20px;
-    }
-    
-    .services {
-      height: auto;
-      padding: 30px 10px 0;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      grid-template-columns: repeat(2, 281px);
-      gap: 40px;
-    }
-    
-    .service__item {
-      width: 100%;
-      height: auto;
-      margin: 0 auto;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-/*  Мы используем медиа-запрос `max-width: 768px`, чтобы применять стили только на экранах с разрешением до 768px. 
-  
-  Для блока `.service` мы убираем фиксированную высоту, чтобы блок мог растягиваться по высоте в зависимости от содержимого. 
-  
-  Для блока `.service__content` мы изменяем свойство `height` на `auto`, чтобы блок также мог растягиваться по высоте в 
-  зависимости от содержимого. Мы также меняем направление гибкого контейнера на колонку и выравниваем элементы по центру. 
-  
-  Для заголовка `.service__title` мы устанавливаем новые свойства, чтобы заголовок занимал всю ширину блока и выравнивался 
-  по центру. Мы также удаляем свойство `margin-top` и добавляем свойство `padding-bottom`, чтобы создать отступ снизу.
-  
-  Для блока `.services` мы также изменяем свойство `height` на `auto`, чтобы блок мог растягиваться по высоте в зависимости 
-  от содержимого. Мы меняем свойство `display` на `flex` и направление гибкого контейнера на колонку, чтобы плитки 
-  отображались в один столбец. Мы также изменяем свойство `gap` на `40px`, чтобы добавить отступ между плитками.
-  
-  Для блока `.service__item` мы устанавливаем новые свойства, чтобы плитки занимали всю ширину блока и могли растягиваться 
-  по высоте в зависимости от содержимого. Мы также удаляем свойство `grid-template-columns` и добавляем свойство 
-  `border-radius`, чтобы углы плиток были закруглены.
-*/
-};
+
+	/* Медиа-запрос для экранов с разрешением до 768px */
+	.service {
+		height: auto;
+	}
+
+	.service__content {
+		height: auto;
+		padding: 50px 20px 0;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.service__title {
+		width: 100%;
+		height: auto;
+		margin-top: 0;
+		text-align: center;
+		font-size: 25px;
+		line-height: 35px;
+		padding-bottom: 20px;
+	}
+
+
+	.services {
+		height: auto;
+		padding: 30px 10px 0;
+		align-items: center;
+		justify-content: center;
+		grid-template-columns: repeat(2, 281px);
+		gap: 20px 40px;
+	}
+
+	.service__item {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 605px) {
+	.services {
+		height: auto;
+		padding: 30px 10px 0;
+		align-items: center;
+		justify-content: center;
+		grid-template-columns: repeat(1, 281px);
+		gap: 40px;
+	}
+}
 
 @media (max-width: $mobile-big-width) {
-
+	.services {
+		height: auto;
+		padding: 30px 10px 0;
+		align-items: center;
+		justify-content: center;
+		grid-template-columns: repeat(1, 281px);
+		gap: 15px;
+	}
 }

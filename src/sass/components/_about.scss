@@ -67,41 +67,9 @@
 }
 
 @media (max-width: $mobile-big-width) {
-    // .about {
-    //     max-width: 380px;
-    //     width: 380px;
-    //     height: 516px;
-    //     padding-left: 50px;
-    // }
-    // .about__wrapper {
-    //     width: auto;
-    //     @include flex (flex, column, none, none, space-between, none);
-    //     margin: 0;
-    //     padding-top: 34px;
-    //     padding-right: 50px;
-    //     p {
-    //         margin-top: 21px;
-    //         margin-right: 50px;
-    //         @include font (1.5rem, 2.5rem, none);
-    //         text-align: left;
-    //     }
-    // }
-    // .about__content {
-    //     width: 380px;
-    //     padding: 0;
-    //     > h2 {
-    //         width: 288px;
-    //         height: 57.74px;
-    //         margin-top: -5px;
-    //         padding-left: 20px;
-    //         color: $color-orange;
-    //         @include font (2.5rem, 3.3rem, none);
-    //         text-align: center;
-    //     }
-    // }
-    // .about__img {
-    //     width: 150px;
-    //     margin-right: 48px;
-    //     margin-bottom: 25px;
-    // }
+    .about__img {
+        width: 150px;
+        margin-right: 48px;
+        margin-bottom: 25px;
+    }
 }

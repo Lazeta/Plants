@@ -7,14 +7,14 @@
 
 .welcome__wrapper {
     margin: 0 auto;
-    padding: 0;
+    padding: 63px 23px 40px 26px;
     @include flex (flex, row, none, none, space-between, none);
 }
 
 .welcome__img {
     width: 448.8px;
     height: 407.36px;
-    margin: -10px 25px 0px;
+    margin: -10px 0px 25px 0px;
     padding: 0 0 0 75px;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .welcome__title {
-    min-width: 414px;
+    min-width: inherit;
     height: auto;
 }
 
@@ -122,31 +122,9 @@
 }
 
 @media (max-width: $mobile-big-width) {
-    // .welcome {
-    //     width: auto;
-    //     height: 300px;
-    //     padding-left: 50px;
-    // }
-    // .welcome__wrapper {
-    //     width: auto;
-    //     padding: 0px;
-    //     @include flex (flex, column, wrap, space-around, space-around, none);
-    // }
-    // .welcome__section {
-    //     width: 346px;
-    //     height: 310px;
-    //     margin: 25px 36px 0px 0;
-    //     @include flex (flex, column, none, none, space-between, none);
-    //     & p {
-    //         width: auto;
-    //         height:  auto;
-    //         margin: 0px;
-    //         padding: 0px 0px 2px 1px;
-    //         align-content: stretch;
-    //     }
-    // }
-    // .welcome__img {
-    //     margin: 0;
-    //     padding: 0px;
-    // }
+    .welcome__img {
+        display: none;
+        margin: 0;
+        padding: 0px;
+    }
 }

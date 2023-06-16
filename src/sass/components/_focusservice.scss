@@ -1,0 +1,8 @@
+.service__item.active {
+    filter: blur(2px);
+    transition: filter 0.3s ease-in-out;
+}
+
+.service__item.focused {
+    filter: none;
+}

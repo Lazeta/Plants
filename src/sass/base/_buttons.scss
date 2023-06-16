@@ -7,6 +7,7 @@
     border: 2px solid $color-orange;
     border-radius: 10px;
 }
+
 .btn__project {
     min-width: 161px;
     height: 50px;
@@ -16,42 +17,6 @@
     @include flex (flex, row, nowrap, normal, center, center);
     border: 1px solid $color-orange;
     border-radius: 5px;
-}
-
-.prices__list button {
-    margin: 7px 22px 7px 22px;
-    padding-left: 10px;
-}
-.btn__item {
-    width: 250px;
-    height: 50px;
-    background: $color-light;
-    @include flex (flex, row, nowrap, center, space-around, center);
-    border-radius: 20px;
-    border: none;
-}
-.btn__item-basics :nth-child(1) {
-    margin-right: 10px;
-    padding-top: 8px;
-}
-.btn__item-basics :nth-child(2) {
-    padding: 16px 10px 10px 20px;
-}
-.btn__item-standard :nth-child(1) {
-    width: 140px;
-    margin-right: -40px;
-    margin-left: 2px;
-    padding-right: 50px;
-}
-.btn__item-standard :nth-child(2) {
-    padding: 10px 12px 10px 0px;
-}
-.btn__item-pro :nth-child(1) {
-    margin-left: -3px;
-    padding-bottom: 5px;
-}
-.btn__item-pro :nth-child(2) {
-    padding: 10px 5px 16px 10px;
 }
 
 .btn__contact-us {
@@ -65,39 +30,20 @@
     border-radius: 5px;
 }
 
-.btn__city__bar {
-    width: 450px;
-    height: 50px;
-    margin-top: 85px;
-    background: $color-city-box;
-    @include flex (inline-flex, none, none, none, space-between, none);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: none;
-}
-.btn__city__bar span {
-    height: 40px;
-    padding: 5px 0px 5px 17px;
-    @extend %font-inter;
-    @include font (2rem, 4rem, 400);
-    letter-spacing: 0.05em;
-    color: $color-main-text;
-}
-.btn__city__bar img {
-    padding-top: 16px;
-    padding-right: 27px;
-}
-
 
 .btn__animation {
     @extend %transition-1s;
+
     &:hover {
         @extend %transition-1s;
         background-color: $color-orange;
         color: $color-white;
     }
 }
+
 .btn__animation_2 {
     @extend %transition-1s;
+
     &:hover {
         @extend %transition-1s;
         background-color: $color-orange;
@@ -108,222 +54,80 @@
 
 
 
-// @media (max-width: $tablet-width) {
-//     .btn__learn-more {
-//         width: 158px;
-//         height: 44px;
-//     }
-    
-//     .services__btns {
-//         button {
-//             width: 161px;
-//             height: 50px;
-//             color: $color-orange;
-//             border: 1px solid $color-orange;
-//             border-radius: 5px;
-//         }
-//     }
-//     .btn__project__1 {
-//         margin-right: 38px;
-//     }
-//     .btn__project__2 {
-//         margin-right: 38px;
-//     }
+@media (max-width: $tablet-width) {
+    .services__buttons {
+        max-width: max-content;
+        width: auto;
+        height: auto;
 
-//     .btn__item {
-//         width: 250px;
-//         height: 50px;
-//         margin: 16px 41px;
-//         padding: 14px 40px;
-//         background: $color-light;
-//         @include flex (flex, none, none, none, space-between, none);
-//         // text-align: start;
-//         border-radius: 20px;
-//         border: none;
-//     }
-//     .btn__accordion__item {
-//         border-radius: 50%;
-//     }
+        button {
+            width: 10vw;
+            height: 4vh;
+            color: $color-orange;
+            border: 1px solid $color-orange;
+            border-radius: 5px;
+        }
+    }
 
-//     .btn__contact-us {
-//         width: 162px;
-//         height: 50px;
-//         margin-top: 28px;
-//         color: $color-orange;
-//         border: 1px solid $color-orange;
-//         border-radius: 5px;
+    .btn__project {
+        min-width: 26vw;
+        height: 50px;
+        margin: 0px 10px;
+        font-size: 2.0rem;
+        color: $color-orange;
+        @include flex (flex, row, nowrap, normal, center, center);
+        border: 1px solid $color-orange;
+        border-radius: 5px;
+    }
 
-//     }
-//     .btn__city__bar {
-//         width: 450px;
-//         height: 50px;
-//         margin-top: -11px;
-//         margin-right: 159px;
-//         background: $color-city-box;
-//         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-//         border-radius: 0px;
-//         border: none;
-//         @include flex (flex, row, none, none, space-between, flex-end);
-//         span {
-//             height: 40px;
-//             letter-spacing: 0.05em;
-//             color: $color-main-text;
-//             text-align: center; 
-//         }
-//         img {
-//             padding: 0 35px 18px 0;
-//         }
-//     }
-//     .btn__accordion__city {
-//         margin-right: 0;
-//     }
+    .btn__accordion__city {
+        margin-right: 0;
+    }
+}
 
+@media (max-width: $mobile-big-width) {
+    .btn__project {
+        min-width: 26vw;
+        height: 50px;
+        margin: 0px 5px;
+        font-size: 2.0rem;
+        color: $color-orange;
+        @include flex (flex, row, nowrap, normal, center, center);
+        border: 1px solid $color-orange;
+        border-radius: 5px;
+    }
 
-//     .btn__animation {
-//         transition: 0.6s;
-//         transform: scale(1);
-//     }
-//     .btn__animation_2 {
-//         transition: 0.6s;
-//         transform: scale(1);
-//     }
-//     .btn__animation:hover {
-//         transition: 3s;
-//         transform: scale(1);
-//         background-color: $color-hovered;
-//         color: $color-white;
-//     }
-//     .btn__animation_2:hover {
-//         transition: 2s;
-//         transform: scale(1);
-//         background-color: $color-hovered;
-//         color: $color-white;
-//     }
-// }
+    .btn__city__bar {
+        width: auto;
+        height: auto;
+        margin: 20px 20px 0 20px;
+        padding: 0 10px 0 10px;
+        background: $color-city-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 0px;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
 
-// @media (max-width: $mobile-big-width) {
-//     .btn__learn-more {
-//         width: 100px;
-//         height: 34.14px;
-//         margin-bottom: 59px;
-//         margin-left: 1px;
-//         padding-left: 16px;
-//     }
+        span {
+            padding-right: 50vw;
+            height: auto;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 40px;
+            letter-spacing: 0.05em;
+            color: $color-main-text;
+            text-align: center;
+        }
 
-//     .services__button {
-//         width: 121px;
-//         height: 35px;
-//         margin: 0px 10px 9px 0;
-//         font-weight: 400;
-//         font-size: 15px;
-//         line-height: 20px;
-//         text-align: center;
-//         color: $color-orange;
-//         border: 1px solid $color-orange;
-//         border-radius: 5px;
-//     }
-//     .btn__item {
-//         width: 180px;
-//         height: 49.72px;
-//         margin: 0px 25px 0px 15px;
-//         padding: 0px 0 0 6px;
-//         text-align: start;
-//         font-family: 'Inter';
-//         font-style: normal;
-//         font-weight: 700;
-//         font-size: 15px;
-//         line-height: 20px;
-//         background: $color-city-box;
-//         border-radius: 20px;
-//         border: none;
-//         display: flex;
-//         justify-content: space-around;
-//         align-content: normal;
-//         flex-wrap: nowrap;
-//         align-items: center;
-//     }
-//     .btn__item-basics button {
-//         margin-top: 0px;
-//         padding-left: 0px;
-//         margin-left: 5px;
-//     }
-//     .btn__item-standard {
-//         margin-top: 0px;
-//     }
-//     .btn__item-pro {
-//         margin-top: 0px;
-//         margin-bottom: 0px;
-//     }
-//     .btn__accordion__item {
-//         padding-right: 22px;
-//         padding-top: 4px;
-//         border-radius: 50%;
-//     }
+        img {
+            padding: 0 20px 17px 0;
+        }
+    }
 
-//     .btn__contact-us {
-//         display: block;
-//         width: 121px;
-//         height: 35px;
-//         margin: 19px 0 0 87px;
-//         font-weight: 700;
-//         font-size: 15px;
-//         line-height: 20px;
-//         text-align: center;
-//         color: #E06733;
-//         border: 1px solid #E06733;
-//         border-radius: 5px;
-//     }
-
-//     .btn__city__bar {
-//         width: 300px;
-//         height: 50px;
-//         margin-top: 63px;
-//         margin-left: -42px;
-//         padding-right: 0;
-//         background: $color-city-box;
-//         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-//         border-radius: 0px;
-//         border: none;
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: end;
-//         span {
-//             height: 40px;
-//             font-style: normal;
-//             font-weight: 400;
-//             font-size: 20px;
-//             line-height: 40px;
-//             letter-spacing: 0.05em;
-//             color: $color-main-text;
-//             text-align: center;
-//         }
-//         img {
-//             padding: 0 20px 17px 0;
-//         }
-//     }
-//     .btn__accordion__city {
-//         margin-right: 0px;
-//     }
-
-
-//     .btn__animation {
-//         transition: 0.6s;
-//         transform: scale(1);
-//     }
-//     .btn__animation_2 {
-//         transition: 0.6s;
-//         transform: scale(1);
-//     }
-//     .btn__animation:hover {
-//         transition: 3s;
-//         transform: scale(1);
-//         background-color: #E06733;
-//         color:#ffffff;
-//     }
-//     .btn__animation_2:hover {
-//         transition: 2s;
-//         transform: scale(1);
-//         background-color: #E06733;
-//         color:#ffffff;
-//     }
-// }
+    .btn__accordion__city {
+        margin-right: 0px;
+    }
+}
