@@ -310,6 +310,7 @@ button {
   .wrapper {
     max-width: 414px;
     margin: auto;
+    overflow-x: hidden;
   }
 }
 .header {
@@ -1597,7 +1598,7 @@ button {
   align-items: none;
   padding: 15px 35px 0px 37px;
   letter-spacing: 0.05em;
-  z-index: 0;
+  z-index: 1;
 }
 .city-selection__bar._hidden {
   position: absolute;
@@ -1658,6 +1659,7 @@ button {
   .btn__city__bar {
     width: 80%;
     margin-left: 40px;
+    padding: 0 10px;
   }
   .btn__city__bar._active {
     width: 80%;
