@@ -122,29 +122,6 @@
 }
 
 @media (max-width: $mobile-big-width) {
-    // .welcome {
-    //     width: auto;
-    //     height: 300px;
-    //     padding-left: 50px;
-    // }
-    // .welcome__wrapper {
-    //     width: auto;
-    //     padding: 0px;
-    //     @include flex (flex, column, wrap, space-around, space-around, none);
-    // }
-    // .welcome__section {
-    //     width: 346px;
-    //     height: 310px;
-    //     margin: 25px 36px 0px 0;
-    //     @include flex (flex, column, none, none, space-between, none);
-    //     & p {
-    //         width: auto;
-    //         height:  auto;
-    //         margin: 0px;
-    //         padding: 0px 0px 2px 1px;
-    //         align-content: stretch;
-    //     }
-    // }
     .welcome__img {
         display: none;
         margin: 0;

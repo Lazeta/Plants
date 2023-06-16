@@ -47,14 +47,13 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- join preprocessor -->
-    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" href="./sass/style.css">
 
     <title>Plants</title>
 </head>
 
 
 <body id="Home">
-    <!-- <button class="change__button __changer">Change Theme</button> -->
     <header class="header">
         <div class="wrapper header__wrapper">
             <div class="logo__box">
@@ -195,7 +194,7 @@
 
                     <div class="prices__bar__content">
                         <div data-spollers data-one-spoller class="prices__list">
-                            
+
                             <div class="prices__item">
                                 <button tabindex="-1" type="button" data-spoller class="accordion">
                                     <strong>Basics</strong>
@@ -280,7 +279,9 @@
                 <div class="price__info">
                     <div class="prices__content">
                         <h3 class="prices__content__title">Our best <em>gardeners </em> are ready to help you</h3>
-                        <button class="btn__contact-us btn__animation">Contact us</button>
+                        <a href="#Contact-us">
+                            <button class="btn__contact-us btn__animation">Contact us</button>
+                        </a>
                     </div>
                     <div class="leafs">
                         <img class="leafs__img" src="./assets/img/leafs_small.png" alt="small leafs image png">
@@ -294,22 +295,105 @@
                 <div class="contact-us__box-city">
                     <h2 class="contact-us__title">Contact us</h2>
                     <div class="contact-us__button">
-                        <button type="submit" class="btn__city__bar">
-                            <span>City</span>
+                        <button onmouseover="mouseOverButton()" id="Contact-us" type="submit" class="btn__city__bar">
+                            <div class="city__name">
+                                <span>City</span>
+                            </div>
                             <img class="btn__accordion__city" src="./assets/svg/accordion_btn.svg"
                                 alt="accordion unactive_btn svg">
                             <img class="btn__accordion__city__active" src="./assets/svg/drop_btn.svg"
                                 alt="accordion drop_btn svg">
                         </button>
-                        <div class="city-selection__bar">
+                        <div onmouseover="mouseOverList()" class="city-selection__bar">
                             <ul class="city-selection__list">
-                                <li calss="city-name">Canandaigua, NY</li>
-                                <li calss="city-name">New York City</li>
-                                <li calss="city-name">Yonkers, NY</li>
-                                <li calss="city-name">Sherrill, NY</li>
+                                <li data-city="Canandaigua" class="city-name__Canandaigua">Canandaigua, NY</li>
+                                <div city-item class="Canandaigua city__card">
+                                    <ul class="card__info">
+                                        <ul class="city">
+                                            <li class="item__title">City:</li>
+                                            <li class="item__text">Canandaigua, NY</li>
+                                        </ul>
+                                        <ul class="phone">
+                                            <li class="item__title">Phone:</li>
+                                            <li class="item__text">+1 585 393 0001</li>
+                                        </ul>
+                                        <ul class="office-adress">
+                                            <li class="item__title">Office adress:</li>
+                                            <li class="item__text">151 Charlotte Street</li>
+                                        </ul>
+                                    </ul>
+                                    <a href="tel:+15863930001" class="btn__call-us" type="submit">
+                                        <span>Call us</span>
+                                    </a>
+                                </div>
+
+                                <li data-city="New-York-City" class="city-name__New-York-City">New York City</li>
+                                <div city-item class="New-York-City city__card ">
+                                    <ul class="card__info">
+                                        <ul class="city">
+                                            <li class="item__title">City:</li>
+                                            <li class="item__text">New York City</li>
+                                        </ul>
+                                        <ul class="phone">
+                                            <li class="item__title">Phone:</li>
+                                            <li class="item__text">+1 212 456 0002</li>
+                                        </ul>
+                                        <ul class="office-adress">
+                                            <li class="item__title">Office adress:</li>
+                                            <li class="item__text">9 East 91st Street</li>
+                                        </ul>
+                                    </ul>
+                                    <a href="tel:+12124560002" class="btn__call-us" type="submit">
+                                        <span>Call us</span>
+
+                                    </a>
+                                </div>
+
+                                <li data-city="Yonkers" class="city-name__Yonkers">Yonkers, NY</li>
+                                <div city-item class="Yonkers city__card ">
+                                    <ul class="card__info">
+                                        <ul class="city">
+                                            <li class="item__title">City:</li>
+                                            <li class="item__text">Yonkers, NY</li>
+                                        </ul>
+                                        <ul class="phone">
+                                            <li class="item__title">Phone:</li>
+                                            <li class="item__text">+1 914 678 0003</li>
+                                        </ul>
+                                        <ul class="office-adress">
+                                            <li class="item__title">Office adress:</li>
+                                            <li class="item__text">511 Warburton Ave</li>
+                                        </ul>
+                                    </ul>
+                                    <a href="tel:+19146780003" class="btn__call-us" type="submit">
+                                        <span>Call us</span>
+
+                                    </a>
+                                </div>
+
+                                <li  data-city="Sherrill" class="city-name__Sherrill">Sherrill, NY</li>
+                                <div city-item class="Sherrill city__card">
+                                    <ul class="card__info">
+                                        <ul class="city">
+                                            <li class="item__title">City:</li>
+                                            <li class="item__text">Sherrill, NY</li>
+                                        </ul>
+                                        <ul class="phone">
+                                            <li class="item__title">Phone:</li>
+                                            <li class="item__text">+1 315 908 0004</li>
+                                        </ul>
+                                        <ul class="office-adress">
+                                            <li class="item__title">Office adress:</li>
+                                            <li class="item__text">14 WEST Noyes BLVD</li>
+                                        </ul>
+                                    </ul>
+                                    <a href="tel:+13159080004" class="btn__call-us" type="submit">
+                                        <span>Call us</span>
+
+                                    </a>
+                                </div>
                             </ul>
                         </div>
-                        </button>
                     </div>
                 </div>
 
@@ -376,7 +460,6 @@
     <script src="./app/focusservice.js"></script>
     <script src="./app/prices_selected.js"></script>
     <script src="./app/city_selected.js"></script>
-    <!-- <script src="./app/bgChangeColor.js"></script> -->
 </body>
 
 </html>

@@ -1,1 +1,1 @@
-https://lazeta.github.io/plants2/
+https://lazeta.github.io/Plants/src/

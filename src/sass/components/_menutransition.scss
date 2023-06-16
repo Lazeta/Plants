@@ -60,7 +60,6 @@
 
         li {
             @include font (2.4rem, 5rem, 700);
-            box-shadow: 1px 1px rgba(0, 0, 0, 1);
         }
 
         a {
@@ -72,21 +71,10 @@
                 transform: scale(1);
                 background-color: rgba(0, 0, 0, 0.025);
                 color: $color-black;
-                // border-radius: 5px;
             }
 
         }
     }
-    //     .navigation.__active {
-    //         display: block;
-    //         animation: burgerAnimationOpen 0.75s;
-    //     }
-
-    //     .navigation.close {
-    //         display: block;
-    //         animation: burgerAnimationClose 0.8s;
-    //     }
-
 }
 
 
@@ -99,12 +87,9 @@
         position: fixed;
         top: 0;
         left: -450px;
-        background-color: $color-green;
+        background-color: rgba($color: #9ee66fda, $alpha: 0.9);
         transition: all 0.3s ease;
-        opacity: 70%;
         z-index: 10;
-        // flex-direction: column;
-        // text-align: center;
     }
     
     .header__navigation.__active {
