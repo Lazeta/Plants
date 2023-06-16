@@ -199,6 +199,8 @@ button {
 
 @media (max-width: 768px) {
   .services__buttons {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
     max-width: max-content;
     width: auto;
     height: auto;
@@ -515,12 +517,13 @@ button {
 @media (max-width: 414px) {
   .navigation {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    padding: 50px 0px 0 140px;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap;
+    align-content: none;
+    justify-content: none;
+    align-items: flex-start;
   }
 }
 .welcome {
@@ -781,7 +784,8 @@ button {
   min-width: 329px;
   max-height: 350px;
   border-radius: 20px 20px 0px 0px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .description {
@@ -804,6 +808,8 @@ button {
 
 @media (max-width: 1335px) {
   .services {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     padding: 130px 50px 0px 50px;
     display: grid;
@@ -1218,7 +1224,6 @@ button {
     font-size: 2.4rem;
     line-height: 5rem;
     font-weight: 700;
-    box-shadow: 1px 1px rgb(0, 0, 0);
   }
   .hamburger a {
     transition: all 400ms ease-out;
@@ -1239,9 +1244,8 @@ button {
     position: fixed;
     top: 0;
     left: -450px;
-    background-color: #499A18;
+    background-color: rgba(158, 230, 111, 0.9);
     transition: all 0.3s ease;
-    opacity: 70%;
     z-index: 10;
   }
   .header__navigation.__active {
@@ -1255,6 +1259,16 @@ button {
     flex-direction: column;
   }
 }
+@-webkit-keyframes burgerAnimationOpen {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 @keyframes burgerAnimationOpen {
   from {
     transform: translateX(-100%);
@@ -1263,6 +1277,16 @@ button {
   to {
     transform: translateX(0%);
     opacity: 1;
+  }
+}
+@-webkit-keyframes burgerAnimationClose {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
 @keyframes burgerAnimationClose {
@@ -1307,10 +1331,14 @@ button {
 }
 
 .card__info {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 .card__info li {
   position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-size: 1.6rem;
   line-height: 4rem;
@@ -1539,7 +1567,6 @@ button {
 }
 .btn__city__bar._active {
   width: 450px;
-  height: 50px;
   background: #C1E698;
   border-radius: 0px;
   box-shadow: none;
@@ -1551,7 +1578,7 @@ button {
   display: none;
 }
 .btn__city__bar._active .btn__accordion__city__active {
-  display: inline;
+  display: block;
 }
 
 .city-selection__bar {
@@ -1627,4 +1654,52 @@ button {
   letter-spacing: 0.05em;
 }
 
-/*# sourceMappingURL=style.css.map */
+@media (max-width: 414px) {
+  .btn__city__bar {
+    width: 80%;
+    margin-left: 40px;
+  }
+  .btn__city__bar._active {
+    width: 80%;
+    margin-left: 40px;
+  }
+  .btn__city__bar._active span {
+    margin-bottom: -20px;
+    padding-left: 19px;
+  }
+  .btn__city__bar._active img {
+    display: none;
+    margin: 0 20px 0 0px;
+  }
+  .btn__city__bar._active .btn__accordion__city__active {
+    display: inline;
+  }
+  .city-selection__bar {
+    display: none;
+    z-index: 0;
+  }
+  .city-selection__bar._active {
+    width: 80%;
+    margin-left: 52px;
+    padding: 15px 0px 0px 0px;
+  }
+  .city-selection__bar._hidden {
+    position: absolute;
+    z-index: 0;
+    background: #EDF2EC;
+    color: #EDF2EC;
+  }
+  .city-selection__bar._hidden > ul > li {
+    display: none;
+  }
+  .city-selection__bar._hidden > ul > li:hover::before {
+    display: none;
+  }
+  .contact-us__button {
+    margin: 0;
+    padding: 0;
+  }
+  .city__name {
+    padding: 0px 0px 0px 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
